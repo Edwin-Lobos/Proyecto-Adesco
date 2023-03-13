@@ -222,6 +222,7 @@ namespace Proyecto_Adesco
 
         private void rjButton2_Click_1(object sender, EventArgs e)
         {
+            //-------hola----------
             bool bandera = false;
             DatosBD _datos = new DatosBD();
             _datos.Nombres = txtNombres.Text;
@@ -290,6 +291,11 @@ namespace Proyecto_Adesco
         private void Datos_SizeChanged(object sender, EventArgs e)
         {
             CentrarPanelEnFormulario();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
