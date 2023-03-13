@@ -27,6 +27,7 @@ namespace Proyecto_Adesco
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+            //Apurate dilmer
             Form frmLogin = new Login();
             frmLogin.Show();
             this.Visible = false;
