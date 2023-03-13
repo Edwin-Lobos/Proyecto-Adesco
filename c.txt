@@ -1,0 +1,1 @@
+Get-ChildItem -Path 'C:\Users\ESTUDIANTE\Desktop\Proyecto Adesco' -Recurse | Unblock-File
