@@ -91,5 +91,17 @@ namespace Proyecto_Adesco
             string dato = txtDato.Text;
             cargarTabla(dato);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
     } 
 }

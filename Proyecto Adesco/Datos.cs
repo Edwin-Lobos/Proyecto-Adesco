@@ -238,6 +238,13 @@ namespace Proyecto_Adesco
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
     }
     }
 

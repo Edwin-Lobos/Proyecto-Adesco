@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.picMonstrar = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new Proyecto_Adesco.RJButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).BeginInit();
             this.panel1Barra.SuspendLayout();
@@ -104,6 +106,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(201, 21);
             this.txtUsuario.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.txtUsuario, "Este es el usuario con el que se iniciará la sesión.\r\n");
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtPassword
@@ -115,6 +118,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(201, 21);
             this.txtPassword.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.txtPassword, "Este es la contraña con la que se iniciará sesión.");
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtConPassword
@@ -126,6 +130,7 @@
             this.txtConPassword.PasswordChar = '*';
             this.txtConPassword.Size = new System.Drawing.Size(201, 21);
             this.txtConPassword.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtConPassword, "Asegúrese de ingresar la misma contraseña.");
             this.txtConPassword.TextChanged += new System.EventHandler(this.txtConPassword_TextChanged);
             this.txtConPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConPassword_KeyPress);
             // 
@@ -137,6 +142,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(201, 21);
             this.txtNombre.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.txtNombre, "Este es el nombre que se mostrará en el menú.");
             // 
             // picOcultar
             // 
@@ -184,6 +190,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "\r\n");
             // 
             // picMonstrar
             // 
@@ -195,6 +202,7 @@
             this.picMonstrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMonstrar.TabIndex = 9;
             this.picMonstrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picMonstrar, "Mostrar/ocultar contraseña.");
             this.picMonstrar.Click += new System.EventHandler(this.picMonstrar_Click);
             // 
             // pictureBox4
@@ -286,6 +294,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picMonstrar;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
