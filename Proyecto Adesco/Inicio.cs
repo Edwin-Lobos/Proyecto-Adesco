@@ -27,7 +27,7 @@ namespace Proyecto_Adesco
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            //Apurate dilmer
+            
             Form frmLogin = new Login();
             frmLogin.Show();
             this.Visible = false;
@@ -112,6 +112,11 @@ namespace Proyecto_Adesco
         private void groupBox1_Enter(object sender, EventArgs e)
         {
            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

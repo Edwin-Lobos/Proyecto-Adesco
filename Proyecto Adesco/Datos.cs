@@ -31,8 +31,9 @@ namespace Proyecto_Adesco
             this.Visible = false;
         }
         //----------------Botón para registrar y actualizar los datos en la base------------------
-        private void btnRegistrardatos_Click(object sender, EventArgs e)
+        private void rjButton2_Click_1(object sender, EventArgs e)
         {
+
             bool bandera = false;
             DatosBD _datos = new DatosBD();
             _datos.Nombres = txtNombres.Text;
@@ -40,6 +41,7 @@ namespace Proyecto_Adesco
             _datos.Senda = txtSenda.Text;
             _datos.Poligono = txtPoligono.Text;
             _datos.N_casa = txtN_casa.Text;
+            _datos.Telefono = int.Parse(txtTelefono.Text);
             _datos.Codigo = txtCodigo.Text;
 
             if (string.IsNullOrEmpty(_datos.Nombres) || string.IsNullOrEmpty(_datos.Apellidos) || string.IsNullOrEmpty(_datos.Senda) || string.IsNullOrEmpty(_datos.Poligono) || string.IsNullOrEmpty(_datos.N_casa) || string.IsNullOrEmpty(_datos.Codigo))
@@ -69,10 +71,10 @@ namespace Proyecto_Adesco
                     cargarTabla(null);
                 }
             }
-            
+
         }
 
-        //-----------------------------Botón para limpiar los texbox------------------------------
+        //-----------------------------limpiar los texbox------------------------------
         private void limpiar()
         {
             txtId.Text = "";
@@ -81,11 +83,12 @@ namespace Proyecto_Adesco
             txtSenda.Text = "";
             txtPoligono.Text = "";
             txtN_casa.Text = "";
+            txtTelefono.Text = "";
             txtCodigo.Text = "";
         }
 
         //---------------------------------Botón para buscar--------------------------------------
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void rjButton1_Click_1(object sender, EventArgs e)
         {
             string dato = txtDato.Text;
             cargarTabla(dato);
@@ -108,11 +111,12 @@ namespace Proyecto_Adesco
             txtSenda.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtPoligono.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtN_casa.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtCodigo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtTelefono.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtCodigo.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
 
         //----------------Botón para eliminar los registros de la base de datos-------------------
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void rjButton2_Click(object sender, EventArgs e)
         {
             bool bandera = false;
             DialogResult resultado = MessageBox.Show("¿Seguro que desea eliminar el registro?", "Salir", MessageBoxButtons.YesNo);
@@ -132,15 +136,37 @@ namespace Proyecto_Adesco
             }
         }
 
-        //-------------------------LIMPIAR------------------------------
+        //-------------------------LIMPIAR-----------------------------------------
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
         }
+        
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtNombres.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtApellidos.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtSenda.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtPoligono.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtN_casa.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtTelefono.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtCodigo.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+        }
+        //-------------------------------------------------------------------------------
 
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+
+
+        //--------------------------------------------------------------------------
         private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 txtApellidos.Focus();
             }
@@ -178,89 +204,7 @@ namespace Proyecto_Adesco
             }
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtNombres.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtApellidos.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtSenda.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtPoligono.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtN_casa.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtCodigo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-        }
-
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            bool bandera = false;
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea eliminar el registro?", "Salir", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
-                int id = int.Parse(txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                Ctrldatos _ctrl = new Ctrldatos();
-                bandera = _ctrl.eliminar(id);
-
-                if (bandera)
-                {
-                    MessageBox.Show("Registro Eliminado", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiar();
-                    cargarTabla(null);
-                }
-            }
-        }
-
-        private void rjButton3_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
-
-        private void rjButton1_Click_1(object sender, EventArgs e)
-        {
-            string dato = txtDato.Text;
-            cargarTabla(dato);
-        }
-
-        private void rjButton2_Click_1(object sender, EventArgs e)
-        {
-            //-------hola----------
-            bool bandera = false;
-            DatosBD _datos = new DatosBD();
-            _datos.Nombres = txtNombres.Text;
-            _datos.Apellidos = txtApellidos.Text;
-            _datos.Senda = txtSenda.Text;
-            _datos.Poligono = txtPoligono.Text;
-            _datos.N_casa = txtN_casa.Text;
-            _datos.Codigo = txtCodigo.Text;
-
-            if (string.IsNullOrEmpty(_datos.Nombres) || string.IsNullOrEmpty(_datos.Apellidos) || string.IsNullOrEmpty(_datos.Senda) || string.IsNullOrEmpty(_datos.Poligono) || string.IsNullOrEmpty(_datos.N_casa) || string.IsNullOrEmpty(_datos.Codigo))
-            {
-                MessageBox.Show("Debe llenar todos los campos", "Aviso",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Ctrldatos ctrl = new Ctrldatos();
-                if (txtId.Text != "")
-                {
-                    _datos.Id = int.Parse(txtId.Text);
-                    bandera = ctrl.actualizar(_datos);
-                }
-                else
-                {
-                    bandera = ctrl.insertar(_datos);
-                }
-
-                if (bandera)
-                {
-                    MessageBox.Show("Registro exitoso", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    limpiar();
-                    cargarTabla(null);
-                }
-            }
-
-        }
+        //-------------------------------------------------------------------------------
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -273,19 +217,16 @@ namespace Proyecto_Adesco
         }
         private void CentrarPanelEnFormulario()
         {
-            //Obtener las dimensiones del formulario y del panel que se va a centrar
-            int alturaFormulario = this.Height;
-            int anchuraFormulario = this.Width;
-            int alturaPanelCentro = panel1?.Height ?? 0;
-            int anchuraPanelCentro = panel1?.Width ?? 0;
+            int altura_form = this.Height;
+            int anchura_form = this.Width;
+            int altura_grbox = panel1.Height;
+            int anchura_grbox = panel1.Width;
 
-            //Calcular la ubicación del panel en el centro del formulario
-            panel1?.Invoke((MethodInvoker)(() =>
-            {
-                panel1.Location = new Point(
-                    (anchuraFormulario - anchuraPanelCentro) / 2,
-                    (alturaFormulario - alturaPanelCentro) / 2);
-            }));
+            int nueva_altura = (altura_form - altura_grbox) / 2;
+            int nueva_anchura = (anchura_form - anchura_grbox) / 2;
+
+
+            panel1.Location = new Point(nueva_anchura, nueva_altura);
         }
 
         private void Datos_SizeChanged(object sender, EventArgs e)

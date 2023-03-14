@@ -18,11 +18,11 @@ namespace Proyecto_Adesco
 
             if (dato == null)
             {
-                sql = "SELECT id, nombres, apellidos, senda, poligono, n_casa, codigo FROM datos ORDER BY nombres ASC";
+                sql = "SELECT id, nombres, apellidos, senda, poligono, n_casa, Telefono, codigo FROM datos ORDER BY nombres ASC";
             }
             else
             {
-                sql = "SELECT id, nombres, apellidos, senda, poligono, n_casa, codigo FROM datos WHERE nombres LIKE '%" + dato + "%' OR apellidos LIKE '%" + dato + "%' OR senda LIKE '%" + dato + "%' OR poligono LIKE '%" + dato + "%' OR n_casa LIKE '%" + dato + "%' OR codigo LIKE '%" + dato + "%' ORDER BY nombres ASC";
+                sql = "SELECT id, nombres, apellidos, senda, poligono, n_casa, Telefono, codigo FROM datos WHERE nombres LIKE '%" + dato + "%' OR apellidos LIKE '%" + dato + "%' OR senda LIKE '%" + dato + "%' OR poligono LIKE '%" + dato + "%' OR n_casa LIKE '%" + dato + "%' OR Telefono LIKE '%" + dato + "%' OR codigo LIKE '%" + dato + "%' ORDER BY nombres ASC";
             }
 
             try
@@ -41,6 +41,7 @@ namespace Proyecto_Adesco
                     _datos.Senda = reader.GetString("senda");
                     _datos.Poligono = reader.GetString("poligono");
                     _datos.N_casa = reader.GetString("n_casa");
+                    _datos.Telefono = int.Parse(reader.GetString(6));
                     _datos.Codigo = reader.GetString("codigo");
 
                     lista.Add(_datos);
@@ -59,7 +60,7 @@ namespace Proyecto_Adesco
         {
             bool bandera = false;
 
-            string sql = "INSERT INTO datos (nombres, apellidos, senda, poligono, n_casa, codigo) VALUES ('"+datos.Nombres+ "', '"+datos.Apellidos+ "', '"+datos.Senda+"', '"+datos.Poligono+"', '"+datos.N_casa+"', '"+datos.Codigo+"')";
+            string sql = "INSERT INTO datos (nombres, apellidos, senda, poligono, n_casa, Telefono, codigo) VALUES ('"+datos.Nombres+ "', '"+datos.Apellidos+ "', '"+datos.Senda+"', '"+datos.Poligono+"', '"+datos.N_casa+ "', '"+datos.Telefono+"', '" + datos.Codigo+"')";
 
             try
             {
@@ -83,7 +84,7 @@ namespace Proyecto_Adesco
         {
             bool bandera = false;
 
-            string sql = "UPDATE datos SET nombres='" + datos.Nombres + "', apellidos='" + datos.Apellidos + "', senda='" + datos.Senda + "', poligono='" + datos.Poligono + "', n_casa='" + datos.N_casa + "', codigo='" + datos.Codigo + "' WHERE id= '" + datos.Id + "'";
+            string sql = "UPDATE datos SET nombres='" + datos.Nombres + "', apellidos='" + datos.Apellidos + "', senda='" + datos.Senda + "', poligono='" + datos.Poligono + "', n_casa='" + datos.N_casa + "', Telefono='" + datos.Telefono + "', codigo='" + datos.Codigo + "' WHERE id= '" + datos.Id + "'";
 
             try
             {

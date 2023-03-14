@@ -16,7 +16,9 @@ namespace Proyecto_Adesco
             private string senda;
             private string poligono;
             private string n_casa;
+            private int telefono;
             private string codigo;
+            
 
             public int Id { get => id; set => id = value; }
             public string Nombres { get => nombres; set => nombres = value; }
@@ -24,8 +26,8 @@ namespace Proyecto_Adesco
             public string Senda { get => senda; set => senda = value; }
             public string Poligono { get => poligono; set => poligono = value; }    
             public string N_casa { get => n_casa; set => n_casa = value; }
+            public int Telefono { get => telefono; set => telefono = value; }
             public string Codigo { get => codigo; set => codigo = value; }
-            
-
+           
     }
 }
