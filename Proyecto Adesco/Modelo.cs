@@ -13,7 +13,7 @@ namespace Proyecto_Adesco
         //-------------------------------verifica si se registro un usuario--------------------------
         public int registro(Usuarios usuario)
         {
-            MySqlConnection conexion = base.GetConnection();
+            MySqlConnection conexion = Conexion.GetConnection();
             conexion.Open();
 
             string sql = "INSERT INTO usuarios (usuario, password, nombre, id_tipo) VALUES(@usuario, @password, @nombre, @id_tipo)";
@@ -33,7 +33,7 @@ namespace Proyecto_Adesco
         public bool existeuser(string usuario)
         {
             MySqlDataReader reader;
-            MySqlConnection conexion = base.GetConnection();
+            MySqlConnection conexion = Conexion.GetConnection();
             conexion.Open();
 
             string sql = "SELECT id from usuarios WHERE usuario LIKE @usuario";
@@ -54,7 +54,7 @@ namespace Proyecto_Adesco
         public Usuarios user(string usuario)
         {
             MySqlDataReader reader;
-            MySqlConnection conexion = base.GetConnection();
+            MySqlConnection conexion = Conexion.GetConnection();
             conexion.Open();
 
             string sql = "SELECT id, password, nombre, id_tipo FROM usuarios WHERE usuario LIKE @usuario";

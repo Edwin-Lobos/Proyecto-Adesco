@@ -27,7 +27,7 @@ namespace Proyecto_Adesco
 
             try
             {
-                MySqlConnection conexion = base.GetConnection();
+                MySqlConnection conexion = Conexion.GetConnection();
                 conexion.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 reader = comando.ExecuteReader();
@@ -64,7 +64,7 @@ namespace Proyecto_Adesco
 
             try
             {
-                MySqlConnection conexion = base.GetConnection();
+                MySqlConnection conexion = Conexion.GetConnection();
                 conexion.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 comando.ExecuteNonQuery();
@@ -88,7 +88,7 @@ namespace Proyecto_Adesco
 
             try
             {
-                MySqlConnection conexion = base.GetConnection();
+                MySqlConnection conexion = Conexion.GetConnection();
                 conexion.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 comando.ExecuteNonQuery();
@@ -112,7 +112,7 @@ namespace Proyecto_Adesco
 
             try
             {
-                MySqlConnection conexion = base.GetConnection();
+                MySqlConnection conexion = Conexion.GetConnection();
                 conexion.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 comando.ExecuteNonQuery();

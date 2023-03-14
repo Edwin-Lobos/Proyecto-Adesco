@@ -11,7 +11,7 @@ namespace Proyecto_Adesco
     internal class Conexion
     {
 
-        public MySqlConnection GetConnection()
+        public static MySqlConnection GetConnection()
         {
 
             string servidor = "sql355.main-hosting.eu";
