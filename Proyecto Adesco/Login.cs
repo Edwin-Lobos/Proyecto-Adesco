@@ -112,7 +112,28 @@ namespace Proyecto_Adesco
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                rjButton1.Focus();
+                string usuario = txtUsuario.Text;
+                string password = txtPassword.Text;
+
+                try
+                {
+                    Control ctrl = new Control();
+                    string respuesta = ctrl.ctrlLogin(usuario, password);
+                    if (respuesta.Length > 0)
+                    {
+                        MessageBox.Show(respuesta, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        Principal frm = new Principal();
+                        frm.Visible = true;
+                        this.Visible = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
