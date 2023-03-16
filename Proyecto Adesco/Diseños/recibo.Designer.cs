@@ -44,9 +44,9 @@
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new Proyecto_Adesco.RJButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.btnImprimir = new Proyecto_Adesco.RJButton();
             this.txtOCargo = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPoligono = new System.Windows.Forms.TextBox();
@@ -56,6 +56,19 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDato = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.txtNum_recibo = new System.Windows.Forms.TextBox();
+            this.btnBuscar3 = new Proyecto_Adesco.RJButton();
+            this.auxReciboBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnLimpiar = new Proyecto_Adesco.RJButton();
+            this.btnGuardar = new Proyecto_Adesco.RJButton();
+            this.btnBuscar = new Proyecto_Adesco.RJButton();
+            this.btnImprimir = new Proyecto_Adesco.RJButton();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,15 +78,29 @@
             this.ncasaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datosBDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDato = new System.Windows.Forms.TextBox();
             this.btnBuscar2 = new Proyecto_Adesco.RJButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.auxReciboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.numreciboDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poligonoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncasaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // picRegresar
@@ -180,6 +207,19 @@
             // 
             this.cbMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMes.FormattingEnabled = true;
+            this.cbMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
             this.cbMes.Location = new System.Drawing.Point(39, 484);
             this.cbMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMes.Name = "cbMes";
@@ -199,12 +239,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLimpiar);
+            this.groupBox1.Controls.Add(this.txtNum_recibo);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.cbMes);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtOCargo);
             this.groupBox1.Controls.Add(this.label7);
@@ -230,31 +273,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnBuscar
+            // checkBox1
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar.BorderRadius = 12;
-            this.btnBuscar.BorderRadius1 = 12;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.BorderSize1 = 0;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(179, 55);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(95, 32);
-            this.btnBuscar.TabIndex = 64;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextColor = System.Drawing.Color.White;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(191, 421);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(60, 20);
+            this.checkBox1.TabIndex = 70;
+            this.checkBox1.Text = "Mora";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(191, 462);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 84);
+            this.listBox1.TabIndex = 69;
             // 
             // txtId
             // 
@@ -264,31 +302,6 @@
             this.txtId.Size = new System.Drawing.Size(84, 22);
             this.txtId.TabIndex = 8;
             this.txtId.Visible = false;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnImprimir.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnImprimir.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnImprimir.BorderRadius = 18;
-            this.btnImprimir.BorderRadius1 = 18;
-            this.btnImprimir.BorderSize = 0;
-            this.btnImprimir.BorderSize1 = 0;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatAppearance.BorderSize = 0;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(76, 583);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(181, 46);
-            this.btnImprimir.TabIndex = 16;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextColor = System.Drawing.Color.White;
-            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // txtOCargo
             // 
@@ -395,13 +408,233 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(445, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(445, 113);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(829, 546);
+            this.dataGridView1.Size = new System.Drawing.Size(829, 243);
             this.dataGridView1.TabIndex = 69;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(685, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 20);
+            this.label10.TabIndex = 71;
+            this.label10.Text = "Buscar";
+            // 
+            // txtDato
+            // 
+            this.txtDato.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDato.Location = new System.Drawing.Point(764, 80);
+            this.txtDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDato.Name = "txtDato";
+            this.txtDato.Size = new System.Drawing.Size(225, 23);
+            this.txtDato.TabIndex = 72;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(36, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(86, 20);
+            this.label11.TabIndex = 73;
+            this.label11.Text = "Regresar";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numreciboDataGridViewTextBoxColumn,
+            this.mesesDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.otroDataGridViewTextBoxColumn,
+            this.nombresDataGridViewTextBoxColumn1,
+            this.apellidosDataGridViewTextBoxColumn1,
+            this.sendaDataGridViewTextBoxColumn1,
+            this.poligonoDataGridViewTextBoxColumn1,
+            this.ncasaDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.auxReciboBindingSource3;
+            this.dataGridView2.Location = new System.Drawing.Point(445, 429);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(829, 213);
+            this.dataGridView2.TabIndex = 74;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(685, 400);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 20);
+            this.label12.TabIndex = 76;
+            this.label12.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(764, 395);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(225, 23);
+            this.txtBuscar.TabIndex = 77;
+            // 
+            // txtNum_recibo
+            // 
+            this.txtNum_recibo.Location = new System.Drawing.Point(216, 278);
+            this.txtNum_recibo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNum_recibo.Name = "txtNum_recibo";
+            this.txtNum_recibo.Size = new System.Drawing.Size(84, 22);
+            this.txtNum_recibo.TabIndex = 76;
+            this.txtNum_recibo.Visible = false;
+            // 
+            // btnBuscar3
+            // 
+            this.btnBuscar3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnBuscar3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnBuscar3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar3.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar3.BorderRadius = 12;
+            this.btnBuscar3.BorderRadius1 = 12;
+            this.btnBuscar3.BorderSize = 0;
+            this.btnBuscar3.BorderSize1 = 0;
+            this.btnBuscar3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar3.FlatAppearance.BorderSize = 0;
+            this.btnBuscar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar3.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar3.Location = new System.Drawing.Point(996, 390);
+            this.btnBuscar3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar3.Name = "btnBuscar3";
+            this.btnBuscar3.Size = new System.Drawing.Size(97, 32);
+            this.btnBuscar3.TabIndex = 78;
+            this.btnBuscar3.Text = "Buscar";
+            this.btnBuscar3.TextColor = System.Drawing.Color.White;
+            this.btnBuscar3.UseVisualStyleBackColor = false;
+            this.btnBuscar3.Click += new System.EventHandler(this.btnBuscar3_Click);
+            // 
+            // auxReciboBindingSource2
+            // 
+            this.auxReciboBindingSource2.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderRadius = 18;
+            this.btnLimpiar.BorderRadius1 = 18;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.BorderSize1 = 0;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(191, 589);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(132, 46);
+            this.btnLimpiar.TabIndex = 77;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderRadius = 18;
+            this.btnGuardar.BorderRadius1 = 18;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.BorderSize1 = 0;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(39, 589);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(132, 46);
+            this.btnGuardar.TabIndex = 75;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextColor = System.Drawing.Color.White;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar.BorderRadius = 12;
+            this.btnBuscar.BorderRadius1 = 12;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.BorderSize1 = 0;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(179, 55);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(95, 32);
+            this.btnBuscar.TabIndex = 64;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextColor = System.Drawing.Color.White;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnImprimir.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnImprimir.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnImprimir.BorderRadius = 18;
+            this.btnImprimir.BorderRadius1 = 18;
+            this.btnImprimir.BorderSize = 0;
+            this.btnImprimir.BorderSize1 = 0;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(764, 649);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(181, 46);
+            this.btnImprimir.TabIndex = 16;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextColor = System.Drawing.Color.White;
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -473,27 +706,6 @@
             // 
             this.datosBDBindingSource.DataSource = typeof(Proyecto_Adesco.DatosBD);
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(685, 85);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 20);
-            this.label10.TabIndex = 71;
-            this.label10.Text = "Buscar";
-            // 
-            // txtDato
-            // 
-            this.txtDato.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDato.Location = new System.Drawing.Point(764, 80);
-            this.txtDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDato.Name = "txtDato";
-            this.txtDato.Size = new System.Drawing.Size(225, 23);
-            this.txtDato.TabIndex = 72;
-            // 
             // btnBuscar2
             // 
             this.btnBuscar2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -511,7 +723,7 @@
             this.btnBuscar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar2.ForeColor = System.Drawing.Color.White;
             this.btnBuscar2.Location = new System.Drawing.Point(997, 75);
-            this.btnBuscar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar2.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar2.Name = "btnBuscar2";
             this.btnBuscar2.Size = new System.Drawing.Size(97, 32);
             this.btnBuscar2.TabIndex = 70;
@@ -520,26 +732,97 @@
             this.btnBuscar2.UseVisualStyleBackColor = false;
             this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
             // 
-            // label11
+            // auxReciboBindingSource1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(36, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 20);
-            this.label11.TabIndex = 73;
-            this.label11.Text = "Regresar";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.auxReciboBindingSource1.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
             // 
-            // listBox1
+            // auxReciboBindingSource
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(216, 452);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
-            this.listBox1.TabIndex = 69;
+            this.auxReciboBindingSource.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            // 
+            // auxReciboBindingSource3
+            // 
+            this.auxReciboBindingSource3.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            // 
+            // numreciboDataGridViewTextBoxColumn
+            // 
+            this.numreciboDataGridViewTextBoxColumn.DataPropertyName = "Num_recibo";
+            this.numreciboDataGridViewTextBoxColumn.HeaderText = "Num_recibo";
+            this.numreciboDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numreciboDataGridViewTextBoxColumn.Name = "numreciboDataGridViewTextBoxColumn";
+            this.numreciboDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mesesDataGridViewTextBoxColumn
+            // 
+            this.mesesDataGridViewTextBoxColumn.DataPropertyName = "Mes_es";
+            this.mesesDataGridViewTextBoxColumn.HeaderText = "Mes_es";
+            this.mesesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mesesDataGridViewTextBoxColumn.Name = "mesesDataGridViewTextBoxColumn";
+            this.mesesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // otroDataGridViewTextBoxColumn
+            // 
+            this.otroDataGridViewTextBoxColumn.DataPropertyName = "Otro";
+            this.otroDataGridViewTextBoxColumn.HeaderText = "Otro";
+            this.otroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.otroDataGridViewTextBoxColumn.Name = "otroDataGridViewTextBoxColumn";
+            this.otroDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombresDataGridViewTextBoxColumn1
+            // 
+            this.nombresDataGridViewTextBoxColumn1.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn1.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nombresDataGridViewTextBoxColumn1.Name = "nombresDataGridViewTextBoxColumn1";
+            this.nombresDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // apellidosDataGridViewTextBoxColumn1
+            // 
+            this.apellidosDataGridViewTextBoxColumn1.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn1.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.apellidosDataGridViewTextBoxColumn1.Name = "apellidosDataGridViewTextBoxColumn1";
+            this.apellidosDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // sendaDataGridViewTextBoxColumn1
+            // 
+            this.sendaDataGridViewTextBoxColumn1.DataPropertyName = "Senda";
+            this.sendaDataGridViewTextBoxColumn1.HeaderText = "Senda";
+            this.sendaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.sendaDataGridViewTextBoxColumn1.Name = "sendaDataGridViewTextBoxColumn1";
+            this.sendaDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // poligonoDataGridViewTextBoxColumn1
+            // 
+            this.poligonoDataGridViewTextBoxColumn1.DataPropertyName = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn1.HeaderText = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.poligonoDataGridViewTextBoxColumn1.Name = "poligonoDataGridViewTextBoxColumn1";
+            this.poligonoDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // ncasaDataGridViewTextBoxColumn1
+            // 
+            this.ncasaDataGridViewTextBoxColumn1.DataPropertyName = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn1.HeaderText = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.ncasaDataGridViewTextBoxColumn1.Name = "ncasaDataGridViewTextBoxColumn1";
+            this.ncasaDataGridViewTextBoxColumn1.Width = 125;
             // 
             // recibo
             // 
@@ -547,11 +830,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1324, 706);
+            this.Controls.Add(this.btnBuscar3);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.picRegresar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtDato);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBuscar2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -560,11 +848,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "recibo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.recibo_FormClosed);
+            this.Load += new System.EventHandler(this.recibo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,5 +904,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private RJButton btnGuardar;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private RJButton btnBuscar3;
+        private System.Windows.Forms.TextBox txtNum_recibo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource;
+        private RJButton btnLimpiar;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource1;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numreciboDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mesesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sendaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poligonoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncasaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource3;
     }
 }
