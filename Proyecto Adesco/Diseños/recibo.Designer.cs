@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recibo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picRegresar = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +44,12 @@
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new Proyecto_Adesco.RJButton();
             this.txtNum_recibo = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new Proyecto_Adesco.RJButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnBuscar = new Proyecto_Adesco.RJButton();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtOCargo = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -57,19 +60,6 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDato = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new Proyecto_Adesco.RJButton();
-            this.btnBuscar3 = new Proyecto_Adesco.RJButton();
-            this.auxReciboBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnLimpiar = new Proyecto_Adesco.RJButton();
-            this.btnGuardar = new Proyecto_Adesco.RJButton();
-            this.btnBuscar = new Proyecto_Adesco.RJButton();
-            this.btnImprimir = new Proyecto_Adesco.RJButton();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,14 +69,10 @@
             this.ncasaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datosBDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnBuscar2 = new Proyecto_Adesco.RJButton();
-            this.auxReciboBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvRecibo = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDato = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.numreciboDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +83,20 @@
             this.sendaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poligonoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ncasaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auxReciboBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new Proyecto_Adesco.RJButton();
+            this.btnBuscar3 = new Proyecto_Adesco.RJButton();
+            this.btnImprimir = new Proyecto_Adesco.RJButton();
+            this.btnBuscar2 = new Proyecto_Adesco.RJButton();
+            this.auxReciboBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvRecibo = new System.Windows.Forms.DataGridView();
             this.numreciboDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,9 +110,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource)).BeginInit();
@@ -292,6 +292,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderRadius = 18;
+            this.btnLimpiar.BorderRadius1 = 18;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.BorderSize1 = 0;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(191, 589);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(132, 46);
+            this.btnLimpiar.TabIndex = 77;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // txtNum_recibo
             // 
             this.txtNum_recibo.Location = new System.Drawing.Point(216, 278);
@@ -300,6 +326,32 @@
             this.txtNum_recibo.Size = new System.Drawing.Size(84, 22);
             this.txtNum_recibo.TabIndex = 76;
             this.txtNum_recibo.Visible = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderRadius = 18;
+            this.btnGuardar.BorderRadius1 = 18;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.BorderSize1 = 0;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(39, 589);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(132, 46);
+            this.btnGuardar.TabIndex = 75;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextColor = System.Drawing.Color.White;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // checkBox1
             // 
@@ -321,6 +373,32 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 84);
             this.listBox1.TabIndex = 69;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar.BorderRadius = 12;
+            this.btnBuscar.BorderRadius1 = 12;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.BorderSize1 = 0;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(179, 55);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(95, 32);
+            this.btnBuscar.TabIndex = 64;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextColor = System.Drawing.Color.White;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtId
             // 
@@ -409,14 +487,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -428,14 +506,14 @@
             this.ncasaDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.datosBDBindingSource;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(85, 64);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -443,6 +521,76 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(829, 243);
             this.dataGridView1.TabIndex = 69;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 41;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sendaDataGridViewTextBoxColumn
+            // 
+            this.sendaDataGridViewTextBoxColumn.DataPropertyName = "Senda";
+            this.sendaDataGridViewTextBoxColumn.HeaderText = "Senda";
+            this.sendaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sendaDataGridViewTextBoxColumn.Name = "sendaDataGridViewTextBoxColumn";
+            this.sendaDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // poligonoDataGridViewTextBoxColumn
+            // 
+            this.poligonoDataGridViewTextBoxColumn.DataPropertyName = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn.HeaderText = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.poligonoDataGridViewTextBoxColumn.Name = "poligonoDataGridViewTextBoxColumn";
+            this.poligonoDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // ncasaDataGridViewTextBoxColumn
+            // 
+            this.ncasaDataGridViewTextBoxColumn.DataPropertyName = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn.HeaderText = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ncasaDataGridViewTextBoxColumn.Name = "ncasaDataGridViewTextBoxColumn";
+            this.ncasaDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // datosBDBindingSource
+            // 
+            this.datosBDBindingSource.DataSource = typeof(Proyecto_Adesco.DatosBD);
             // 
             // label10
             // 
@@ -499,6 +647,90 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(948, 213);
             this.dataGridView2.TabIndex = 74;
+            // 
+            // numreciboDataGridViewTextBoxColumn
+            // 
+            this.numreciboDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numreciboDataGridViewTextBoxColumn.DataPropertyName = "Num_recibo";
+            this.numreciboDataGridViewTextBoxColumn.HeaderText = "Num_recibo";
+            this.numreciboDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numreciboDataGridViewTextBoxColumn.Name = "numreciboDataGridViewTextBoxColumn";
+            // 
+            // mesesDataGridViewTextBoxColumn
+            // 
+            this.mesesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mesesDataGridViewTextBoxColumn.DataPropertyName = "Mes_es";
+            this.mesesDataGridViewTextBoxColumn.HeaderText = "Mes_es";
+            this.mesesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mesesDataGridViewTextBoxColumn.Name = "mesesDataGridViewTextBoxColumn";
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // otroDataGridViewTextBoxColumn
+            // 
+            this.otroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.otroDataGridViewTextBoxColumn.DataPropertyName = "Otro";
+            this.otroDataGridViewTextBoxColumn.HeaderText = "Otro";
+            this.otroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.otroDataGridViewTextBoxColumn.Name = "otroDataGridViewTextBoxColumn";
+            // 
+            // nombresDataGridViewTextBoxColumn1
+            // 
+            this.nombresDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombresDataGridViewTextBoxColumn1.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn1.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nombresDataGridViewTextBoxColumn1.Name = "nombresDataGridViewTextBoxColumn1";
+            // 
+            // apellidosDataGridViewTextBoxColumn1
+            // 
+            this.apellidosDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellidosDataGridViewTextBoxColumn1.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn1.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.apellidosDataGridViewTextBoxColumn1.Name = "apellidosDataGridViewTextBoxColumn1";
+            // 
+            // sendaDataGridViewTextBoxColumn1
+            // 
+            this.sendaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sendaDataGridViewTextBoxColumn1.DataPropertyName = "Senda";
+            this.sendaDataGridViewTextBoxColumn1.HeaderText = "Senda";
+            this.sendaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.sendaDataGridViewTextBoxColumn1.Name = "sendaDataGridViewTextBoxColumn1";
+            // 
+            // poligonoDataGridViewTextBoxColumn1
+            // 
+            this.poligonoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.poligonoDataGridViewTextBoxColumn1.DataPropertyName = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn1.HeaderText = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.poligonoDataGridViewTextBoxColumn1.Name = "poligonoDataGridViewTextBoxColumn1";
+            // 
+            // ncasaDataGridViewTextBoxColumn1
+            // 
+            this.ncasaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ncasaDataGridViewTextBoxColumn1.DataPropertyName = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn1.HeaderText = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.ncasaDataGridViewTextBoxColumn1.Name = "ncasaDataGridViewTextBoxColumn1";
+            // 
+            // auxReciboBindingSource3
+            // 
+            this.auxReciboBindingSource3.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
             // 
             // label12
             // 
@@ -573,88 +805,6 @@
             this.btnBuscar3.UseVisualStyleBackColor = false;
             this.btnBuscar3.Click += new System.EventHandler(this.btnBuscar3_Click);
             // 
-            // auxReciboBindingSource3
-            // 
-            this.auxReciboBindingSource3.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLimpiar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnLimpiar.BorderRadius = 18;
-            this.btnLimpiar.BorderRadius1 = 18;
-            this.btnLimpiar.BorderSize = 0;
-            this.btnLimpiar.BorderSize1 = 0;
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(191, 589);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(132, 46);
-            this.btnLimpiar.TabIndex = 77;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.TextColor = System.Drawing.Color.White;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuardar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnGuardar.BorderRadius = 18;
-            this.btnGuardar.BorderRadius1 = 18;
-            this.btnGuardar.BorderSize = 0;
-            this.btnGuardar.BorderSize1 = 0;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(39, 589);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(132, 46);
-            this.btnGuardar.TabIndex = 75;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextColor = System.Drawing.Color.White;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar.BorderRadius = 12;
-            this.btnBuscar.BorderRadius1 = 12;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.BorderSize1 = 0;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(179, 55);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(95, 32);
-            this.btnBuscar.TabIndex = 64;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextColor = System.Drawing.Color.White;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // btnImprimir
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -680,76 +830,6 @@
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            this.idDataGridViewTextBoxColumn.Width = 41;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nombresDataGridViewTextBoxColumn
-            // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            this.nombresDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // apellidosDataGridViewTextBoxColumn
-            // 
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sendaDataGridViewTextBoxColumn
-            // 
-            this.sendaDataGridViewTextBoxColumn.DataPropertyName = "Senda";
-            this.sendaDataGridViewTextBoxColumn.HeaderText = "Senda";
-            this.sendaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sendaDataGridViewTextBoxColumn.Name = "sendaDataGridViewTextBoxColumn";
-            this.sendaDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // poligonoDataGridViewTextBoxColumn
-            // 
-            this.poligonoDataGridViewTextBoxColumn.DataPropertyName = "Poligono";
-            this.poligonoDataGridViewTextBoxColumn.HeaderText = "Poligono";
-            this.poligonoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.poligonoDataGridViewTextBoxColumn.Name = "poligonoDataGridViewTextBoxColumn";
-            this.poligonoDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // ncasaDataGridViewTextBoxColumn
-            // 
-            this.ncasaDataGridViewTextBoxColumn.DataPropertyName = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn.HeaderText = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ncasaDataGridViewTextBoxColumn.Name = "ncasaDataGridViewTextBoxColumn";
-            this.ncasaDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // datosBDBindingSource
-            // 
-            this.datosBDBindingSource.DataSource = typeof(Proyecto_Adesco.DatosBD);
             // 
             // btnBuscar2
             // 
@@ -850,86 +930,6 @@
             this.dgvRecibo.RowTemplate.Height = 24;
             this.dgvRecibo.Size = new System.Drawing.Size(959, 150);
             this.dgvRecibo.TabIndex = 83;
-            // 
-            // numreciboDataGridViewTextBoxColumn
-            // 
-            this.numreciboDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numreciboDataGridViewTextBoxColumn.DataPropertyName = "Num_recibo";
-            this.numreciboDataGridViewTextBoxColumn.HeaderText = "Num_recibo";
-            this.numreciboDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numreciboDataGridViewTextBoxColumn.Name = "numreciboDataGridViewTextBoxColumn";
-            // 
-            // mesesDataGridViewTextBoxColumn
-            // 
-            this.mesesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mesesDataGridViewTextBoxColumn.DataPropertyName = "Mes_es";
-            this.mesesDataGridViewTextBoxColumn.HeaderText = "Mes_es";
-            this.mesesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mesesDataGridViewTextBoxColumn.Name = "mesesDataGridViewTextBoxColumn";
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // otroDataGridViewTextBoxColumn
-            // 
-            this.otroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.otroDataGridViewTextBoxColumn.DataPropertyName = "Otro";
-            this.otroDataGridViewTextBoxColumn.HeaderText = "Otro";
-            this.otroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.otroDataGridViewTextBoxColumn.Name = "otroDataGridViewTextBoxColumn";
-            // 
-            // nombresDataGridViewTextBoxColumn1
-            // 
-            this.nombresDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombresDataGridViewTextBoxColumn1.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn1.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nombresDataGridViewTextBoxColumn1.Name = "nombresDataGridViewTextBoxColumn1";
-            // 
-            // apellidosDataGridViewTextBoxColumn1
-            // 
-            this.apellidosDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.apellidosDataGridViewTextBoxColumn1.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn1.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.apellidosDataGridViewTextBoxColumn1.Name = "apellidosDataGridViewTextBoxColumn1";
-            // 
-            // sendaDataGridViewTextBoxColumn1
-            // 
-            this.sendaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sendaDataGridViewTextBoxColumn1.DataPropertyName = "Senda";
-            this.sendaDataGridViewTextBoxColumn1.HeaderText = "Senda";
-            this.sendaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.sendaDataGridViewTextBoxColumn1.Name = "sendaDataGridViewTextBoxColumn1";
-            // 
-            // poligonoDataGridViewTextBoxColumn1
-            // 
-            this.poligonoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.poligonoDataGridViewTextBoxColumn1.DataPropertyName = "Poligono";
-            this.poligonoDataGridViewTextBoxColumn1.HeaderText = "Poligono";
-            this.poligonoDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.poligonoDataGridViewTextBoxColumn1.Name = "poligonoDataGridViewTextBoxColumn1";
-            // 
-            // ncasaDataGridViewTextBoxColumn1
-            // 
-            this.ncasaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ncasaDataGridViewTextBoxColumn1.DataPropertyName = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn1.HeaderText = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.ncasaDataGridViewTextBoxColumn1.Name = "ncasaDataGridViewTextBoxColumn1";
             // 
             // numreciboDataGridViewTextBoxColumn1
             // 
@@ -1043,9 +1043,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource)).EndInit();
