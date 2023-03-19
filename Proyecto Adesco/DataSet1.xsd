@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.Proyecto_Adesco.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cn (Settings)" PropertyReference="ApplicationSettings.Proyecto_Adesco.Properties.Settings.GlobalReference.Default.cn" Provider="System.Data.Odbc" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="datosTableAdapter" GeneratorDataComponentClassName="datosTableAdapter" Name="datos" UserDataComponentName="datosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="u433272284_adesco.datos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="cn (Settings)" DbObjectName="u433272284_adesco.datos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `datos` WHERE (((? = 1 AND `id` IS NULL) OR (`id` = ?)) AND (`nombres` = ?) AND (`apellidos` = ?) AND (`senda` = ?) AND (`poligono` = ?) AND (`n_casa` = ?) AND (`Telefono` = ?) AND (`codigo` = ?))</CommandText>
@@ -88,50 +88,50 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="datos" msprop:Generator_RowEvHandlerName="datosRowChangeEventHandler" msprop:Generator_RowDeletedName="datosRowDeleted" msprop:Generator_RowDeletingName="datosRowDeleting" msprop:Generator_RowEvArgName="datosRowChangeEvent" msprop:Generator_TablePropName="datos" msprop:Generator_RowChangedName="datosRowChanged" msprop:Generator_RowChangingName="datosRowChanging" msprop:Generator_TableClassName="datosDataTable" msprop:Generator_RowClassName="datosRow" msprop:Generator_TableVarName="tabledatos" msprop:Generator_UserTableName="datos">
+        <xs:element name="datos" msprop:Generator_RowClassName="datosRow" msprop:Generator_RowEvHandlerName="datosRowChangeEventHandler" msprop:Generator_RowDeletedName="datosRowDeleted" msprop:Generator_RowDeletingName="datosRowDeleting" msprop:Generator_RowEvArgName="datosRowChangeEvent" msprop:Generator_TablePropName="datos" msprop:Generator_RowChangedName="datosRowChanged" msprop:Generator_UserTableName="datos" msprop:Generator_RowChangingName="datosRowChanging" msprop:Generator_TableClassName="datosDataTable" msprop:Generator_TableVarName="tabledatos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
-              <xs:element name="nombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_UserColumnName="nombres">
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" minOccurs="0" />
+              <xs:element name="nombres" msprop:Generator_UserColumnName="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="160" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="apellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_UserColumnName="apellidos">
+              <xs:element name="apellidos" msprop:Generator_UserColumnName="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnVarNameInTable="columnapellidos">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="160" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="senda" msprop:Generator_ColumnPropNameInRow="senda" msprop:Generator_ColumnPropNameInTable="sendaColumn" msprop:Generator_ColumnVarNameInTable="columnsenda" msprop:Generator_UserColumnName="senda">
+              <xs:element name="senda" msprop:Generator_UserColumnName="senda" msprop:Generator_ColumnPropNameInTable="sendaColumn" msprop:Generator_ColumnPropNameInRow="senda" msprop:Generator_ColumnVarNameInTable="columnsenda">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="poligono" msprop:Generator_ColumnPropNameInRow="poligono" msprop:Generator_ColumnPropNameInTable="poligonoColumn" msprop:Generator_ColumnVarNameInTable="columnpoligono" msprop:Generator_UserColumnName="poligono">
+              <xs:element name="poligono" msprop:Generator_UserColumnName="poligono" msprop:Generator_ColumnPropNameInTable="poligonoColumn" msprop:Generator_ColumnPropNameInRow="poligono" msprop:Generator_ColumnVarNameInTable="columnpoligono">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="160" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="n_casa" msprop:Generator_ColumnPropNameInRow="n_casa" msprop:Generator_ColumnPropNameInTable="n_casaColumn" msprop:Generator_ColumnVarNameInTable="columnn_casa" msprop:Generator_UserColumnName="n_casa">
+              <xs:element name="n_casa" msprop:Generator_UserColumnName="n_casa" msprop:Generator_ColumnPropNameInTable="n_casaColumn" msprop:Generator_ColumnPropNameInRow="n_casa" msprop:Generator_ColumnVarNameInTable="columnn_casa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_UserColumnName="Telefono" type="xs:int" />
-              <xs:element name="codigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_UserColumnName="codigo">
+              <xs:element name="Telefono" msprop:Generator_UserColumnName="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" type="xs:int" />
+              <xs:element name="codigo" msprop:Generator_UserColumnName="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="160" />

@@ -22,15 +22,5 @@ namespace Proyecto_Adesco.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=MySQL DataSource;uid=u433272284_edwin;pwd=$8k4W~!qb4P")]
-        public string ConnectionString {
-            get {
-                return ((string)(this["ConnectionString"]));
-            }
-        }
     }
 }

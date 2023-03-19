@@ -976,8 +976,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.Odbc.OdbcConnection();
-            this._connection.ConnectionString = global::Proyecto_Adesco.Properties.Settings.Default.ConnectionString;
+           
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

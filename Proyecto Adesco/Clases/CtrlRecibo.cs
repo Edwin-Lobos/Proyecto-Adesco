@@ -9,6 +9,7 @@ namespace Proyecto_Adesco.Clases
 {
     internal class CtrlRecibo : Conexion
     {
+        
         //---------------Conexión con la base para el módulo de registro de personas------------------
         public List<object> consulta(string datoRC)
         {
@@ -18,11 +19,11 @@ namespace Proyecto_Adesco.Clases
 
             if (datoRC == null)
             {
-                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro FROM recibos ORDER BY nombres ASC";
+                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro FROM recibos ORDER BY nombres ASC";
             }
             else
             {
-                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro FROM recibos WHERE nombres LIKE '%" + datoRC + "%' OR apellidos LIKE '%" + datoRC + "%' OR senda LIKE '%" + datoRC + "%' OR poligono LIKE '%" + datoRC + "%' OR n_casa LIKE '%" + datoRC + "%' OR cantidad LIKE '%" + datoRC + "%' OR mes_es LIKE '%" + datoRC + "%' OR otro LIKE '%" + datoRC + "%' ORDER BY nombres ASC";
+                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro FROM recibos WHERE nombres LIKE '%" + datoRC + "%' OR apellidos LIKE '%" + datoRC + "%' OR senda LIKE '%" + datoRC + "%' OR poligono LIKE '%" + datoRC + "%' OR n_casa LIKE '%" + datoRC + "%' OR cantidad LIKE '%" + datoRC + "%' OR mes_es LIKE '%" + datoRC + "%' OR total LIKE '%" + datoRC + "%' OR otro LIKE '%" + datoRC + "%' ORDER BY nombres ASC";
             }
 
             try
@@ -37,7 +38,7 @@ namespace Proyecto_Adesco.Clases
                     AuxRecibo _recibo = new AuxRecibo();
                     _recibo.Num_recibo = int.Parse(reader.GetString(0));
                     _recibo.Mes_es = reader.GetString("mes_es");
-                    _recibo.Total = double.Parse(reader[2].ToString());
+                    //_recibo.Total = double.Parse(reader[2].ToString());
                     _recibo.Cantidad = double.Parse(reader[3].ToString());
                     _recibo.Otro = double.Parse(reader[4].ToString());
                     _recibo.Nombres = reader.GetString("nombres");
@@ -62,7 +63,7 @@ namespace Proyecto_Adesco.Clases
         {
             bool bandera = false;
 
-            string sql = "INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro) VALUES ('" + datoRC.Nombres + "', '" + datoRC.Apellidos + "', '" + datoRC.Senda + "', '" + datoRC.Poligono + "', '" + datoRC.N_casa + "', '" + datoRC.Cantidad + "', '" + datoRC.Mes_es + "', '" + datoRC.Otro + "')";
+            string sql = "INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro) VALUES ('" + datoRC.Nombres + "', '" + datoRC.Apellidos + "', '" + datoRC.Senda + "', '" + datoRC.Poligono + "', '" + datoRC.N_casa + "', '" + datoRC.Cantidad + "', '" + datoRC.Mes_es + "', '" + "', '" + datoRC.Total +  datoRC.Otro + "')";
 
             try
             {
@@ -88,7 +89,7 @@ namespace Proyecto_Adesco.Clases
         {
             bool bandera = false;
 
-            string sql = "DELETE FROM datos WHERE id= '" + Num_id + "'";
+            string sql = "DELETE FROM recibos WHERE Num_recibo= '" + Num_id + "'";
 
             try
             {
