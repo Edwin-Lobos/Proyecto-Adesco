@@ -562,66 +562,59 @@
             // 
             // nombresDataGridViewTextBoxColumn
             // 
-            this.nombresDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nombresDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
             this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
             this.nombresDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            this.nombresDataGridViewTextBoxColumn.Width = 125;
             // 
             // apellidosDataGridViewTextBoxColumn
             // 
-            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
             this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
             this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.Width = 125;
             // 
             // sendaDataGridViewTextBoxColumn
             // 
-            this.sendaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.sendaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sendaDataGridViewTextBoxColumn.DataPropertyName = "Senda";
             this.sendaDataGridViewTextBoxColumn.HeaderText = "Senda";
             this.sendaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sendaDataGridViewTextBoxColumn.Name = "sendaDataGridViewTextBoxColumn";
-            this.sendaDataGridViewTextBoxColumn.Width = 63;
             // 
             // poligonoDataGridViewTextBoxColumn
             // 
-            this.poligonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.poligonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.poligonoDataGridViewTextBoxColumn.DataPropertyName = "Poligono";
             this.poligonoDataGridViewTextBoxColumn.HeaderText = "Poligono";
             this.poligonoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.poligonoDataGridViewTextBoxColumn.Name = "poligonoDataGridViewTextBoxColumn";
-            this.poligonoDataGridViewTextBoxColumn.Width = 63;
             // 
             // ncasaDataGridViewTextBoxColumn
             // 
-            this.ncasaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ncasaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ncasaDataGridViewTextBoxColumn.DataPropertyName = "N_casa";
             this.ncasaDataGridViewTextBoxColumn.HeaderText = "N_casa";
             this.ncasaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ncasaDataGridViewTextBoxColumn.Name = "ncasaDataGridViewTextBoxColumn";
-            this.ncasaDataGridViewTextBoxColumn.Width = 63;
             // 
             // telefonoDataGridViewTextBoxColumn
             // 
-            this.telefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.telefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.Width = 125;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
-            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
             this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
             this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Width = 87;
             // 
             // Datos
             // 

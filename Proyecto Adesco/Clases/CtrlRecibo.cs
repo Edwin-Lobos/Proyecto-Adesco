@@ -1,15 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Proyecto_Adesco.Clases
 {
     internal class CtrlRecibo : Conexion
     {
-        
+
         //---------------Conexión con la base para el módulo de registro de personas------------------
         public List<object> consulta(string datoRC)
         {
@@ -19,11 +21,11 @@ namespace Proyecto_Adesco.Clases
 
             if (datoRC == null)
             {
-                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro FROM recibos ORDER BY nombres ASC";
+                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro FROM recibos ORDER BY Num_recibo ASC";
             }
             else
             {
-                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro FROM recibos WHERE nombres LIKE '%" + datoRC + "%' OR apellidos LIKE '%" + datoRC + "%' OR senda LIKE '%" + datoRC + "%' OR poligono LIKE '%" + datoRC + "%' OR n_casa LIKE '%" + datoRC + "%' OR cantidad LIKE '%" + datoRC + "%' OR mes_es LIKE '%" + datoRC + "%' OR total LIKE '%" + datoRC + "%' OR otro LIKE '%" + datoRC + "%' ORDER BY nombres ASC";
+                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro FROM recibos WHERE nombres LIKE '%" + datoRC + "%' OR apellidos LIKE '%" + datoRC + "%' OR senda LIKE '%" + datoRC + "%' OR poligono LIKE '%" + datoRC + "%' OR n_casa LIKE '%" + datoRC + "%' OR cantidad LIKE '%" + datoRC + "%' OR mes_es LIKE '%" + datoRC + "%' OR total LIKE '%" + datoRC + "%' OR otro LIKE '%" + datoRC + "%' ORDER BY Num_recibo ASC";
             }
 
             try
@@ -38,18 +40,21 @@ namespace Proyecto_Adesco.Clases
                     AuxRecibo _recibo = new AuxRecibo();
                     _recibo.Num_recibo = int.Parse(reader.GetString(0));
                     _recibo.Mes_es = reader.GetString("mes_es");
-                    //_recibo.Total = double.Parse(reader[2].ToString());
-                    _recibo.Cantidad = double.Parse(reader[3].ToString());
-                    _recibo.Otro = double.Parse(reader[4].ToString());
+                    double total;
+                    bool success = double.TryParse(reader[8].ToString(), out total);
+                    if (success)
+                    {
+                        _recibo.Total = total;
+                    }
+                    _recibo.Cantidad = double.Parse(reader[6].ToString());
+                    _recibo.Otro = double.Parse(reader[9].ToString());
                     _recibo.Nombres = reader.GetString("nombres");
                     _recibo.Apellidos = reader.GetString("apellidos");
                     _recibo.Senda = reader.GetString("senda");
                     _recibo.Poligono = reader.GetString("poligono");
                     _recibo.N_casa = reader.GetString("n_casa");
-                             
-                    
-                    lista.Add(_recibo);
 
+                    lista.Add(_recibo);
                 }
             }
             catch (MySqlException ex)
@@ -59,31 +64,42 @@ namespace Proyecto_Adesco.Clases
             return lista;
         }
 
-        public bool insertar(AuxRecibo datoRC)
+
+
+
+
+
+
+
+        public void Insertar(AuxRecibo persona)
         {
-            bool bandera = false;
-
-            string sql = "INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro) VALUES ('" + datoRC.Nombres + "', '" + datoRC.Apellidos + "', '" + datoRC.Senda + "', '" + datoRC.Poligono + "', '" + datoRC.N_casa + "', '" + datoRC.Cantidad + "', '" + datoRC.Mes_es + "', '" + "', '" + datoRC.Total +  datoRC.Otro + "')";
-
             try
             {
                 MySqlConnection conexion = Conexion.GetConnection();
                 conexion.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
+
+                string query = "INSERT INTO Persona (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @total, @otro)";
+                MySqlCommand comando = new MySqlCommand(query, conexion);
+                comando.Parameters.AddWithValue("@nombres", persona.Nombres);
+                comando.Parameters.AddWithValue("@apellidos", persona.Apellidos);
+                comando.Parameters.AddWithValue("@senda", persona.Senda);
+                comando.Parameters.AddWithValue("@poligono", persona.Poligono);
+                comando.Parameters.AddWithValue("@n_casa", persona.N_casa);
+                comando.Parameters.AddWithValue("@cantidad", persona.Cantidad);
+                comando.Parameters.AddWithValue("@mes_es", persona.Mes_es);
+                comando.Parameters.AddWithValue("@total", persona.Total);
+                comando.Parameters.AddWithValue("@otro", persona.Otro);
+
                 comando.ExecuteNonQuery();
-                bandera = true;
-
-
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.Message.ToString());
-                bandera = false;
+                MessageBox.Show("Error");
+                
             }
-            return bandera;
+           
         }
 
-       
 
         public bool eliminar(int Num_id)
         {
