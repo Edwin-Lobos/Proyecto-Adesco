@@ -10,6 +10,7 @@ namespace Proyecto_Adesco.Clases
     {
         private int num_recibo;
         private string mes_es;
+        private string pendientes;
         private double total, cantidad, otro;
         private string nombres, apellidos, senda, poligono, n_casa;
 
@@ -23,5 +24,6 @@ namespace Proyecto_Adesco.Clases
         public string Senda { get => senda; set => senda = value; }
         public string Poligono { get => poligono; set => poligono = value; }
         public string N_casa { get => n_casa; set => n_casa = value; }
+        public string Pendientes { get => pendientes; set => pendientes = value; }
     }
 }

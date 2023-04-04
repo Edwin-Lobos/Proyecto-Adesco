@@ -8,12 +8,11 @@ using System.IO;
 using System.Security.AccessControl;
 using System.Windows.Forms;
 
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
 using Microsoft.ReportingServices.Diagnostics.Internal;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Data;
+using System.Globalization;
 
 namespace Proyecto_Adesco
 {
@@ -109,6 +108,22 @@ namespace Proyecto_Adesco
                 fila.Cells["mes_es"].Value = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
                 fila.Cells["otro"].Value = txtOCargo.Text;
                 fila.Cells["total"].Value = decimal.Parse(txtCantidad.Text) + decimal.Parse(txtOCargo.Text);
+                fila.Cells["pendientes"].Value = "Sí"; // Establecer un valor predeterminado para la columna Pendiente
+
+
+                // Actualizar el valor de la columna Pendiente en función del mes ingresado
+                string mesSeleccionado = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
+                DateTime fechaSeleccionada = DateTime.ParseExact(mesSeleccionado, "MMMM", CultureInfo.CurrentCulture);
+                DateTime siguienteMes = DateTime.Now.AddMonths(1);
+
+                if (fechaSeleccionada.Year == siguienteMes.Year && fechaSeleccionada.Month == siguienteMes.Month)
+                {
+                    fila.Cells["pendientes"].Value = "Sí";
+                }
+                else
+                {
+                    fila.Cells["pendientes"].Value = "No";
+                }
 
 
                 // Enviar los datos a la base de datos
@@ -120,7 +135,7 @@ namespace Proyecto_Adesco
                         // Verificar si el valor de la columna total es nulo
                         if (row.Cells["nombres"].Value != null)
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total)", conexion);
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, pendientes) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @pendientes)", conexion);
                             cmd.Parameters.AddWithValue("@nombres", row.Cells["nombres"].Value);
                             cmd.Parameters.AddWithValue("@apellidos", row.Cells["apellidos"].Value);
                             cmd.Parameters.AddWithValue("@senda", row.Cells["senda"].Value);
@@ -130,6 +145,7 @@ namespace Proyecto_Adesco
                             cmd.Parameters.AddWithValue("@mes_es", row.Cells["mes_es"].Value);
                             cmd.Parameters.AddWithValue("@otro", row.Cells["otro"].Value);
                             cmd.Parameters.AddWithValue("@total", row.Cells["total"].Value);
+                            cmd.Parameters.AddWithValue("@pendientes", row.Cells["pendientes"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -138,6 +154,7 @@ namespace Proyecto_Adesco
                 }
 
                 MessageBox.Show("Los datos se han guardado correctamente.");
+
             }
         }
 
@@ -237,32 +254,9 @@ namespace Proyecto_Adesco
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            SaveFileDialog guardar = new SaveFileDialog();
-            guardar.FileName = DateTime.Now.ToString("dd-MM-yyyy.pdf");
-           
-
-            string paginahtml_texto = "<table><tr><td><Hola Mundo></td></tr></table>";
-
-            if (guardar.ShowDialog() == DialogResult.OK)
-            {
-                using(FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
-                {
-                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
-                    pdfDoc.Add(new Phrase(""));
-
-                    using (StringReader sr = new StringReader(paginahtml_texto))
-                    {
-                        XMLWorkerHelper.GetInstance()
-                            .ParseXHtml(writer, pdfDoc, sr);
-                    }
-                    pdfDoc.Close();
-                    stream.Close();
-                }
-                
-
-            }
+            Form recibovs = new ReciboVS();
+            recibovs.Show();
+            this.Visible = false;
         }
 
         private void btnLimpiar_Click_1(object sender, EventArgs e)
