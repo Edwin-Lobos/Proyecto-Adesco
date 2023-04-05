@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recibo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNum_recibo = new System.Windows.Forms.TextBox();
             this.lbxMes_es = new System.Windows.Forms.ListBox();
@@ -57,6 +58,7 @@
             this.txtDato = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.auxReciboBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -75,6 +77,12 @@
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mes_es = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pendientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auxReciboBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnImprimir = new Proyecto_Adesco.RJButton();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,46 +94,41 @@
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datosBDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBuscar2 = new Proyecto_Adesco.RJButton();
-            this.auxReciboBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.btnEliminar = new Proyecto_Adesco.RJButton();
             this.btnBuscar3 = new Proyecto_Adesco.RJButton();
             this.btnLimpiar = new Proyecto_Adesco.RJButton();
             this.btnGuardar = new Proyecto_Adesco.RJButton();
             this.btnBuscar = new Proyecto_Adesco.RJButton();
-            this.auxReciboBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.auxReciboBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.numreciboDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombresDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sendaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.poligonoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ncasaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pendientesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poligonoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncasaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource6)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource7)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -153,28 +156,27 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Location = new System.Drawing.Point(59, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(44, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(367, 741);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(275, 602);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtNum_recibo
             // 
-            this.txtNum_recibo.Location = new System.Drawing.Point(249, 334);
-            this.txtNum_recibo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNum_recibo.Location = new System.Drawing.Point(187, 271);
+            this.txtNum_recibo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNum_recibo.Name = "txtNum_recibo";
-            this.txtNum_recibo.Size = new System.Drawing.Size(84, 22);
+            this.txtNum_recibo.Size = new System.Drawing.Size(64, 20);
             this.txtNum_recibo.TabIndex = 99;
             this.txtNum_recibo.Visible = false;
             // 
             // lbxMes_es
             // 
             this.lbxMes_es.FormattingEnabled = true;
-            this.lbxMes_es.ItemHeight = 16;
             this.lbxMes_es.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
@@ -188,11 +190,11 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.lbxMes_es.Location = new System.Drawing.Point(48, 434);
-            this.lbxMes_es.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbxMes_es.Location = new System.Drawing.Point(36, 353);
+            this.lbxMes_es.Margin = new System.Windows.Forms.Padding(2);
             this.lbxMes_es.Name = "lbxMes_es";
             this.lbxMes_es.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbxMes_es.Size = new System.Drawing.Size(119, 148);
+            this.lbxMes_es.Size = new System.Drawing.Size(90, 121);
             this.lbxMes_es.TabIndex = 96;
             // 
             // label8
@@ -200,18 +202,19 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 412);
+            this.label8.Location = new System.Drawing.Point(33, 335);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(231, 20);
+            this.label8.Size = new System.Drawing.Size(193, 16);
             this.label8.TabIndex = 95;
             this.label8.Text = "Seleccione meses a pagar";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(249, 295);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Location = new System.Drawing.Point(187, 240);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(84, 22);
+            this.txtId.Size = new System.Drawing.Size(64, 20);
             this.txtId.TabIndex = 85;
             this.txtId.Visible = false;
             // 
@@ -220,19 +223,20 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 594);
+            this.label6.Location = new System.Drawing.Point(31, 483);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 20);
+            this.label6.Size = new System.Drawing.Size(82, 16);
             this.label6.TabIndex = 91;
             this.label6.Text = "Otro Cargo";
             // 
             // txtOCargo
             // 
             this.txtOCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOCargo.Location = new System.Drawing.Point(45, 617);
-            this.txtOCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOCargo.Location = new System.Drawing.Point(34, 501);
+            this.txtOCargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtOCargo.Name = "txtOCargo";
-            this.txtOCargo.Size = new System.Drawing.Size(135, 23);
+            this.txtOCargo.Size = new System.Drawing.Size(102, 20);
             this.txtOCargo.TabIndex = 84;
             // 
             // label7
@@ -240,9 +244,10 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 160);
+            this.label7.Location = new System.Drawing.Point(33, 130);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 20);
+            this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 94;
             this.label7.Text = "Apellidos";
             // 
@@ -251,37 +256,38 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(44, 344);
+            this.label9.Location = new System.Drawing.Point(33, 280);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 20);
+            this.label9.Size = new System.Drawing.Size(69, 16);
             this.label9.TabIndex = 92;
             this.label9.Text = "Cantidad";
             // 
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(48, 367);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantidad.Location = new System.Drawing.Point(36, 298);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(135, 23);
+            this.txtCantidad.Size = new System.Drawing.Size(102, 20);
             this.txtCantidad.TabIndex = 83;
             // 
             // txtPoligono
             // 
             this.txtPoligono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoligono.Location = new System.Drawing.Point(198, 241);
-            this.txtPoligono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPoligono.Location = new System.Drawing.Point(148, 196);
+            this.txtPoligono.Margin = new System.Windows.Forms.Padding(2);
             this.txtPoligono.Name = "txtPoligono";
-            this.txtPoligono.Size = new System.Drawing.Size(135, 23);
+            this.txtPoligono.Size = new System.Drawing.Size(102, 20);
             this.txtPoligono.TabIndex = 82;
             // 
             // txtSenda
             // 
             this.txtSenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenda.Location = new System.Drawing.Point(48, 241);
-            this.txtSenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSenda.Location = new System.Drawing.Point(36, 196);
+            this.txtSenda.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenda.Name = "txtSenda";
-            this.txtSenda.Size = new System.Drawing.Size(135, 23);
+            this.txtSenda.Size = new System.Drawing.Size(102, 20);
             this.txtSenda.TabIndex = 81;
             // 
             // label2
@@ -289,9 +295,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 94);
+            this.label2.Location = new System.Drawing.Point(33, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 87;
             this.label2.Text = "Nombres";
             // 
@@ -300,28 +307,29 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 36);
+            this.label1.Location = new System.Drawing.Point(33, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 86;
             this.label1.Text = "Codigo";
             // 
             // txtN_casa
             // 
             this.txtN_casa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtN_casa.Location = new System.Drawing.Point(48, 301);
-            this.txtN_casa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtN_casa.Location = new System.Drawing.Point(36, 245);
+            this.txtN_casa.Margin = new System.Windows.Forms.Padding(2);
             this.txtN_casa.Name = "txtN_casa";
-            this.txtN_casa.Size = new System.Drawing.Size(135, 23);
+            this.txtN_casa.Size = new System.Drawing.Size(102, 20);
             this.txtN_casa.TabIndex = 80;
             // 
             // txtApellidos
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(48, 182);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtApellidos.Location = new System.Drawing.Point(36, 148);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(263, 23);
+            this.txtApellidos.Size = new System.Drawing.Size(198, 20);
             this.txtApellidos.TabIndex = 79;
             // 
             // label4
@@ -329,9 +337,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 217);
+            this.label4.Location = new System.Drawing.Point(146, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 89;
             this.label4.Text = "Poligono";
             // 
@@ -340,9 +349,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 278);
+            this.label3.Location = new System.Drawing.Point(33, 226);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 88;
             this.label3.Text = "N° Casa";
             // 
@@ -351,28 +361,29 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 219);
+            this.label5.Location = new System.Drawing.Point(33, 178);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 90;
             this.label5.Text = "Senda";
             // 
             // txtNombres
             // 
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(48, 116);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombres.Location = new System.Drawing.Point(36, 94);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(263, 23);
+            this.txtNombres.Size = new System.Drawing.Size(198, 20);
             this.txtNombres.TabIndex = 78;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(48, 59);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodigo.Location = new System.Drawing.Point(36, 48);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(135, 23);
+            this.txtCodigo.Size = new System.Drawing.Size(102, 20);
             this.txtCodigo.TabIndex = 77;
             // 
             // dataGridView1
@@ -408,12 +419,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 100);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 81);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(888, 252);
+            this.dataGridView1.Size = new System.Drawing.Size(666, 205);
             this.dataGridView1.TabIndex = 69;
             // 
             // label10
@@ -421,9 +432,10 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(320, 54);
+            this.label10.Location = new System.Drawing.Point(240, 44);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 20);
+            this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 71;
             this.label10.Text = "Buscar";
             // 
@@ -431,10 +443,10 @@
             // 
             this.txtDato.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDato.Location = new System.Drawing.Point(395, 54);
-            this.txtDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDato.Location = new System.Drawing.Point(296, 44);
+            this.txtDato.Margin = new System.Windows.Forms.Padding(2);
             this.txtDato.Name = "txtDato";
-            this.txtDato.Size = new System.Drawing.Size(225, 23);
+            this.txtDato.Size = new System.Drawing.Size(170, 20);
             this.txtDato.TabIndex = 72;
             // 
             // label11
@@ -442,9 +454,10 @@
             this.label11.AutoSize = true;
             this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(36, 11);
+            this.label11.Location = new System.Drawing.Point(27, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 20);
+            this.label11.Size = new System.Drawing.Size(72, 16);
             this.label11.TabIndex = 73;
             this.label11.Text = "Regresar";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -455,24 +468,25 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numreciboDataGridViewTextBoxColumn,
-            this.mesesDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn,
-            this.otroDataGridViewTextBoxColumn,
-            this.nombresDataGridViewTextBoxColumn1,
-            this.apellidosDataGridViewTextBoxColumn1,
-            this.sendaDataGridViewTextBoxColumn1,
-            this.poligonoDataGridViewTextBoxColumn1,
-            this.ncasaDataGridViewTextBoxColumn1,
-            this.pendientesDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.nombresDataGridViewTextBoxColumn2,
+            this.apellidosDataGridViewTextBoxColumn2,
+            this.sendaDataGridViewTextBoxColumn2,
+            this.poligonoDataGridViewTextBoxColumn2,
+            this.ncasaDataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn6,
             this.Column1});
-            this.dataGridView2.DataSource = this.auxReciboBindingSource6;
-            this.dataGridView2.Location = new System.Drawing.Point(15, 58);
+            this.dataGridView2.DataSource = this.auxReciboBindingSource7;
+            this.dataGridView2.Location = new System.Drawing.Point(11, 47);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(989, 282);
+            this.dataGridView2.Size = new System.Drawing.Size(742, 229);
             this.dataGridView2.TabIndex = 74;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -481,9 +495,10 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(324, 24);
+            this.label12.Location = new System.Drawing.Point(243, 20);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 20);
+            this.label12.Size = new System.Drawing.Size(55, 16);
             this.label12.TabIndex = 76;
             this.label12.Text = "Buscar";
             // 
@@ -491,20 +506,21 @@
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(399, 24);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Location = new System.Drawing.Point(299, 20);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(225, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(170, 20);
             this.txtBuscar.TabIndex = 77;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(444, 147);
+            this.tabControl1.Location = new System.Drawing.Point(333, 119);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1033, 429);
+            this.tabControl1.Size = new System.Drawing.Size(775, 349);
             this.tabControl1.TabIndex = 82;
             // 
             // tabPage1
@@ -513,10 +529,11 @@
             this.tabPage1.Controls.Add(this.btnBuscar2);
             this.tabPage1.Controls.Add(this.txtDato);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1025, 400);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(767, 323);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -528,10 +545,11 @@
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.btnEliminar);
             this.tabPage2.Controls.Add(this.btnBuscar3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1025, 400);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(767, 323);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Recibos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -547,10 +565,11 @@
             // picRegresar
             // 
             this.picRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRegresar.Location = new System.Drawing.Point(8, 6);
-            this.picRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picRegresar.Image = ((System.Drawing.Image)(resources.GetObject("picRegresar.Image")));
+            this.picRegresar.Location = new System.Drawing.Point(6, 5);
+            this.picRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.picRegresar.Name = "picRegresar";
-            this.picRegresar.Size = new System.Drawing.Size(40, 34);
+            this.picRegresar.Size = new System.Drawing.Size(30, 28);
             this.picRegresar.TabIndex = 15;
             this.picRegresar.TabStop = false;
             this.picRegresar.Click += new System.EventHandler(this.picRegresar_Click);
@@ -569,11 +588,12 @@
             this.total,
             this.mes_es,
             this.pendientes});
-            this.dataGridView3.Location = new System.Drawing.Point(463, 621);
+            this.dataGridView3.Location = new System.Drawing.Point(347, 505);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(939, 150);
+            this.dataGridView3.Size = new System.Drawing.Size(704, 122);
             this.dataGridView3.TabIndex = 83;
             // 
             // nombres
@@ -662,10 +682,9 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(905, 13);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImprimir.Location = new System.Drawing.Point(679, 11);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(156, 46);
+            this.btnImprimir.Size = new System.Drawing.Size(117, 37);
             this.btnImprimir.TabIndex = 80;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
@@ -749,8 +768,8 @@
             this.btnBuscar2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnBuscar2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnBuscar2.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar2.BorderRadius = 12;
-            this.btnBuscar2.BorderRadius1 = 12;
+            this.btnBuscar2.BorderRadius = 13;
+            this.btnBuscar2.BorderRadius1 = 13;
             this.btnBuscar2.BorderSize = 0;
             this.btnBuscar2.BorderSize1 = 0;
             this.btnBuscar2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -758,19 +777,18 @@
             this.btnBuscar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar2.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar2.Location = new System.Drawing.Point(628, 49);
-            this.btnBuscar2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar2.Location = new System.Drawing.Point(471, 40);
             this.btnBuscar2.Name = "btnBuscar2";
-            this.btnBuscar2.Size = new System.Drawing.Size(97, 32);
+            this.btnBuscar2.Size = new System.Drawing.Size(73, 26);
             this.btnBuscar2.TabIndex = 70;
             this.btnBuscar2.Text = "Buscar";
             this.btnBuscar2.TextColor = System.Drawing.Color.White;
             this.btnBuscar2.UseVisualStyleBackColor = false;
             this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
             // 
-            // auxReciboBindingSource6
+            // auxReciboBindingSource7
             // 
-            this.auxReciboBindingSource6.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.auxReciboBindingSource7.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
             // 
             // btnEliminar
             // 
@@ -788,10 +806,9 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(457, 347);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(343, 282);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(156, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(117, 37);
             this.btnEliminar.TabIndex = 79;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -814,10 +831,9 @@
             this.btnBuscar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar3.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar3.Location = new System.Drawing.Point(631, 19);
-            this.btnBuscar3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar3.Location = new System.Drawing.Point(473, 15);
             this.btnBuscar3.Name = "btnBuscar3";
-            this.btnBuscar3.Size = new System.Drawing.Size(97, 32);
+            this.btnBuscar3.Size = new System.Drawing.Size(73, 26);
             this.btnBuscar3.TabIndex = 78;
             this.btnBuscar3.Text = "Buscar";
             this.btnBuscar3.TextColor = System.Drawing.Color.White;
@@ -840,10 +856,9 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(198, 660);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Location = new System.Drawing.Point(148, 536);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(132, 46);
+            this.btnLimpiar.Size = new System.Drawing.Size(99, 37);
             this.btnLimpiar.TabIndex = 100;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
@@ -866,10 +881,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(51, 660);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(38, 536);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(132, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(99, 37);
             this.btnGuardar.TabIndex = 98;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextColor = System.Drawing.Color.White;
@@ -892,127 +906,91 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(188, 57);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(141, 46);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(95, 32);
+            this.btnBuscar.Size = new System.Drawing.Size(71, 26);
             this.btnBuscar.TabIndex = 93;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
-            // auxReciboBindingSource5
+            // dataGridViewTextBoxColumn1
             // 
-            this.auxReciboBindingSource5.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Num_recibo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Num_recibo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // auxReciboBindingSource4
+            // dataGridViewTextBoxColumn2
             // 
-            this.auxReciboBindingSource4.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Mes_es";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mes_es";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // auxReciboBindingSource3
+            // dataGridViewTextBoxColumn3
             // 
-            this.auxReciboBindingSource3.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Total";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // auxReciboBindingSource2
+            // dataGridViewTextBoxColumn4
             // 
-            this.auxReciboBindingSource2.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // auxReciboBindingSource1
+            // dataGridViewTextBoxColumn5
             // 
-            this.auxReciboBindingSource1.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Otro";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Otro";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // auxReciboBindingSource
+            // nombresDataGridViewTextBoxColumn2
             // 
-            this.auxReciboBindingSource.DataSource = typeof(Proyecto_Adesco.Clases.AuxRecibo);
+            this.nombresDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombresDataGridViewTextBoxColumn2.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn2.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn2.Name = "nombresDataGridViewTextBoxColumn2";
             // 
-            // numreciboDataGridViewTextBoxColumn
+            // apellidosDataGridViewTextBoxColumn2
             // 
-            this.numreciboDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numreciboDataGridViewTextBoxColumn.DataPropertyName = "Num_recibo";
-            this.numreciboDataGridViewTextBoxColumn.HeaderText = "Num_recibo";
-            this.numreciboDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numreciboDataGridViewTextBoxColumn.Name = "numreciboDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellidosDataGridViewTextBoxColumn2.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn2.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn2.Name = "apellidosDataGridViewTextBoxColumn2";
             // 
-            // mesesDataGridViewTextBoxColumn
+            // sendaDataGridViewTextBoxColumn2
             // 
-            this.mesesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mesesDataGridViewTextBoxColumn.DataPropertyName = "Mes_es";
-            this.mesesDataGridViewTextBoxColumn.HeaderText = "Mes_es";
-            this.mesesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mesesDataGridViewTextBoxColumn.Name = "mesesDataGridViewTextBoxColumn";
+            this.sendaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sendaDataGridViewTextBoxColumn2.DataPropertyName = "Senda";
+            this.sendaDataGridViewTextBoxColumn2.HeaderText = "Senda";
+            this.sendaDataGridViewTextBoxColumn2.Name = "sendaDataGridViewTextBoxColumn2";
             // 
-            // totalDataGridViewTextBoxColumn
+            // poligonoDataGridViewTextBoxColumn2
             // 
-            this.totalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.poligonoDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.poligonoDataGridViewTextBoxColumn2.DataPropertyName = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn2.HeaderText = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn2.Name = "poligonoDataGridViewTextBoxColumn2";
             // 
-            // cantidadDataGridViewTextBoxColumn
+            // ncasaDataGridViewTextBoxColumn2
             // 
-            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.ncasaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ncasaDataGridViewTextBoxColumn2.DataPropertyName = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn2.HeaderText = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn2.Name = "ncasaDataGridViewTextBoxColumn2";
             // 
-            // otroDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.otroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.otroDataGridViewTextBoxColumn.DataPropertyName = "Otro";
-            this.otroDataGridViewTextBoxColumn.HeaderText = "Otro";
-            this.otroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.otroDataGridViewTextBoxColumn.Name = "otroDataGridViewTextBoxColumn";
-            // 
-            // nombresDataGridViewTextBoxColumn1
-            // 
-            this.nombresDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombresDataGridViewTextBoxColumn1.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn1.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nombresDataGridViewTextBoxColumn1.Name = "nombresDataGridViewTextBoxColumn1";
-            // 
-            // apellidosDataGridViewTextBoxColumn1
-            // 
-            this.apellidosDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.apellidosDataGridViewTextBoxColumn1.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn1.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.apellidosDataGridViewTextBoxColumn1.Name = "apellidosDataGridViewTextBoxColumn1";
-            // 
-            // sendaDataGridViewTextBoxColumn1
-            // 
-            this.sendaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sendaDataGridViewTextBoxColumn1.DataPropertyName = "Senda";
-            this.sendaDataGridViewTextBoxColumn1.HeaderText = "Senda";
-            this.sendaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.sendaDataGridViewTextBoxColumn1.Name = "sendaDataGridViewTextBoxColumn1";
-            // 
-            // poligonoDataGridViewTextBoxColumn1
-            // 
-            this.poligonoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.poligonoDataGridViewTextBoxColumn1.DataPropertyName = "Poligono";
-            this.poligonoDataGridViewTextBoxColumn1.HeaderText = "Poligono";
-            this.poligonoDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.poligonoDataGridViewTextBoxColumn1.Name = "poligonoDataGridViewTextBoxColumn1";
-            // 
-            // ncasaDataGridViewTextBoxColumn1
-            // 
-            this.ncasaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ncasaDataGridViewTextBoxColumn1.DataPropertyName = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn1.HeaderText = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.ncasaDataGridViewTextBoxColumn1.Name = "ncasaDataGridViewTextBoxColumn1";
-            // 
-            // pendientesDataGridViewTextBoxColumn
-            // 
-            this.pendientesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pendientesDataGridViewTextBoxColumn.DataPropertyName = "Pendientes";
-            this.pendientesDataGridViewTextBoxColumn.HeaderText = "Pendientes";
-            this.pendientesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pendientesDataGridViewTextBoxColumn.Name = "pendientesDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Pendientes";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Pendientes";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // Column1
             // 
@@ -1025,17 +1003,17 @@
             // 
             // recibo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1513, 783);
+            this.ClientSize = new System.Drawing.Size(1135, 636);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.picRegresar);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "recibo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1046,6 +1024,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource6)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1053,14 +1032,14 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auxReciboBindingSource7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1147,6 +1126,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn poligonoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ncasaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pendientesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sendaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poligonoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncasaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }
