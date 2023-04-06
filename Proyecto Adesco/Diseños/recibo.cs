@@ -209,7 +209,7 @@ namespace Proyecto_Adesco
         }
         
         
-        //-------------------------------------------------------------------------
+        //---------------------------------------------------------------------------
         private void cargarTabla(string dato)
         {
             List<DatosBD> list = new List<DatosBD>();
@@ -222,7 +222,7 @@ namespace Proyecto_Adesco
             CtrlRecibo _ctrdatos = new CtrlRecibo();
             dataGridView2.DataSource = _ctrdatos.consulta(datoRC);
         }
-        //-------------------------------------------------------------------------
+        //---------------------------------------------------------------------------
         private void btnBuscar2_Click(object sender, EventArgs e)
         {
             string dato = txtDato.Text;
