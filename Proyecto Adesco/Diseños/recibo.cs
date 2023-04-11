@@ -337,11 +337,18 @@ namespace Proyecto_Adesco
             limpiar();
         }
 
+<<<<<<< HEAD
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
+=======
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //dsgsdgdfsdf
+        }
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
     }
     
 }

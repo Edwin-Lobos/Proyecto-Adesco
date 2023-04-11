@@ -77,9 +77,21 @@
             this.otro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mes_es = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalenletras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+            this.pendientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auxReciboBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.auxReciboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImprimir = new Proyecto_Adesco.RJButton();
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +102,7 @@
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datosBDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBuscar2 = new Proyecto_Adesco.RJButton();
+<<<<<<< HEAD
             this.numreciboDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,11 +115,29 @@
             this.ncasaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auxReciboBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
+=======
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poligonoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncasaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auxReciboBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             this.btnEliminar = new Proyecto_Adesco.RJButton();
             this.btnBuscar3 = new Proyecto_Adesco.RJButton();
             this.btnLimpiar = new Proyecto_Adesco.RJButton();
             this.btnGuardar = new Proyecto_Adesco.RJButton();
             this.btnBuscar = new Proyecto_Adesco.RJButton();
+<<<<<<< HEAD
+=======
+            this.button1 = new System.Windows.Forms.Button();
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -665,7 +696,20 @@
             this.codigo.Name = "codigo";
             this.codigo.Width = 125;
             // 
+<<<<<<< HEAD
             // nota
+=======
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Imprimir";
+            this.Column1.Image = global::Proyecto_Adesco.Properties.Resources.imprimir;
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // btnImprimir
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             // 
             this.nota.HeaderText = "Nota";
             this.nota.MinimumWidth = 6;
@@ -774,7 +818,88 @@
             this.btnBuscar2.UseVisualStyleBackColor = false;
             this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
             // 
+<<<<<<< HEAD
             // numreciboDataGridViewTextBoxColumn
+=======
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Num_recibo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Num_recibo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Mes_es";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mes_es";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Total";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Otro";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Otro";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // nombresDataGridViewTextBoxColumn2
+            // 
+            this.nombresDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombresDataGridViewTextBoxColumn2.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn2.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn2.Name = "nombresDataGridViewTextBoxColumn2";
+            // 
+            // apellidosDataGridViewTextBoxColumn2
+            // 
+            this.apellidosDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellidosDataGridViewTextBoxColumn2.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn2.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn2.Name = "apellidosDataGridViewTextBoxColumn2";
+            // 
+            // sendaDataGridViewTextBoxColumn2
+            // 
+            this.sendaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sendaDataGridViewTextBoxColumn2.DataPropertyName = "Senda";
+            this.sendaDataGridViewTextBoxColumn2.HeaderText = "Senda";
+            this.sendaDataGridViewTextBoxColumn2.Name = "sendaDataGridViewTextBoxColumn2";
+            // 
+            // poligonoDataGridViewTextBoxColumn2
+            // 
+            this.poligonoDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.poligonoDataGridViewTextBoxColumn2.DataPropertyName = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn2.HeaderText = "Poligono";
+            this.poligonoDataGridViewTextBoxColumn2.Name = "poligonoDataGridViewTextBoxColumn2";
+            // 
+            // ncasaDataGridViewTextBoxColumn2
+            // 
+            this.ncasaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ncasaDataGridViewTextBoxColumn2.DataPropertyName = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn2.HeaderText = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn2.Name = "ncasaDataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Pendientes";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Pendientes";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // auxReciboBindingSource7
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             // 
             this.numreciboDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numreciboDataGridViewTextBoxColumn.DataPropertyName = "Num_recibo";
@@ -994,14 +1119,34 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+=======
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(433, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             // 
             // recibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1513, 886);
+=======
+            this.ClientSize = new System.Drawing.Size(1135, 636);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImprimir);
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label11);
@@ -1106,8 +1251,39 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn otro;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn mes_es;
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nota;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalenletras;
+=======
+        private System.Windows.Forms.DataGridViewTextBoxColumn pendientes;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource5;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numreciboDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mesesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sendaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poligonoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncasaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pendientesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource auxReciboBindingSource7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sendaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poligonoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncasaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.Button button1;
+>>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
     }
 }
