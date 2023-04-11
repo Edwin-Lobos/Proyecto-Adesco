@@ -20,9 +20,9 @@ namespace Proyecto_Adesco {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet3")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet1 : global::System.Data.DataSet {
+    public partial class DataSet3 : global::System.Data.DataSet {
         
         private recibosDataTable tablerecibos;
         
@@ -30,7 +30,7 @@ namespace Proyecto_Adesco {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataSet1() {
+        public DataSet3() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Proyecto_Adesco {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Proyecto_Adesco {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet1 cln = ((DataSet1)(base.Clone()));
+            DataSet3 cln = ((DataSet3)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Proyecto_Adesco {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet1";
+            this.DataSetName = "DataSet3";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/DataSet31.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablerecibos = new recibosDataTable();
@@ -225,7 +225,7 @@ namespace Proyecto_Adesco {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet1 ds = new DataSet1();
+            DataSet3 ds = new DataSet3();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -299,11 +299,7 @@ namespace Proyecto_Adesco {
             
             private global::System.Data.DataColumn columnn_casa;
             
-            private global::System.Data.DataColumn columncodigo;
-            
-            private global::System.Data.DataColumn columnnota;
-            
-            private global::System.Data.DataColumn columntotalenletras;
+            private global::System.Data.DataColumn columnpendientes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -420,25 +416,9 @@ namespace Proyecto_Adesco {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn codigoColumn {
+            public global::System.Data.DataColumn pendientesColumn {
                 get {
-                    return this.columncodigo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn notaColumn {
-                get {
-                    return this.columnnota;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn totalenletrasColumn {
-                get {
-                    return this.columntotalenletras;
+                    return this.columnpendientes;
                 }
             }
             
@@ -479,7 +459,7 @@ namespace Proyecto_Adesco {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public recibosRow AddrecibosRow(string mes_es, decimal total, decimal cantidad, decimal otro, string nombres, string apellidos, string senda, string poligono, string n_casa, string codigo, string nota, string totalenletras) {
+            public recibosRow AddrecibosRow(string mes_es, decimal total, decimal cantidad, decimal otro, string nombres, string apellidos, string senda, string poligono, string n_casa, string pendientes) {
                 recibosRow rowrecibosRow = ((recibosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -492,9 +472,7 @@ namespace Proyecto_Adesco {
                         senda,
                         poligono,
                         n_casa,
-                        codigo,
-                        nota,
-                        totalenletras};
+                        pendientes};
                 rowrecibosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrecibosRow);
                 return rowrecibosRow;
@@ -527,9 +505,7 @@ namespace Proyecto_Adesco {
                 this.columnsenda = base.Columns["senda"];
                 this.columnpoligono = base.Columns["poligono"];
                 this.columnn_casa = base.Columns["n_casa"];
-                this.columncodigo = base.Columns["codigo"];
-                this.columnnota = base.Columns["nota"];
-                this.columntotalenletras = base.Columns["totalenletras"];
+                this.columnpendientes = base.Columns["pendientes"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -555,12 +531,8 @@ namespace Proyecto_Adesco {
                 base.Columns.Add(this.columnpoligono);
                 this.columnn_casa = new global::System.Data.DataColumn("n_casa", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnn_casa);
-                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigo);
-                this.columnnota = new global::System.Data.DataColumn("nota", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnota);
-                this.columntotalenletras = new global::System.Data.DataColumn("totalenletras", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotalenletras);
+                this.columnpendientes = new global::System.Data.DataColumn("pendientes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpendientes);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNum_recibo}, false));
                 this.columnNum_recibo.AutoIncrement = true;
@@ -582,12 +554,8 @@ namespace Proyecto_Adesco {
                 this.columnpoligono.MaxLength = 100;
                 this.columnn_casa.AllowDBNull = false;
                 this.columnn_casa.MaxLength = 60;
-                this.columncodigo.AllowDBNull = false;
-                this.columncodigo.MaxLength = 100;
-                this.columnnota.AllowDBNull = false;
-                this.columnnota.MaxLength = 32767;
-                this.columntotalenletras.AllowDBNull = false;
-                this.columntotalenletras.MaxLength = 400;
+                this.columnpendientes.AllowDBNull = false;
+                this.columnpendientes.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -655,7 +623,7 @@ namespace Proyecto_Adesco {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
+                DataSet3 ds = new DataSet3();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -845,34 +813,12 @@ namespace Proyecto_Adesco {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string codigo {
+            public string pendientes {
                 get {
-                    return ((string)(this[this.tablerecibos.codigoColumn]));
+                    return ((string)(this[this.tablerecibos.pendientesColumn]));
                 }
                 set {
-                    this[this.tablerecibos.codigoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nota {
-                get {
-                    return ((string)(this[this.tablerecibos.notaColumn]));
-                }
-                set {
-                    this[this.tablerecibos.notaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string totalenletras {
-                get {
-                    return ((string)(this[this.tablerecibos.totalenletrasColumn]));
-                }
-                set {
-                    this[this.tablerecibos.totalenletrasColumn] = value;
+                    this[this.tablerecibos.pendientesColumn] = value;
                 }
             }
             
@@ -924,7 +870,7 @@ namespace Proyecto_Adesco {
         }
     }
 }
-namespace Proyecto_Adesco.DataSet1TableAdapters {
+namespace Proyecto_Adesco.DataSet3TableAdapters {
     
     
     /// <summary>
@@ -1058,13 +1004,11 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("senda", "senda");
             tableMapping.ColumnMappings.Add("poligono", "poligono");
             tableMapping.ColumnMappings.Add("n_casa", "n_casa");
-            tableMapping.ColumnMappings.Add("codigo", "codigo");
-            tableMapping.ColumnMappings.Add("nota", "nota");
-            tableMapping.ColumnMappings.Add("totalenletras", "totalenletras");
+            tableMapping.ColumnMappings.Add("pendientes", "pendientes");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `recibos` WHERE (((? = 1 AND `Num_recibo` IS NULL) OR (`Num_recibo` = ?)) AND (`mes_es` = ?) AND (`total` = ?) AND (`cantidad` = ?) AND (`otro` = ?) AND (`nombres` = ?) AND (`apellidos` = ?) AND (`senda` = ?) AND (`poligono` = ?) AND (`n_casa` = ?) AND (`codigo` = ?) AND (`totalenletras` = ?))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `recibos` WHERE (((? = 1 AND `Num_recibo` IS NULL) OR (`Num_recibo` = ?)) AND (`mes_es` = ?) AND (`total` = ?) AND (`cantidad` = ?) AND (`otro` = ?) AND (`nombres` = ?) AND (`apellidos` = ?) AND (`senda` = ?) AND (`poligono` = ?) AND (`n_casa` = ?) AND (`pendientes` = ?))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Num_recibo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Num_recibo", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Num_recibo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Num_recibo", global::System.Data.DataRowVersion.Original, false, null));
@@ -1077,13 +1021,12 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_senda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senda", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_poligono", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "poligono", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_n_casa", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "n_casa", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_codigo", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "codigo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_totalenletras", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalenletras", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_pendientes", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "pendientes", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `recibos` (`mes_es`, `total`, `cantidad`, `otro`, `nombres`, `apellid" +
-                "os`, `senda`, `poligono`, `n_casa`, `codigo`, `nota`, `totalenletras`) VALUES (?" +
-                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "os`, `senda`, `poligono`, `n_casa`, `pendientes`) VALUES (?, ?, ?, ?, ?, ?, ?, ?" +
+                ", ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mes_es", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mes_es", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("total", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(0)), "total", global::System.Data.DataRowVersion.Current, false, null));
@@ -1094,12 +1037,10 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("senda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senda", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("poligono", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "poligono", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("n_casa", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "n_casa", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("codigo", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "codigo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("nota", global::System.Data.Odbc.OdbcType.NText, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nota", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("totalenletras", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalenletras", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("pendientes", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "pendientes", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `recibos` SET `mes_es` = ?, `total` = ?, `cantidad` = ?, `otro` = ?, `nombres` = ?, `apellidos` = ?, `senda` = ?, `poligono` = ?, `n_casa` = ?, `codigo` = ?, `nota` = ?, `totalenletras` = ? WHERE (((? = 1 AND `Num_recibo` IS NULL) OR (`Num_recibo` = ?)) AND (`mes_es` = ?) AND (`total` = ?) AND (`cantidad` = ?) AND (`otro` = ?) AND (`nombres` = ?) AND (`apellidos` = ?) AND (`senda` = ?) AND (`poligono` = ?) AND (`n_casa` = ?) AND (`codigo` = ?) AND (`totalenletras` = ?))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `recibos` SET `mes_es` = ?, `total` = ?, `cantidad` = ?, `otro` = ?, `nombres` = ?, `apellidos` = ?, `senda` = ?, `poligono` = ?, `n_casa` = ?, `pendientes` = ? WHERE (((? = 1 AND `Num_recibo` IS NULL) OR (`Num_recibo` = ?)) AND (`mes_es` = ?) AND (`total` = ?) AND (`cantidad` = ?) AND (`otro` = ?) AND (`nombres` = ?) AND (`apellidos` = ?) AND (`senda` = ?) AND (`poligono` = ?) AND (`n_casa` = ?) AND (`pendientes` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("mes_es", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mes_es", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("total", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(10)), ((byte)(0)), "total", global::System.Data.DataRowVersion.Current, false, null));
@@ -1110,9 +1051,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("senda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senda", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("poligono", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "poligono", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("n_casa", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "n_casa", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("codigo", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "codigo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("nota", global::System.Data.Odbc.OdbcType.NText, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nota", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("totalenletras", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalenletras", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("pendientes", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "pendientes", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Num_recibo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Num_recibo", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Num_recibo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Num_recibo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_mes_es", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mes_es", global::System.Data.DataRowVersion.Original, false, null));
@@ -1124,8 +1063,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_senda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senda", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_poligono", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "poligono", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_n_casa", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "n_casa", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_codigo", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "codigo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_totalenletras", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalenletras", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_pendientes", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "pendientes", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1142,8 +1080,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `Num_recibo`, `mes_es`, `total`, `cantidad`, `otro`, `nombres`, `apellidos" +
-                "`, `senda`, `poligono`, `n_casa`, `codigo`, `nota`, `totalenletras` FROM `recibo" +
-                "s`";
+                "`, `senda`, `poligono`, `n_casa`, `pendientes` FROM `recibos`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1151,7 +1088,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.recibosDataTable dataTable) {
+        public virtual int Fill(DataSet3.recibosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1164,9 +1101,9 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.recibosDataTable GetData() {
+        public virtual DataSet3.recibosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.recibosDataTable dataTable = new DataSet1.recibosDataTable();
+            DataSet3.recibosDataTable dataTable = new DataSet3.recibosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1174,14 +1111,14 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.recibosDataTable dataTable) {
+        public virtual int Update(DataSet3.recibosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1 dataSet) {
+        public virtual int Update(DataSet3 dataSet) {
             return this.Adapter.Update(dataSet, "recibos");
         }
         
@@ -1204,7 +1141,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Num_recibo, string Original_mes_es, decimal Original_total, decimal Original_cantidad, decimal Original_otro, string Original_nombres, string Original_apellidos, string Original_senda, string Original_poligono, string Original_n_casa, string Original_codigo, string Original_totalenletras) {
+        public virtual int Delete(int Original_Num_recibo, string Original_mes_es, decimal Original_total, decimal Original_cantidad, decimal Original_otro, string Original_nombres, string Original_apellidos, string Original_senda, string Original_poligono, string Original_n_casa, string Original_pendientes) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Num_recibo));
             if ((Original_mes_es == null)) {
@@ -1246,17 +1183,11 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_n_casa));
             }
-            if ((Original_codigo == null)) {
-                throw new global::System.ArgumentNullException("Original_codigo");
+            if ((Original_pendientes == null)) {
+                throw new global::System.ArgumentNullException("Original_pendientes");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_codigo));
-            }
-            if ((Original_totalenletras == null)) {
-                throw new global::System.ArgumentNullException("Original_totalenletras");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_totalenletras));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_pendientes));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1278,7 +1209,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string mes_es, decimal total, decimal cantidad, decimal otro, string nombres, string apellidos, string senda, string poligono, string n_casa, string codigo, string nota, string totalenletras) {
+        public virtual int Insert(string mes_es, decimal total, decimal cantidad, decimal otro, string nombres, string apellidos, string senda, string poligono, string n_casa, string pendientes) {
             if ((mes_es == null)) {
                 throw new global::System.ArgumentNullException("mes_es");
             }
@@ -1318,23 +1249,11 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(n_casa));
             }
-            if ((codigo == null)) {
-                throw new global::System.ArgumentNullException("codigo");
+            if ((pendientes == null)) {
+                throw new global::System.ArgumentNullException("pendientes");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(codigo));
-            }
-            if ((nota == null)) {
-                throw new global::System.ArgumentNullException("nota");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(nota));
-            }
-            if ((totalenletras == null)) {
-                throw new global::System.ArgumentNullException("totalenletras");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(totalenletras));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(pendientes));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1366,9 +1285,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
                     string senda, 
                     string poligono, 
                     string n_casa, 
-                    string codigo, 
-                    string nota, 
-                    string totalenletras, 
+                    string pendientes, 
                     int Original_Num_recibo, 
                     string Original_mes_es, 
                     decimal Original_total, 
@@ -1379,8 +1296,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
                     string Original_senda, 
                     string Original_poligono, 
                     string Original_n_casa, 
-                    string Original_codigo, 
-                    string Original_totalenletras) {
+                    string Original_pendientes) {
             if ((mes_es == null)) {
                 throw new global::System.ArgumentNullException("mes_es");
             }
@@ -1420,76 +1336,58 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(n_casa));
             }
-            if ((codigo == null)) {
-                throw new global::System.ArgumentNullException("codigo");
+            if ((pendientes == null)) {
+                throw new global::System.ArgumentNullException("pendientes");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(codigo));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(pendientes));
             }
-            if ((nota == null)) {
-                throw new global::System.ArgumentNullException("nota");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(nota));
-            }
-            if ((totalenletras == null)) {
-                throw new global::System.ArgumentNullException("totalenletras");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(totalenletras));
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Num_recibo));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Num_recibo));
             if ((Original_mes_es == null)) {
                 throw new global::System.ArgumentNullException("Original_mes_es");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_mes_es));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_mes_es));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_total));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_cantidad));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(Original_otro));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_total));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_cantidad));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_otro));
             if ((Original_nombres == null)) {
                 throw new global::System.ArgumentNullException("Original_nombres");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_nombres));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_nombres));
             }
             if ((Original_apellidos == null)) {
                 throw new global::System.ArgumentNullException("Original_apellidos");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_apellidos));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_apellidos));
             }
             if ((Original_senda == null)) {
                 throw new global::System.ArgumentNullException("Original_senda");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_senda));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_senda));
             }
             if ((Original_poligono == null)) {
                 throw new global::System.ArgumentNullException("Original_poligono");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_poligono));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_poligono));
             }
             if ((Original_n_casa == null)) {
                 throw new global::System.ArgumentNullException("Original_n_casa");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_n_casa));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_n_casa));
             }
-            if ((Original_codigo == null)) {
-                throw new global::System.ArgumentNullException("Original_codigo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_codigo));
-            }
-            if ((Original_totalenletras == null)) {
-                throw new global::System.ArgumentNullException("Original_totalenletras");
+            if ((Original_pendientes == null)) {
+                throw new global::System.ArgumentNullException("Original_pendientes");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_totalenletras));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_pendientes));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1599,7 +1497,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._recibosTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.recibos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1618,7 +1516,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._recibosTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.recibos.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1636,7 +1534,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._recibosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.recibos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1678,7 +1576,7 @@ namespace Proyecto_Adesco.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DataSet1 dataSet) {
+        public virtual int UpdateAll(DataSet3 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

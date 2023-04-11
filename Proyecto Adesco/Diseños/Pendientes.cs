@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Adesco.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,14 @@ namespace Proyecto_Adesco
         public Pendientes()
         {
             InitializeComponent();
+            cargarTabla2(null);
         }
-
+        private void cargarTabla2(string datoRC)
+        {
+            List<AuxRecibo> list = new List<AuxRecibo>();
+            CtrlRecibo _ctrdatos = new CtrlRecibo();
+            dataGridView1.DataSource = _ctrdatos.consulta(datoRC);
+        }
         private void picRegresar_Click(object sender, EventArgs e)
         {
             Form frmPrincipal = new Principal();
@@ -27,6 +34,11 @@ namespace Proyecto_Adesco
         private void Pendientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

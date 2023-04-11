@@ -21,11 +21,11 @@ namespace Proyecto_Adesco.Clases
 
             if (datoRC == null)
             {
-                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro, pendientes FROM recibos ORDER BY Num_recibo ASC";
+                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro, codigo FROM recibos ORDER BY Num_recibo ASC";
             }
             else
             {
-                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro , pendientes FROM recibos WHERE nombres LIKE '%" + datoRC + "%' OR apellidos LIKE '%" + datoRC + "%' OR senda LIKE '%" + datoRC + "%' OR poligono LIKE '%" + datoRC + "%' OR n_casa LIKE '%" + datoRC + "%' OR cantidad LIKE '%" + datoRC + "%' OR mes_es LIKE '%" + datoRC + "%' OR total LIKE '%" + datoRC + "%' OR otro LIKE '%" + datoRC + "%' OR pendientes LIKE '%" + datoRC + "%' ORDER BY Num_recibo ASC";
+                sql = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, total, otro , codigo FROM recibos WHERE nombres LIKE '%" + datoRC + "%' OR apellidos LIKE '%" + datoRC + "%' OR senda LIKE '%" + datoRC + "%' OR poligono LIKE '%" + datoRC + "%' OR n_casa LIKE '%" + datoRC + "%' OR cantidad LIKE '%" + datoRC + "%' OR mes_es LIKE '%" + datoRC + "%' OR total LIKE '%" + datoRC + "%' OR otro LIKE '%" + datoRC + "%' OR codigo LIKE '%" + datoRC + "%' ORDER BY Num_recibo ASC";
             }
 
             try
@@ -53,7 +53,7 @@ namespace Proyecto_Adesco.Clases
                     _recibo.Senda = reader.GetString("senda");
                     _recibo.Poligono = reader.GetString("poligono");
                     _recibo.N_casa = reader.GetString("n_casa");
-                    _recibo.Pendientes = reader.GetString("pendientes");
+                    _recibo.Codigo = reader.GetString("codigo");
 
                     lista.Add(_recibo);
                 }
@@ -90,7 +90,7 @@ namespace Proyecto_Adesco.Clases
                 comando.Parameters.AddWithValue("@mes_es", persona.Mes_es);
                 comando.Parameters.AddWithValue("@total", persona.Total);
                 comando.Parameters.AddWithValue("@otro", persona.Otro);
-                comando.Parameters.AddWithValue("@pendientes", persona.Pendientes);
+                comando.Parameters.AddWithValue("@codigo", persona.Codigo);
 
                 comando.ExecuteNonQuery();
             }

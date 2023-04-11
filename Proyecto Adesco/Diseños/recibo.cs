@@ -7,12 +7,12 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Security.AccessControl;
 using System.Windows.Forms;
-
 using Microsoft.ReportingServices.Diagnostics.Internal;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Data;
 using System.Globalization;
+using static System.Resources.ResXFileRef;
 
 namespace Proyecto_Adesco
 {
@@ -39,7 +39,7 @@ namespace Proyecto_Adesco
 
 
         //-------------------Botón para buscar------------------------------------
-        private void btnBuscar_Click_1(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string codigo = txtCodigo.Text;
             MySqlDataReader reader = null;
@@ -86,15 +86,16 @@ namespace Proyecto_Adesco
 
 
         //---------------------------------------------------------------------------------------------
-        private void btnGuardar_Click_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombres.Text) || string.IsNullOrEmpty(txtApellidos.Text) || string.IsNullOrEmpty(txtSenda.Text) || string.IsNullOrEmpty(txtOCargo.Text) || string.IsNullOrEmpty(txtN_casa.Text) || string.IsNullOrEmpty(txtCantidad.Text))
+            if (string.IsNullOrEmpty(lbxMes_es.Text) || string.IsNullOrEmpty(txtCantidad.Text))
             {
                 MessageBox.Show("Debe llenar el campo cantidad", "Aviso",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+
                 // Agregar fila a la DataGridView
                 int indice_fila = dataGridView3.Rows.Add();
                 DataGridViewRow fila = dataGridView3.Rows[indice_fila];
@@ -107,23 +108,10 @@ namespace Proyecto_Adesco
                 fila.Cells["cantidad"].Value = txtCantidad.Text;
                 fila.Cells["mes_es"].Value = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
                 fila.Cells["otro"].Value = txtOCargo.Text;
-                fila.Cells["total"].Value = decimal.Parse(txtCantidad.Text) + decimal.Parse(txtOCargo.Text);
-                fila.Cells["pendientes"].Value = "Sí"; // Establecer un valor predeterminado para la columna Pendiente
-
-
-                // Actualizar el valor de la columna Pendiente en función del mes ingresado
-                string mesSeleccionado = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
-                DateTime fechaSeleccionada = DateTime.ParseExact(mesSeleccionado, "MMMM", CultureInfo.CurrentCulture);
-                DateTime siguienteMes = DateTime.Now.AddMonths(1);
-
-                if (fechaSeleccionada.Year == siguienteMes.Year && fechaSeleccionada.Month == siguienteMes.Month)
-                {
-                    fila.Cells["pendientes"].Value = "Sí";
-                }
-                else
-                {
-                    fila.Cells["pendientes"].Value = "No";
-                }
+                fila.Cells["total"].Value = decimal.Parse(txtCantidad.Text) + (string.IsNullOrEmpty(txtOCargo.Text) ? 0 : decimal.Parse(txtOCargo.Text));
+                //fila.Cells["totalenletras"].Value = ConvertirNumeroALetras((decimal)fila.Cells["total"].Value);
+                fila.Cells["codigo"].Value = txtCodigo.Text;
+                fila.Cells["nota"].Value = txtNota.Text;
 
 
                 // Enviar los datos a la base de datos
@@ -135,33 +123,121 @@ namespace Proyecto_Adesco
                         // Verificar si el valor de la columna total es nulo
                         if (row.Cells["nombres"].Value != null)
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, pendientes) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @pendientes)", conexion);
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota)", conexion);
                             cmd.Parameters.AddWithValue("@nombres", row.Cells["nombres"].Value);
                             cmd.Parameters.AddWithValue("@apellidos", row.Cells["apellidos"].Value);
                             cmd.Parameters.AddWithValue("@senda", row.Cells["senda"].Value);
                             cmd.Parameters.AddWithValue("@poligono", row.Cells["poligono"].Value);
                             cmd.Parameters.AddWithValue("@n_casa", row.Cells["n_casa"].Value);
-                            cmd.Parameters.AddWithValue("@cantidad", row.Cells["cantidad"].Value);
+                            cmd.Parameters.AddWithValue("@cantidad", row.Cells["cantidad"].Value);                         
                             cmd.Parameters.AddWithValue("@mes_es", row.Cells["mes_es"].Value);
                             cmd.Parameters.AddWithValue("@otro", row.Cells["otro"].Value);
                             cmd.Parameters.AddWithValue("@total", row.Cells["total"].Value);
-                            cmd.Parameters.AddWithValue("@pendientes", row.Cells["pendientes"].Value);
+                            cmd.Parameters.AddWithValue("@codigo", row.Cells["codigo"].Value);
+                            cmd.Parameters.AddWithValue("@nota", row.Cells["nota"].Value);
+                            //cmd.Parameters.AddWithValue("@totalenletras", row.Cells["totalenletras"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
                     conexion.Close();
                     cargarTabla2(null);
+                    dataGridView3.Rows.Clear(); // Limpia las filas del DataGridView3
+
                 }
 
                 MessageBox.Show("Los datos se han guardado correctamente.");
+                MySqlCommand cmdUltimaFila = new MySqlCommand("SELECT * FROM recibos ORDER BY Num_recibo DESC LIMIT 1", Conexion.GetConnection());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdUltimaFila);
+                DataTable dtUltimaFila = new DataTable();
+                adapter.Fill(dtUltimaFila);
 
+                ReciboVS formRecibo = new ReciboVS(dtUltimaFila);
+                formRecibo.Show();
             }
+
+
         }
 
 
 
 
         //-------------------------------------------------------------------------
+        public static string ConvertirNumeroALetras(decimal numero)
+        {
+            string[] unidades = new string[] { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
+            string[] decenas = new string[] { "diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve" };
+            string[] veintenas = new string[] { "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa" };
+            string[] centenas = new string[] { "cien", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos" };
+
+            int valorEntero = (int)numero;
+            decimal valorDecimal = numero - valorEntero;
+            string valorEnteroEnLetras = "";
+            string valorDecimalEnLetras = "";
+
+            if (valorEntero == 0)
+            {
+                valorEnteroEnLetras = unidades[0];
+            }
+            else if (valorEntero < 10)
+            {
+                valorEnteroEnLetras = unidades[valorEntero];
+            }
+            else if (valorEntero < 20)
+            {
+                valorEnteroEnLetras = decenas[valorEntero - 10];
+            }
+            else if (valorEntero < 100)
+            {
+                int decena = valorEntero / 10;
+                int unidad = valorEntero % 10;
+                valorEnteroEnLetras = veintenas[decena - 2];
+                if (unidad > 0)
+                {
+                    valorEnteroEnLetras += " y " + unidades[unidad];
+                }
+            }
+            else if (valorEntero == 100)
+            {
+                valorEnteroEnLetras = centenas[0];
+            }
+            else if (valorEntero < 1000)
+            {
+                int centena = valorEntero / 100;
+                int resto = valorEntero % 100;
+                valorEnteroEnLetras = centenas[centena - 1];
+                if (resto > 0)
+                {
+                    valorEnteroEnLetras += " " + ConvertirNumeroALetras(resto);
+                }
+            }
+
+            if (valorDecimal > 0)
+            {
+                int centavos = (int)(valorDecimal * 100);
+                string centavosEnLetras = ConvertirNumeroALetras(centavos);
+
+                if (centavosEnLetras == "uno")
+                {
+                    valorDecimalEnLetras = " con un centavo";
+                }
+                else if (centavosEnLetras != "cero")
+                {
+                    valorDecimalEnLetras = " con " + centavosEnLetras + " centavos";
+                }
+            }
+
+
+            if (valorDecimalEnLetras == "" && valorEnteroEnLetras != "")
+            {
+                valorEnteroEnLetras += " dólares";
+            }
+            else if (valorEnteroEnLetras != "")
+            {
+                valorEnteroEnLetras += " con " + valorDecimalEnLetras;
+            }
+
+            return valorEnteroEnLetras;
+        }
 
 
 
@@ -170,6 +246,9 @@ namespace Proyecto_Adesco
 
 
 
+
+
+        //---------------------------------------------------------------------------
         private void recibo_Load(object sender, EventArgs e)
         {
             
@@ -250,21 +329,19 @@ namespace Proyecto_Adesco
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }    
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            Form recibovs = new ReciboVS();
-            recibovs.Show();
-            this.Visible = false;
         }
 
-        private void btnLimpiar_Click_1(object sender, EventArgs e)
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
         }
 
-       
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
     
 }
