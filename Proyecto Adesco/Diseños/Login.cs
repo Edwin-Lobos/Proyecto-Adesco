@@ -136,5 +136,24 @@ namespace Proyecto_Adesco
                 }
             }
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Form frmInicio = new Inicio();
+            frmInicio.Show();
+            this.Visible = false;
+        }
+
+        private void picRegresar_Click(object sender, EventArgs e)
+        {
+            Form frmInicio = new Inicio();
+            frmInicio.Show();
+            this.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

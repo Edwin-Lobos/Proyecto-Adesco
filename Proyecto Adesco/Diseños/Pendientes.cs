@@ -40,5 +40,19 @@ namespace Proyecto_Adesco
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
     }
 }

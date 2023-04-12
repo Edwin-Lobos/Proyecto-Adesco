@@ -36,45 +36,46 @@
             this.picMonstrar = new System.Windows.Forms.PictureBox();
             this.picOcultar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picRegresar = new System.Windows.Forms.PictureBox();
-            this.panel1Barra = new System.Windows.Forms.Panel();
-            this.rjButton1 = new Proyecto_Adesco.RJButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.picRegresar = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rjButton1 = new Proyecto_Adesco.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).BeginInit();
-            this.panel1Barra.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 71);
+            this.label1.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(275, 226);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 130);
+            this.label2.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(275, 274);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(68, 94);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsuario.Location = new System.Drawing.Point(274, 244);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(311, 23);
+            this.txtUsuario.Size = new System.Drawing.Size(234, 20);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
@@ -82,21 +83,21 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(68, 153);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(274, 292);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(311, 23);
+            this.txtPassword.Size = new System.Drawing.Size(234, 20);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // picMonstrar
             // 
             this.picMonstrar.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrar.Image")));
-            this.picMonstrar.Location = new System.Drawing.Point(384, 155);
-            this.picMonstrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picMonstrar.Location = new System.Drawing.Point(511, 294);
+            this.picMonstrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picMonstrar.Name = "picMonstrar";
-            this.picMonstrar.Size = new System.Drawing.Size(37, 25);
+            this.picMonstrar.Size = new System.Drawing.Size(28, 20);
             this.picMonstrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMonstrar.TabIndex = 11;
             this.picMonstrar.TabStop = false;
@@ -105,10 +106,10 @@
             // picOcultar
             // 
             this.picOcultar.Image = global::Proyecto_Adesco.Properties.Resources.invisible1;
-            this.picOcultar.Location = new System.Drawing.Point(384, 155);
-            this.picOcultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picOcultar.Location = new System.Drawing.Point(511, 294);
+            this.picOcultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picOcultar.Name = "picOcultar";
-            this.picOcultar.Size = new System.Drawing.Size(37, 25);
+            this.picOcultar.Size = new System.Drawing.Size(28, 20);
             this.picOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picOcultar.TabIndex = 12;
             this.picOcultar.TabStop = false;
@@ -117,42 +118,50 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(387, 94);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(513, 244);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(315, 144);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 22);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Inicio de sesion";
+            // 
             // picRegresar
             // 
-            this.picRegresar.BackColor = System.Drawing.Color.Transparent;
             this.picRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRegresar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picRegresar.Image = ((System.Drawing.Image)(resources.GetObject("picRegresar.Image")));
-            this.picRegresar.Location = new System.Drawing.Point(424, 0);
-            this.picRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picRegresar.Location = new System.Drawing.Point(4, 3);
+            this.picRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.picRegresar.Name = "picRegresar";
-            this.picRegresar.Size = new System.Drawing.Size(31, 26);
-            this.picRegresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRegresar.TabIndex = 13;
+            this.picRegresar.Size = new System.Drawing.Size(30, 28);
+            this.picRegresar.TabIndex = 18;
             this.picRegresar.TabStop = false;
-            this.picRegresar.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picRegresar.Click += new System.EventHandler(this.picRegresar_Click);
             // 
-            // panel1Barra
+            // label11
             // 
-            this.panel1Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.panel1Barra.Controls.Add(this.label3);
-            this.panel1Barra.Controls.Add(this.picRegresar);
-            this.panel1Barra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1Barra.Location = new System.Drawing.Point(0, 0);
-            this.panel1Barra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1Barra.Name = "panel1Barra";
-            this.panel1Barra.Size = new System.Drawing.Size(455, 26);
-            this.panel1Barra.TabIndex = 15;
-            this.panel1Barra.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1Barra_Paint);
-            this.panel1Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1Barra_MouseDown);
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(24, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 16);
+            this.label11.TabIndex = 74;
+            this.label11.Text = "Regresar";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // rjButton1
             // 
@@ -167,47 +176,37 @@
             this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(135, 191);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjButton1.Location = new System.Drawing.Point(328, 323);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(168, 49);
+            this.rjButton1.Size = new System.Drawing.Size(126, 40);
             this.rjButton1.TabIndex = 14;
             this.rjButton1.Text = "Ingresar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 20);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Inicio de sesion";
-            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(455, 273);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1Barra);
-            this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.picMonstrar);
-            this.Controls.Add(this.picOcultar);
-            this.Controls.Add(this.txtPassword);
+            this.ClientSize = new System.Drawing.Size(796, 521);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.picRegresar);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.picMonstrar);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.picOcultar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -217,8 +216,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRegresar)).EndInit();
-            this.panel1Barra.ResumeLayout(false);
-            this.panel1Barra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,8 +230,8 @@
         private RJButton rjButton1;
         private System.Windows.Forms.PictureBox picOcultar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox picRegresar;
-        private System.Windows.Forms.Panel panel1Barra;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox picRegresar;
+        private System.Windows.Forms.Label label11;
     }
 }

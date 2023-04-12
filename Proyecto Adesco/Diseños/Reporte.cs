@@ -198,5 +198,12 @@ namespace Proyecto_Adesco
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
     }
 }
