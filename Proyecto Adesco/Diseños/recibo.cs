@@ -18,7 +18,7 @@ namespace Proyecto_Adesco
 {
     public partial class recibo : Form
     {
-        
+
 
         public recibo()
         {
@@ -109,7 +109,7 @@ namespace Proyecto_Adesco
                 fila.Cells["mes_es"].Value = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
                 fila.Cells["otro"].Value = txtOCargo.Text;
                 fila.Cells["total"].Value = decimal.Parse(txtCantidad.Text) + (string.IsNullOrEmpty(txtOCargo.Text) ? 0 : decimal.Parse(txtOCargo.Text));
-                //fila.Cells["totalenletras"].Value = ConvertirNumeroALetras((decimal)fila.Cells["total"].Value);
+                fila.Cells["totalenletras"].Value = ConvertirNumeroALetras((decimal)fila.Cells["total"].Value);
                 fila.Cells["codigo"].Value = txtCodigo.Text;
                 fila.Cells["nota"].Value = txtNota.Text;
 
@@ -123,19 +123,19 @@ namespace Proyecto_Adesco
                         // Verificar si el valor de la columna total es nulo
                         if (row.Cells["nombres"].Value != null)
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota)", conexion);
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota, totalenletras) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota, @totalenletras)", conexion);
                             cmd.Parameters.AddWithValue("@nombres", row.Cells["nombres"].Value);
                             cmd.Parameters.AddWithValue("@apellidos", row.Cells["apellidos"].Value);
                             cmd.Parameters.AddWithValue("@senda", row.Cells["senda"].Value);
                             cmd.Parameters.AddWithValue("@poligono", row.Cells["poligono"].Value);
                             cmd.Parameters.AddWithValue("@n_casa", row.Cells["n_casa"].Value);
-                            cmd.Parameters.AddWithValue("@cantidad", row.Cells["cantidad"].Value);                         
+                            cmd.Parameters.AddWithValue("@cantidad", row.Cells["cantidad"].Value);
                             cmd.Parameters.AddWithValue("@mes_es", row.Cells["mes_es"].Value);
                             cmd.Parameters.AddWithValue("@otro", row.Cells["otro"].Value);
                             cmd.Parameters.AddWithValue("@total", row.Cells["total"].Value);
                             cmd.Parameters.AddWithValue("@codigo", row.Cells["codigo"].Value);
                             cmd.Parameters.AddWithValue("@nota", row.Cells["nota"].Value);
-                            //cmd.Parameters.AddWithValue("@totalenletras", row.Cells["totalenletras"].Value);
+                            cmd.Parameters.AddWithValue("@totalenletras", row.Cells["totalenletras"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -164,86 +164,89 @@ namespace Proyecto_Adesco
         //-------------------------------------------------------------------------
         public static string ConvertirNumeroALetras(decimal numero)
         {
-            string[] unidades = new string[] { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
-            string[] decenas = new string[] { "diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve" };
-            string[] veintenas = new string[] { "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa" };
-            string[] centenas = new string[] { "cien", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos" };
+            string[] unidades = { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
+            string[] decenas = { "diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve" };
+            string[] veintenas = { "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa" };
+            string[] centenas = { "cien", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos" };
 
-            int valorEntero = (int)numero;
-            decimal valorDecimal = numero - valorEntero;
-            string valorEnteroEnLetras = "";
-            string valorDecimalEnLetras = "";
+            int entero = (int)numero;
+            int decimales = (int)Math.Round((numero - entero) * 100);
 
-            if (valorEntero == 0)
+            string resultado = "";
+
+            if (entero == 0)
             {
-                valorEnteroEnLetras = unidades[0];
+                resultado = "cero";
             }
-            else if (valorEntero < 10)
+            else if (entero < 0)
             {
-                valorEnteroEnLetras = unidades[valorEntero];
+                resultado = "menos " + ConvertirNumeroALetras(Math.Abs(numero));
             }
-            else if (valorEntero < 20)
+            else
             {
-                valorEnteroEnLetras = decenas[valorEntero - 10];
-            }
-            else if (valorEntero < 100)
-            {
-                int decena = valorEntero / 10;
-                int unidad = valorEntero % 10;
-                valorEnteroEnLetras = veintenas[decena - 2];
-                if (unidad > 0)
+                if ((entero / 1000000) > 0)
                 {
-                    valorEnteroEnLetras += " y " + unidades[unidad];
+                    resultado += ConvertirNumeroALetras(entero / 1000000) + " millones ";
+                    entero %= 1000000;
+                }
+
+                if ((entero / 1000) > 0)
+                {
+                    resultado += ConvertirNumeroALetras(entero / 1000) + " mil ";
+                    entero %= 1000;
+                }
+
+                if ((entero / 100) > 0)
+                {
+                    if (entero == 100)
+                    {
+                        resultado += "cien ";
+                    }
+                    else
+                    {
+                        resultado += centenas[entero / 100 - 1] + " ";
+                    }
+                    entero %= 100;
+                }
+
+                if (entero > 0)
+                {
+                    if (entero < 10)
+                    {
+                        resultado += unidades[entero] + " ";
+                    }
+                    else if (entero < 20)
+                    {
+                        resultado += decenas[entero - 10] + " ";
+                    }
+                    else
+                    {
+                        resultado += veintenas[entero / 10 - 2] + " ";
+                        if ((entero % 10) > 0)
+                        {
+                            resultado += "y " + unidades[entero % 10] + " ";
+                        }
+                    }
+                }
+
+                resultado += "dólares ";
+            }
+
+            if (decimales > 0)
+            {
+                resultado += decimales.ToString("00") + "/100";
+                if (decimales == 1)
+                {
+                    resultado += " ct";
+                }
+                else
+                {
+                    resultado += " cts";
                 }
             }
-            else if (valorEntero == 100)
-            {
-                valorEnteroEnLetras = centenas[0];
-            }
-            else if (valorEntero < 1000)
-            {
-                int centena = valorEntero / 100;
-                int resto = valorEntero % 100;
-                valorEnteroEnLetras = centenas[centena - 1];
-                if (resto > 0)
-                {
-                    valorEnteroEnLetras += " " + ConvertirNumeroALetras(resto);
-                }
-            }
 
-            if (valorDecimal > 0)
-            {
-                int centavos = (int)(valorDecimal * 100);
-                string centavosEnLetras = ConvertirNumeroALetras(centavos);
-
-                if (centavosEnLetras == "uno")
-                {
-                    valorDecimalEnLetras = " con un centavo";
-                }
-                else if (centavosEnLetras != "cero")
-                {
-                    valorDecimalEnLetras = " con " + centavosEnLetras + " centavos";
-                }
-            }
-
-
-            if (valorDecimalEnLetras == "" && valorEnteroEnLetras != "")
-            {
-                valorEnteroEnLetras += " dólares";
-            }
-            else if (valorEnteroEnLetras != "")
-            {
-                valorEnteroEnLetras += " con " + valorDecimalEnLetras;
-            }
-
-            return valorEnteroEnLetras;
+            return resultado.Trim();
         }
-
-
-
-
-
-
 
 
 
@@ -251,7 +254,7 @@ namespace Proyecto_Adesco
         //---------------------------------------------------------------------------
         private void recibo_Load(object sender, EventArgs e)
         {
-            
+
         }
         private void limpiar()
         {
@@ -266,7 +269,7 @@ namespace Proyecto_Adesco
             txtCantidad.Text = "";
             txtOCargo.Text = "";
             lbxMes_es.ClearSelected();
-        }  
+        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             bool bandera = false;
@@ -286,8 +289,8 @@ namespace Proyecto_Adesco
                 }
             }
         }
-        
-        
+
+
         //---------------------------------------------------------------------------
         private void cargarTabla(string dato)
         {
@@ -313,7 +316,7 @@ namespace Proyecto_Adesco
             cargarTabla2(datoRC);
         }
         //-------------------------------------------------------------------------
-        
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -337,18 +340,16 @@ namespace Proyecto_Adesco
             limpiar();
         }
 
-<<<<<<< HEAD
+
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-=======
-        private void button1_Click(object sender, EventArgs e)
+        private void auxReciboBindingSource5_CurrentChanged(object sender, EventArgs e)
         {
-            //dsgsdgdfsdf
+
         }
->>>>>>> afcf49429754976aea9f92ace8937bd4cb29c802
     }
-    
+
 }
