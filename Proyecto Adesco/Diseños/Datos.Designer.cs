@@ -596,7 +596,7 @@
             // 
             this.ncasaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ncasaDataGridViewTextBoxColumn.DataPropertyName = "N_casa";
-            this.ncasaDataGridViewTextBoxColumn.HeaderText = "N_casa";
+            this.ncasaDataGridViewTextBoxColumn.HeaderText = "N° Casa";
             this.ncasaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ncasaDataGridViewTextBoxColumn.Name = "ncasaDataGridViewTextBoxColumn";
             // 
