@@ -117,32 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="invisible1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\invisible1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picRegresar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAZFJREFUSEud
+        VG1OwzAM7U4Al+DH0Gan7T0QiCMgzrC/bFcdEscYdvI6u81HC0+a4vjZz6mdrNuMHVZFtOHwtkfBlVBI
+        qGnU8BdtA0iL2XVE9M7Mb/Mk2N6VgOQmrADz8ULMNylw6/v+eT23BGQtk0X0osL4XcdxfAC1wD/KHpnP
+        TvxnGIa9+r1UtCeHEbD8YmS0RfA8teUu7mMiFgIZD3i/2ioO4RuTio/x5Dmqs5xLxh1ccuq7uNjFtkT4
+        pDbsFHJbkji12rIRywPwQU9O854rVgrkdCEhhPAJYW3Lt+yf1G+hvo1eoCA2wVNM9JEXqCX7wTYKeGiY
+        tOiEAvMWedRrboAEifAJBepFJND0Gsqe8gkHKYJb5K6pFwWio1EgAvwyLLWLUrviQxv2plcTFX/GN2Ll
+        TcSZpK+hvF213ByFK4hFZ4J5VGZSmgeEjCjAkWEMX+4BXkPoHyNR1VlRNhqWLCGMUiS1S//4SjGGkq+I
+        eYQ8vldiesEWWKjYtiAfXfNPhquBaqvrMzA/rPVAoOt+Ae80cnTjGZTeAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="visible" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\visible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="oulto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oulto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="regresar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\regresar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ojo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="invisible" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\invisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imprimir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imprimir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="auxReciboBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>242, 17</value>
+  </metadata>
+  <metadata name="auxReciboBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
