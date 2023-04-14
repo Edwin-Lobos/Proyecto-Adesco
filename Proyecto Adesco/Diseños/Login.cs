@@ -51,7 +51,7 @@ namespace Proyecto_Adesco
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
+            string usuario = txtUsuario.Text.Trim();
             string password = txtPassword.Text;
 
             try

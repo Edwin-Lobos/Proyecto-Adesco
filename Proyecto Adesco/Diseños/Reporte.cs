@@ -136,7 +136,10 @@ namespace Proyecto_Adesco
                 tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontcolumnas)));
             }
 
-            string sql = "SELECT nombres, apellidos, senda, poligono, n_casa, mes_es, Num_recibo, cantidad, otro, total FROM recibos";
+            string mesSeleccionado = cbxDato.SelectedItem.ToString(); // obtener mes seleccionado en el ComboBox
+            string sql = "SELECT nombres, apellidos, senda, poligono, n_casa, mes_es, Num_recibo, cantidad, otro, total FROM recibos WHERE mes_es LIKE '%" + mesSeleccionado + "%'";
+
+
             MySqlConnection conexion = Conexion.GetConnection();
             conexion.Open();
 
@@ -166,39 +169,51 @@ namespace Proyecto_Adesco
             var logo = new iText.Layout.Element.Image(ImageDataFactory.Create("C:\\Users\\trace\\source\\repos\\Edwin-Lobos\\Proyecto-Adesco\\Proyecto Adesco\\Resources\\logopdf.png")).SetWidth(50);
             var plogo = new Paragraph("").Add(logo);
 
-            var titulo = new Paragraph("Reporte de Personas");
+
+            var titulo = new Paragraph("Reporte de Personas del mes: " + mesSeleccionado);
             titulo.SetTextAlignment(TextAlignment.CENTER);
             titulo.SetFontSize(12);
+            titulo.SetRelativePosition(60, 0, 0, 0);
+
 
             var dfecha = DateTime.Now.ToString("dd-MM-yyyy");
             var dhora = DateTime.Now.ToString("hh:mm:ss");
             var fecha = new Paragraph("Fecha: " + dfecha + "\nHora: " + dhora);
             fecha.SetFontSize(12);
 
-            PdfDocument pdfdoc = new PdfDocument(new PdfReader("Reporte.pdf"), new PdfWriter("ReportePersonas.pdf"));
-            Document doc = new Document(pdfdoc);
+            // ------------------------------------Pedir ruta de descarga al usuario---------------------------------------
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+            saveFileDialog.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
 
-            int numeros = pdfdoc.GetNumberOfPages();
-
-            for (int i = 1; i <= numeros; i++)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                PdfPage pagina = pdfdoc.GetPage(i);
-                float y = pdfdoc.GetPage(i).GetPageSize().GetTop() - 15;
-                doc.ShowTextAligned(plogo, 40, y, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
-                doc.ShowTextAligned(titulo, 150, y - 15, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
-                doc.ShowTextAligned(fecha, 520, y - 15, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
+                string rutaDescarga = saveFileDialog.FileName;
 
-                doc.ShowTextAligned(new Paragraph(string.Format("Página {0} de {1}", i, numeros)), pdfdoc.GetPage(i).GetPageSize().GetWidth() / 2, pdfdoc.GetPage(i).GetPageSize().GetBottom() + 30, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
+                PdfDocument pdfdoc = new PdfDocument(new PdfReader("Reporte.pdf"), new PdfWriter(rutaDescarga));
+                Document doc = new Document(pdfdoc);
 
+                int numeros = pdfdoc.GetNumberOfPages();
 
+                for (int i = 1; i <= numeros; i++)
+                {
+                    PdfPage pagina = pdfdoc.GetPage(i);
+                    float y = pdfdoc.GetPage(i).GetPageSize().GetTop() - 15;
+                    doc.ShowTextAligned(plogo, 40, y, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
+                    doc.ShowTextAligned(titulo, 150, y - 15, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
+                    doc.ShowTextAligned(fecha, 520, y - 15, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
 
+                    doc.ShowTextAligned(new Paragraph(string.Format("Página {0} de {1}", i, numeros)), pdfdoc.GetPage(i).GetPageSize().GetWidth() / 2, pdfdoc.GetPage(i).GetPageSize().GetBottom() + 30, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
+                }
+
+                doc.Close();
+
+                MessageBox.Show("Reporte creado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            doc.Close();
-            MessageBox.Show("Reporte creado correctamente", "Aviso",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
         }
-
         private void label11_Click(object sender, EventArgs e)
         {
             Form frmPrincipal = new Principal();

@@ -1175,9 +1175,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalenletras;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn pendientes;
-        private System.Windows.Forms.BindingSource auxReciboBindingSource6;
+        
 
-        private System.Windows.Forms.DataGridViewTextBoxColumn pendientesDataGridViewTextBoxColumn;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

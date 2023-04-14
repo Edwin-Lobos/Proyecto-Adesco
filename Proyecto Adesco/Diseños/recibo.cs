@@ -136,6 +136,7 @@ namespace Proyecto_Adesco
                             cmd.Parameters.AddWithValue("@codigo", row.Cells["codigo"].Value);
                             cmd.Parameters.AddWithValue("@nota", row.Cells["nota"].Value);
                             cmd.Parameters.AddWithValue("@totalenletras", row.Cells["totalenletras"].Value);
+                            
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -153,6 +154,7 @@ namespace Proyecto_Adesco
 
                 ReciboVS formRecibo = new ReciboVS(dtUltimaFila);
                 formRecibo.Show();
+     
             }
 
 

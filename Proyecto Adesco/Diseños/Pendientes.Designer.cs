@@ -244,7 +244,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource auxReciboBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn numreciboDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pendientesDataGridViewTextBoxColumn;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sendaDataGridViewTextBoxColumn;
