@@ -258,11 +258,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Diseños\Datos.cs">
+    <Compile Include="Diseños\Beneficiarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diseños\Datos.Designer.cs">
-      <DependentUpon>Datos.cs</DependentUpon>
+    <Compile Include="Diseños\Beneficiarios.Designer.cs">
+      <DependentUpon>Beneficiarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\DatosBD.cs" />
     <Compile Include="Diseños\Login.cs">
@@ -318,8 +318,8 @@
       <DependentUpon>ReciboVS.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Usuarios.cs" />
-    <EmbeddedResource Include="Diseños\Datos.resx">
-      <DependentUpon>Datos.cs</DependentUpon>
+    <EmbeddedResource Include="Diseños\Beneficiarios.resx">
+      <DependentUpon>Beneficiarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diseños\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

@@ -13,6 +13,27 @@ namespace Proyecto_Adesco
 {
     public partial class Inicio : Form
     {
+        private void AbrirFormulario<Login>() where Login : Form, new()
+        {
+            Form formulario = panel1.Controls.OfType<Login>().FirstOrDefault();
+            if (formulario != null)
+            {
+                //Si la instancia esta minimizada la dejamos en su estado normal
+                if (formulario.WindowState == FormWindowState.Minimized)
+                {
+                    formulario.WindowState = FormWindowState.Normal;
+                }
+                //Si la instancia existe la pongo en primer plano
+                formulario.BringToFront();
+                return;
+            }
+            //Se abre el form
+            formulario = new Login();
+            formulario.TopLevel = false;
+            panel1.Controls.Add(formulario);
+            panel1.Tag = formulario;
+            formulario.Show();
+        }
 
         public Inicio()
         {
@@ -36,9 +57,7 @@ namespace Proyecto_Adesco
 
         private void rjButton3_Click(object sender, EventArgs e)
         {
-            Form frmRegistro = new Registro();
-            frmRegistro.Show();
-            this.Visible = false;
+            
         }
 
         private void panel1Barra_MouseDown(object sender, MouseEventArgs e)
@@ -63,45 +82,26 @@ namespace Proyecto_Adesco
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            centrado();
+           // centrado();
         }
-        private void centrado()
-        {
+       // private void centrado()
+        //{
             //dimensiones
-            int altura_form = this.Height;
-            int anchura_form = this.Width;
-            int altura_grbox = panel1.Height;
-            int anchura_grbox = panel1.Width;
+         //   int altura_form = this.Height;
+           // int anchura_form = this.Width;
+           // int altura_grbox = panel1.Height;
+           // int anchura_grbox = panel1.Width;
 
-            int nueva_altura = (altura_form - altura_grbox) / 2;
-            int nueva_anchura = (anchura_form - anchura_grbox) / 2;
+            //int nueva_altura = (altura_form - altura_grbox) / 2;
+            //int nueva_anchura = (anchura_form - anchura_grbox) / 2;
 
 
-            panel1.Location = new Point(nueva_anchura, nueva_altura);
-        }
-
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void rjButton4_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-
-        }
-
-        private void rjButton5_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+            //panel1.Location = new Point(nueva_anchura, nueva_altura);
+        //}
 
         private void Inicio_SizeChanged(object sender, EventArgs e)
         {
-            centrado();
+            //centrado();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace Proyecto_Adesco
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            //AbrirFormulario<Login>();
         }
     }
 }

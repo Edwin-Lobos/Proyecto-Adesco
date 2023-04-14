@@ -20,7 +20,9 @@ namespace Proyecto_Adesco
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form frmInicio = new Inicio();
+            frmInicio.Show();
+            this.Visible = false;
         }
 
 

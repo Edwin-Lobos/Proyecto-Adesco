@@ -33,7 +33,9 @@ namespace Proyecto_Adesco
 
         private void Pendientes_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
 
         private void rjButton1_Click(object sender, EventArgs e)

@@ -28,22 +28,9 @@ namespace Proyecto_Adesco
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            centrado();
+           
         }
-        private void centrado()
-        {
-            //dimensiones
-            int altura_form = this.Height;
-            int anchura_form = this.Width;
-            int altura_grbox = panel1.Height;
-            int anchura_grbox = panel1.Width;
-
-            int nueva_altura = (altura_form - altura_grbox) / 2;
-            int nueva_anchura = (anchura_form - anchura_grbox) / 2;
-
-
-            panel1.Location = new Point(nueva_anchura, nueva_altura);
-        }
+        
 
         private void btnRecibo_Click(object sender, EventArgs e)
         {
@@ -134,7 +121,7 @@ namespace Proyecto_Adesco
 
         private void botonDatos_Click(object sender, EventArgs e)
         {
-            Form frmDatos = new Datos();
+            Form frmDatos = new Beneficiarios();
             frmDatos.Show();
             this.Visible = false;
         }
@@ -159,7 +146,14 @@ namespace Proyecto_Adesco
 
         private void Principal_SizeChanged(object sender, EventArgs e)
         {
-            centrado();
+            
+        }
+
+        private void rjButton3_Click_1(object sender, EventArgs e)
+        {
+            Form frmRegistro = new Registro();
+            frmRegistro.Show();
+            this.Visible = false;
         }
     }
 }

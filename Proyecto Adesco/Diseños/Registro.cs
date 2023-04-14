@@ -27,7 +27,9 @@ namespace Proyecto_Adesco
 
         private void Registro_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
 
         private void picMonstrar_Click(object sender, EventArgs e)
@@ -120,6 +122,20 @@ namespace Proyecto_Adesco
         private void txtConPassword_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
+
+        private void picRegresar_Click_1(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
     }
 }

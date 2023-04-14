@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Adesco
 {
-    public partial class Datos : Form
+    public partial class Beneficiarios : Form
     {
-        public Datos()
+        public Beneficiarios()
         {
             InitializeComponent();
             cargarTabla(null);
@@ -21,7 +21,9 @@ namespace Proyecto_Adesco
 
         private void Datos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
 
         private void picRegresar_Click(object sender, EventArgs e)

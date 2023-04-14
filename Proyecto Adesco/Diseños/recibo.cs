@@ -28,7 +28,9 @@ namespace Proyecto_Adesco
         }
         private void recibo_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
         private void picRegresar_Click(object sender, EventArgs e)
         {

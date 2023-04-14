@@ -39,7 +39,9 @@ namespace Proyecto_Adesco
 
         private void Reporte_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
 
         private void Reporte_Load(object sender, EventArgs e)
