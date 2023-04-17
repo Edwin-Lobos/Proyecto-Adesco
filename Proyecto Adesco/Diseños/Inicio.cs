@@ -48,10 +48,28 @@ namespace Proyecto_Adesco
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            
-            Form frmLogin = new Login();
-            frmLogin.Show();
-            this.Visible = false;
+            string usuario = txtUsuario.Text.Trim();
+            string password = txtPassword.Text;
+
+            try
+            {
+                Control ctrl = new Control();
+                string respuesta = ctrl.ctrlLogin(usuario, password);
+                if (respuesta.Length > 0)
+                {
+                    MessageBox.Show(respuesta, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    Principal frm = new Principal();
+                    frm.Visible = true;
+                    this.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
 
@@ -82,21 +100,24 @@ namespace Proyecto_Adesco
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-           // centrado();
+            txtUsuario.Focus();
+            txtUsuario.SelectAll();
+
+            // centrado();
         }
-       // private void centrado()
+        // private void centrado()
         //{
-            //dimensiones
-         //   int altura_form = this.Height;
-           // int anchura_form = this.Width;
-           // int altura_grbox = panel1.Height;
-           // int anchura_grbox = panel1.Width;
+        //dimensiones
+        //   int altura_form = this.Height;
+        // int anchura_form = this.Width;
+        // int altura_grbox = panel1.Height;
+        // int anchura_grbox = panel1.Width;
 
-            //int nueva_altura = (altura_form - altura_grbox) / 2;
-            //int nueva_anchura = (anchura_form - anchura_grbox) / 2;
+        //int nueva_altura = (altura_form - altura_grbox) / 2;
+        //int nueva_anchura = (anchura_form - anchura_grbox) / 2;
 
 
-            //panel1.Location = new Point(nueva_anchura, nueva_altura);
+        //panel1.Location = new Point(nueva_anchura, nueva_altura);
         //}
 
         private void Inicio_SizeChanged(object sender, EventArgs e)
@@ -118,5 +139,78 @@ namespace Proyecto_Adesco
         {
             //AbrirFormulario<Login>();
         }
+
+        private void picMonstrar_Click(object sender, EventArgs e)
+        {
+            // la imagen ocultar la mandamos al frente
+            picOcultar.BringToFront();
+            // se muestra la contraseña
+            txtPassword.PasswordChar = '\0';
+
+        }
+
+        private void picOcultar_Click(object sender, EventArgs e)
+        {
+            picMonstrar.BringToFront();
+            txtPassword.PasswordChar = '*';
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        //-----------------------------------------------------------------------------
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtPassword.Focus();
+            }
+        }
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                string usuario = txtUsuario.Text;
+                string password = txtPassword.Text;
+
+                try
+                {
+                    Control ctrl = new Control();
+                    string respuesta = ctrl.ctrlLogin(usuario, password);
+                    if (respuesta.Length > 0)
+                    {
+                        MessageBox.Show(respuesta, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        Principal frm = new Principal();
+                        frm.Visible = true;
+                        this.Visible = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                rjButton1.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        //-----------------------------------------------------------------------------
     }
 }

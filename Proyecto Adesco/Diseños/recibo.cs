@@ -114,6 +114,7 @@ namespace Proyecto_Adesco
                 fila.Cells["totalenletras"].Value = ConvertirNumeroALetras((decimal)fila.Cells["total"].Value);
                 fila.Cells["codigo"].Value = txtCodigo.Text;
                 fila.Cells["nota"].Value = txtNota.Text;
+                fila.Cells["fecha"].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
 
                 // Enviar los datos a la base de datos
@@ -125,7 +126,7 @@ namespace Proyecto_Adesco
                         // Verificar si el valor de la columna total es nulo
                         if (row.Cells["nombres"].Value != null)
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota, totalenletras) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota, @totalenletras)", conexion);
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota, totalenletras, fecha) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota, @totalenletras, @fecha)", conexion);
                             cmd.Parameters.AddWithValue("@nombres", row.Cells["nombres"].Value);
                             cmd.Parameters.AddWithValue("@apellidos", row.Cells["apellidos"].Value);
                             cmd.Parameters.AddWithValue("@senda", row.Cells["senda"].Value);
@@ -138,7 +139,7 @@ namespace Proyecto_Adesco
                             cmd.Parameters.AddWithValue("@codigo", row.Cells["codigo"].Value);
                             cmd.Parameters.AddWithValue("@nota", row.Cells["nota"].Value);
                             cmd.Parameters.AddWithValue("@totalenletras", row.Cells["totalenletras"].Value);
-                            
+                            cmd.Parameters.AddWithValue("@fecha", row.Cells["fecha"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }

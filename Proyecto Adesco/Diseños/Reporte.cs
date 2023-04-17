@@ -9,25 +9,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Kernel.Font;
-using iText.Kernel.Geom;
-using iText.IO.Font.Constants;
-using iText.Layout.Element;
-using iText.Layout.Properties;
-using iText.IO.Image;
+using Microsoft.Reporting.WinForms;
+using Microsoft.ReportingServices;
 using System.Globalization;
+using Org.BouncyCastle.Asn1.X500;
+using Point = System.Drawing.Point;
+using System.IO;
+using System.Drawing.Printing;
 
 namespace Proyecto_Adesco
 {
-    public partial class Reporte : Form
+    public partial class Reporte : Form 
     {
 
         public Reporte()
         {
             InitializeComponent();
-            cargarTabla2(null);
+            
         }
 
         private void picRegresar_Click(object sender, EventArgs e)
@@ -44,22 +42,10 @@ namespace Proyecto_Adesco
             this.Visible = false;
         }
 
-        private void Reporte_Load(object sender, EventArgs e)
-        {
+        
 
-        }
-        private void cargarTabla2(string datoRC)
-        {
-            List<AuxRecibo> list = new List<AuxRecibo>();
-            CtrlRecibo _ctrdatos = new CtrlRecibo();
-            dataGridView1.DataSource = _ctrdatos.consulta(datoRC);
-        }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            string dato = cbxDato.Text;
-            cargarTabla2(dato);
-        }
 
+        //----------------------------------------------------------------------------------------------------------
         public List<object> consulta(string datoRC)
         {
             MySqlDataReader reader;
@@ -113,108 +99,27 @@ namespace Proyecto_Adesco
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            crearPDF();
+
+
+
+
         }
-
-        private void crearPDF()
+        private void Reporte_Load(object sender, EventArgs e)
         {
-            //------------------------------------Crea el pdf---------------------------------------------
-            PdfWriter pdfWriter = new PdfWriter("Reporte.pdf");
-            PdfDocument pdfDocument = new PdfDocument(pdfWriter);
-            PageSize tamanio = new PageSize(792, 612);
-            Document documento = new Document(pdfDocument, tamanio);
-
-            documento.SetMargins(60, 20, 55, 20);
-            PdfFont fontcolumnas = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
-            PdfFont fontcontenido = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
-
-            string[] columnas = { "Nombres", "Apellidos", "Senda", "Poligono", "N° Casa", "Mes(es)", "N° Recibo", "Cantidad", "Otro(cargo)", "Total", };
-            float[] tamanios = { 3, 3, 1, 2, 2, 3, 2, 1, 2, 1 };
-            Table tabla = new Table(UnitValue.CreatePercentArray(tamanios));
-            tabla.SetWidth(UnitValue.CreatePercentValue(100));
-
-            foreach (string columna in columnas)
-            {
-                tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontcolumnas)));
-            }
-
-            string mesSeleccionado = cbxDato.SelectedItem.ToString(); // obtener mes seleccionado en el ComboBox
-            string sql = "SELECT nombres, apellidos, senda, poligono, n_casa, mes_es, Num_recibo, cantidad, otro, total FROM recibos WHERE mes_es LIKE '%" + mesSeleccionado + "%'";
+            reportViewer1.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("Letter", 850, 1100);
+            reportViewer1.PrinterSettings.DefaultPageSettings.Margins = new Margins(50, 50, 50, 50);
 
 
-            MySqlConnection conexion = Conexion.GetConnection();
-            conexion.Open();
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total FROM recibos ORDER BY Num_recibo DESC", Conexion.GetConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            ReportDataSource rds = new ReportDataSource("DataSet2", dt);
 
-            MySqlCommand command = new MySqlCommand(sql, conexion);
-            MySqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["nombres"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["apellidos"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["senda"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["poligono"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["n_casa"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["mes_es"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph(reader["Num_recibo"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph("$" + reader["cantidad"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph("$" + reader["otro"].ToString()).SetFont(fontcontenido)));
-                tabla.AddCell(new Cell().Add(new Paragraph("$" + reader["total"].ToString()).SetFont(fontcontenido)));
-
-            }
-
-
-            documento.Add(tabla);
-            documento.Close();
-
-            //--------------------------------Inserta logo, fecha y hora al pdf-----------------------------------
-            var logo = new iText.Layout.Element.Image(ImageDataFactory.Create("C:\\Users\\trace\\source\\repos\\Edwin-Lobos\\Proyecto-Adesco\\Proyecto Adesco\\Resources\\logopdf.png")).SetWidth(50);
-            var plogo = new Paragraph("").Add(logo);
-
-
-            var titulo = new Paragraph("Reporte de Personas del mes: " + mesSeleccionado);
-            titulo.SetTextAlignment(TextAlignment.CENTER);
-            titulo.SetFontSize(12);
-            titulo.SetRelativePosition(60, 0, 0, 0);
-
-
-            var dfecha = DateTime.Now.ToString("dd-MM-yyyy");
-            var dhora = DateTime.Now.ToString("hh:mm:ss");
-            var fecha = new Paragraph("Fecha: " + dfecha + "\nHora: " + dhora);
-            fecha.SetFontSize(12);
-
-            // ------------------------------------Pedir ruta de descarga al usuario---------------------------------------
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
-            saveFileDialog.FilterIndex = 2;
-            saveFileDialog.RestoreDirectory = true;
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string rutaDescarga = saveFileDialog.FileName;
-
-                PdfDocument pdfdoc = new PdfDocument(new PdfReader("Reporte.pdf"), new PdfWriter(rutaDescarga));
-                Document doc = new Document(pdfdoc);
-
-                int numeros = pdfdoc.GetNumberOfPages();
-
-                for (int i = 1; i <= numeros; i++)
-                {
-                    PdfPage pagina = pdfdoc.GetPage(i);
-                    float y = pdfdoc.GetPage(i).GetPageSize().GetTop() - 15;
-                    doc.ShowTextAligned(plogo, 40, y, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
-                    doc.ShowTextAligned(titulo, 150, y - 15, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
-                    doc.ShowTextAligned(fecha, 520, y - 15, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
-
-                    doc.ShowTextAligned(new Paragraph(string.Format("Página {0} de {1}", i, numeros)), pdfdoc.GetPage(i).GetPageSize().GetWidth() / 2, pdfdoc.GetPage(i).GetPageSize().GetBottom() + 30, i, TextAlignment.CENTER, VerticalAlignment.TOP, 0);
-                }
-
-                doc.Close();
-
-                MessageBox.Show("Reporte creado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+            
         }
         private void label11_Click(object sender, EventArgs e)
         {
@@ -222,5 +127,83 @@ namespace Proyecto_Adesco
             frmPrincipal.Show();
             this.Visible = false;
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbxDato_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Reporte_Resize(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            {
+                // Obtener el valor seleccionado del ComboBox "cbxDato"
+                string mesSeleccionado = cbxDato.SelectedItem.ToString();
+
+                // Crear la consulta SQL filtrada
+                string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total FROM recibos WHERE mes_es = '" + mesSeleccionado + "' ORDER BY Num_recibo DESC";
+
+                // Crear un objeto DataTable y llenarlo con los datos de la consulta filtrada
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand(consulta, Conexion.GetConnection());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
+
+                // Actualizar el origen de datos del informe con la consulta filtrada
+                ReportDataSource rds = new ReportDataSource("DataSet2", dt);
+                this.reportViewer1.LocalReport.DataSources.Clear();
+                this.reportViewer1.LocalReport.DataSources.Add(rds);
+                this.reportViewer1.RefreshReport();
+            }
+
+
+        }
+
+        private void btnGenerarRP_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "Archivo PDF (*.pdf)|*.pdf";
+            saveDialog.Title = "Guardar como";
+            saveDialog.FileName = "Reporte.pdf";
+
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                Warning[] warnings;
+                string[] streamids;
+                string mimeType;
+                string encoding;
+                string filenameExtension;
+
+                byte[] pdfBytes;
+
+                pdfBytes = reportViewer1.LocalReport.Render(
+                    "PDF", null, out mimeType, out encoding,
+                    out filenameExtension, out streamids, out warnings);
+
+                using (MemoryStream pdfStream = new MemoryStream(pdfBytes))
+                {
+                    // Guardar el archivo PDF en la ubicación especificada
+                    File.WriteAllBytes(saveDialog.FileName, pdfStream.ToArray());
+
+                    MessageBox.Show("El archivo se ha guardado correctamente.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        //----------------------------------------------------------------------------------------------------------
+
+
+
+
     }
 }

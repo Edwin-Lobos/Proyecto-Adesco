@@ -1,5 +1,4 @@
-﻿using iText.StyledXmlParser.Jsoup.Select;
-using Microsoft.Reporting.WinForms;
+﻿using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;

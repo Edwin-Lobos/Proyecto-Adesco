@@ -1,5 +1,4 @@
-﻿using iText.Layout.Element;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +11,7 @@ namespace Proyecto_Adesco.Clases
         private int num_recibo;
         private string mes_es;
         private string codigo;
-        private Text nota;
+        private string nota;
         private double total, cantidad, otro;
         private string nombres, apellidos, senda, poligono, n_casa;
 
@@ -27,6 +26,6 @@ namespace Proyecto_Adesco.Clases
         public string Poligono { get => poligono; set => poligono = value; }
         public string N_casa { get => n_casa; set => n_casa = value; }
         public string Codigo { get => codigo; set => codigo = value; }
-        public Text Nota { get => nota; set => nota = value; }
+        public string Nota { get => nota; set => nota = value; }
     }
 }
