@@ -78,6 +78,7 @@
             this.poligonoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ncasaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpAño = new System.Windows.Forms.DateTimePicker();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,6 +119,7 @@
             this.totalenletras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -506,7 +508,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1130, 615);
+            this.tabPage2.Size = new System.Drawing.Size(1130, 834);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Recibos";
             // 
@@ -532,7 +534,8 @@
             this.nota,
             this.totalenletras,
             this.nombres,
-            this.fecha});
+            this.fecha,
+            this.año});
             this.dataGridView3.Location = new System.Drawing.Point(473, 880);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView3.Name = "dataGridView3";
@@ -645,6 +648,16 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Pendientes";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dtpAño
+            // 
+            this.dtpAño.CustomFormat = "yyyy";
+            this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAño.Location = new System.Drawing.Point(239, 516);
+            this.dtpAño.Name = "dtpAño";
+            this.dtpAño.ShowUpDown = true;
+            this.dtpAño.Size = new System.Drawing.Size(92, 22);
+            this.dtpAño.TabIndex = 125;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -1051,12 +1064,20 @@
             this.fecha.Name = "fecha";
             this.fecha.Width = 125;
             // 
+            // año
+            // 
+            this.año.HeaderText = "Año";
+            this.año.MinimumWidth = 6;
+            this.año.Name = "año";
+            this.año.Width = 125;
+            // 
             // recibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1566, 1055);
+            this.Controls.Add(this.dtpAño);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.tabControl1);
@@ -1184,6 +1205,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn otroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker dtpAño;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn senda;
         private System.Windows.Forms.DataGridViewTextBoxColumn poligono;
@@ -1197,5 +1219,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalenletras;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn año;
     }
 }

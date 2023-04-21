@@ -307,6 +307,8 @@ namespace Proyecto_Adesco {
             
             private global::System.Data.DataColumn columnfecha;
             
+            private global::System.Data.DataColumn columnaño;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public recibosDataTable() {
@@ -454,6 +456,14 @@ namespace Proyecto_Adesco {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn añoColumn {
+                get {
+                    return this.columnaño;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +499,7 @@ namespace Proyecto_Adesco {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public recibosRow AddrecibosRow(string mes_es, decimal total, decimal cantidad, decimal otro, string nombres, string apellidos, string senda, string poligono, string n_casa, string codigo, string nota, string totalenletras, System.DateTime fecha) {
+            public recibosRow AddrecibosRow(string mes_es, decimal total, decimal cantidad, decimal otro, string nombres, string apellidos, string senda, string poligono, string n_casa, string codigo, string nota, string totalenletras, System.DateTime fecha, string año) {
                 recibosRow rowrecibosRow = ((recibosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -505,7 +515,8 @@ namespace Proyecto_Adesco {
                         codigo,
                         nota,
                         totalenletras,
-                        fecha};
+                        fecha,
+                        año};
                 rowrecibosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrecibosRow);
                 return rowrecibosRow;
@@ -542,6 +553,7 @@ namespace Proyecto_Adesco {
                 this.columnnota = base.Columns["nota"];
                 this.columntotalenletras = base.Columns["totalenletras"];
                 this.columnfecha = base.Columns["fecha"];
+                this.columnaño = base.Columns["año"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +587,8 @@ namespace Proyecto_Adesco {
                 base.Columns.Add(this.columntotalenletras);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
+                this.columnaño = new global::System.Data.DataColumn("año", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaño);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNum_recibo}, false));
                 this.columnNum_recibo.AutoIncrement = true;
@@ -904,6 +918,22 @@ namespace Proyecto_Adesco {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string año {
+                get {
+                    try {
+                        return ((string)(this[this.tablerecibos.añoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'año\' de la tabla \'recibos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerecibos.añoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNum_reciboNull() {
                 return this.IsNull(this.tablerecibos.Num_reciboColumn);
             }
@@ -912,6 +942,18 @@ namespace Proyecto_Adesco {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNum_reciboNull() {
                 this[this.tablerecibos.Num_reciboColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsañoNull() {
+                return this.IsNull(this.tablerecibos.añoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetañoNull() {
+                this[this.tablerecibos.añoColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -106,20 +106,16 @@ namespace Proyecto_Adesco
         }
         private void Reporte_Load(object sender, EventArgs e)
         {
-            reportViewer1.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("Letter", 850, 1100);
-            reportViewer1.PrinterSettings.DefaultPageSettings.Margins = new Margins(50, 50, 50, 50);
-
-
             DataTable dt = new DataTable();
-            MySqlCommand cmd = new MySqlCommand("SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total FROM recibos ORDER BY Num_recibo DESC", Conexion.GetConnection());
+            MySqlCommand cmd = new MySqlCommand("SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total, DATE_FORMAT(fecha, '%Y') AS fecha_year FROM recibos ORDER BY Num_recibo DESC", Conexion.GetConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
-            ReportDataSource rds = new ReportDataSource("DataSet2", dt);
+            dt.Columns["fecha_year"].ColumnName = "fecha"; // Renombrar la columna de fecha/hora
+            ReportDataSource rds = new ReportDataSource("DataSet1", dt);
 
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
-            
         }
         private void label11_Click(object sender, EventArgs e)
         {
@@ -151,7 +147,7 @@ namespace Proyecto_Adesco
                 string mesSeleccionado = cbxDato.SelectedItem.ToString();
 
                 // Crear la consulta SQL filtrada
-                string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total FROM recibos WHERE mes_es = '" + mesSeleccionado + "' ORDER BY Num_recibo DESC";
+                string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total, DATE_FORMAT(fecha, '%Y') AS fecha FROM recibos WHERE mes_es = '" + mesSeleccionado + "' ORDER BY Num_recibo DESC";
 
                 // Crear un objeto DataTable y llenarlo con los datos de la consulta filtrada
                 DataTable dt = new DataTable();
@@ -160,10 +156,11 @@ namespace Proyecto_Adesco
                 adapter.Fill(dt);
 
                 // Actualizar el origen de datos del informe con la consulta filtrada
-                ReportDataSource rds = new ReportDataSource("DataSet2", dt);
+                ReportDataSource rds = new ReportDataSource("DataSet1", dt);
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(rds);
                 this.reportViewer1.RefreshReport();
+
             }
 
 
