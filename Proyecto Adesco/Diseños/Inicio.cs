@@ -211,6 +211,14 @@ namespace Proyecto_Adesco
             }
         }
 
+        private void txtUsuario_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtPassword.Focus();
+            }
+        }
+
         //-----------------------------------------------------------------------------
     }
 }

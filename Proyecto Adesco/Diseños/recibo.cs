@@ -356,6 +356,11 @@ namespace Proyecto_Adesco
         {
 
         }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 
 }
