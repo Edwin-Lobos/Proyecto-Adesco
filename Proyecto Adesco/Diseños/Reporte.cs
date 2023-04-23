@@ -142,28 +142,28 @@ namespace Proyecto_Adesco
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            {
-                // Obtener el valor seleccionado del ComboBox "cbxDato"
-                string mesSeleccionado = cbxDato.SelectedItem.ToString();
+            // Obtener el valor seleccionado del ComboBox "cbxDato"
+            string mesSeleccionado = cbxDato.SelectedItem.ToString();
 
-                // Crear la consulta SQL filtrada
-                string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total, DATE_FORMAT(fecha, '%Y') AS fecha FROM recibos WHERE mes_es = '" + mesSeleccionado + "' ORDER BY Num_recibo DESC";
+            // Obtener el mes y año correspondientes al mes seleccionado
+            DateTime fechaActual = DateTime.Now;
+            int mes = DateTime.ParseExact(mesSeleccionado, "MMMM", CultureInfo.CurrentCulture).Month;
+            int año = fechaActual.Year;
 
-                // Crear un objeto DataTable y llenarlo con los datos de la consulta filtrada
-                DataTable dt = new DataTable();
-                MySqlCommand cmd = new MySqlCommand(consulta, Conexion.GetConnection());
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(dt);
+            // Crear la consulta SQL filtrada por el mes y año seleccionados
+            string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total, DATE_FORMAT(fecha, '%Y') AS fecha FROM recibos WHERE MONTH(fecha) = " + mes + " AND YEAR(fecha) = " + año + " ORDER BY Num_recibo DESC";
 
-                // Actualizar el origen de datos del informe con la consulta filtrada
-                ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-                this.reportViewer1.LocalReport.DataSources.Clear();
-                this.reportViewer1.LocalReport.DataSources.Add(rds);
-                this.reportViewer1.RefreshReport();
+            // Crear un objeto DataTable y llenarlo con los datos de la consulta filtrada
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand(consulta, Conexion.GetConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dt);
 
-            }
-
-
+            // Actualizar el origen de datos del informe con la consulta filtrada
+            ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnGenerarRP_Click(object sender, EventArgs e)

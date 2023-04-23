@@ -97,7 +97,6 @@ namespace Proyecto_Adesco
             }
             else
             {
-
                 // Agregar fila a la DataGridView
                 int indice_fila = dataGridView3.Rows.Add();
                 DataGridViewRow fila = dataGridView3.Rows[indice_fila];
@@ -158,10 +157,7 @@ namespace Proyecto_Adesco
 
                 ReciboVS formRecibo = new ReciboVS(dtUltimaFila);
                 formRecibo.Show();
-     
             }
-
-
         }
 
 
