@@ -31,16 +31,27 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reporte));
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Proyecto_Adesco.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnGenerarRP = new Proyecto_Adesco.RJButton();
             this.btnBuscar = new Proyecto_Adesco.RJButton();
             this.cbxDato = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataSet1 = new Proyecto_Adesco.DataSet1();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.dtpAño = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -123,7 +134,7 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cbxDato.Location = new System.Drawing.Point(624, 36);
+            this.cbxDato.Location = new System.Drawing.Point(526, 38);
             this.cbxDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxDato.Name = "cbxDato";
             this.cbxDato.Size = new System.Drawing.Size(179, 24);
@@ -133,21 +144,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(649, 8);
+            this.label1.Location = new System.Drawing.Point(522, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(243, 20);
             this.label1.TabIndex = 87;
             this.label1.Text = "Filtrar Busqueda por meses";
             // 
-            // dataSet1
+            // dtpAño
             // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSet1BindingSource
-            // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
+            this.dtpAño.CustomFormat = "yyyy";
+            this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAño.Location = new System.Drawing.Point(711, 38);
+            this.dtpAño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpAño.Name = "dtpAño";
+            this.dtpAño.ShowUpDown = true;
+            this.dtpAño.Size = new System.Drawing.Size(92, 22);
+            this.dtpAño.TabIndex = 126;
             // 
             // Reporte
             // 
@@ -155,6 +167,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1481, 842);
+            this.Controls.Add(this.dtpAño);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerarRP);
             this.Controls.Add(this.btnBuscar);
@@ -168,8 +181,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Reporte_FormClosed);
             this.Load += new System.EventHandler(this.Reporte_Load);
             this.Resize += new System.EventHandler(this.Reporte_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +196,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
         private DataSet1 dataSet1;
+        private System.Windows.Forms.DateTimePicker dtpAño;
     }
 }

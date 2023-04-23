@@ -145,13 +145,14 @@ namespace Proyecto_Adesco
             // Obtener el valor seleccionado del ComboBox "cbxDato"
             string mesSeleccionado = cbxDato.SelectedItem.ToString();
 
-            // Obtener el mes y año correspondientes al mes seleccionado
-            DateTime fechaActual = DateTime.Now;
+            // Obtener el valor seleccionado del DateTimePicker "dtpAño"
+            int añoSeleccionado = dtpAño.Value.Year;
+
+            // Obtener el mes correspondiente al mes seleccionado
             int mes = DateTime.ParseExact(mesSeleccionado, "MMMM", CultureInfo.CurrentCulture).Month;
-            int año = fechaActual.Year;
 
             // Crear la consulta SQL filtrada por el mes y año seleccionados
-            string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total, DATE_FORMAT(fecha, '%Y') AS fecha FROM recibos WHERE MONTH(fecha) = " + mes + " AND YEAR(fecha) = " + año + " ORDER BY Num_recibo DESC";
+            string consulta = "SELECT Num_recibo, nombres, apellidos, senda, poligono, n_casa, codigo, mes_es, cantidad, otro, total, DATE_FORMAT(fecha, '%Y') AS fecha FROM recibos WHERE MONTH(fecha) = " + mes + " AND YEAR(fecha) = " + añoSeleccionado + " ORDER BY Num_recibo DESC";
 
             // Crear un objeto DataTable y llenarlo con los datos de la consulta filtrada
             DataTable dt = new DataTable();
@@ -197,6 +198,8 @@ namespace Proyecto_Adesco
                 }
             }
         }
+
+      
         //----------------------------------------------------------------------------------------------------------
 
 

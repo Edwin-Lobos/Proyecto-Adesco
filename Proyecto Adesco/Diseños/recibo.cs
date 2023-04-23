@@ -92,11 +92,30 @@ namespace Proyecto_Adesco
         {
             if (string.IsNullOrEmpty(lbxMes_es.Text) || string.IsNullOrEmpty(txtCantidad.Text))
             {
-                MessageBox.Show("Debe llenar el campo cantidad", "Aviso",
+                MessageBox.Show("Debe llenar el campo cantidad y Mes/es", "Aviso",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                string codigo = txtCodigo.Text;
+                string mes_es = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
+
+                // Consultar si ya existe un recibo para la misma persona y el mismo mes
+                using (MySqlConnection conexion = Conexion.GetConnection())
+                {
+                    conexion.Open();
+                    MySqlCommand cmdExistencia = new MySqlCommand("SELECT COUNT(*) FROM recibos WHERE codigo = @codigo AND mes_es = @mes_es", conexion);
+                    cmdExistencia.Parameters.AddWithValue("@codigo", codigo);
+                    cmdExistencia.Parameters.AddWithValue("@mes_es", mes_es);
+                    int count = Convert.ToInt32(cmdExistencia.ExecuteScalar());
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Ya existe un recibo para el mes seleccionado.", "Advertencia",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
                 // Agregar fila a la DataGridView
                 int indice_fila = dataGridView3.Rows.Add();
                 DataGridViewRow fila = dataGridView3.Rows[indice_fila];

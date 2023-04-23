@@ -27,5 +27,6 @@ namespace Proyecto_Adesco.Clases
         public string N_casa { get => n_casa; set => n_casa = value; }
         public string Codigo { get => codigo; set => codigo = value; }
         public string Nota { get => nota; set => nota = value; }
+        
     }
 }
