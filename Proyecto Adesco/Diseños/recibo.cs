@@ -28,9 +28,7 @@ namespace Proyecto_Adesco
         }
         private void recibo_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
+            Application.Exit();
         }
         private void picRegresar_Click(object sender, EventArgs e)
         {
@@ -375,6 +373,13 @@ namespace Proyecto_Adesco
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
         }
     }
 

@@ -99,31 +99,31 @@
                   <Width>1.33118cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.31376cm</Width>
+                  <Width>3.04733cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.44004cm</Width>
+                  <Width>3.20577cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.36998cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.64178cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.61229cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.39644cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.76687cm</Width>
+                  <Width>1.5475cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.50228cm</Width>
+                  <Width>1.29061cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.39644cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>2.5cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.68748cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.57107cm</Width>
+                  <Width>1.25357cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.4993cm</Width>
@@ -145,6 +145,7 @@
                                   <Value>N° Recibo</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -179,6 +180,7 @@
                                   <Value>Nombre</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -213,6 +215,7 @@
                                   <Value>Apellidos</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -247,6 +250,7 @@
                                   <Value>Senda</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -281,6 +285,7 @@
                                   <Value>Poligono</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -315,6 +320,7 @@
                                   <Value>N° casa</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -349,6 +355,7 @@
                                   <Value>Codigo</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -383,6 +390,7 @@
                                   <Value>Mes/es</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -417,6 +425,7 @@
                                   <Value>Cantidad</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -451,6 +460,7 @@
                                   <Value>Otro</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -485,6 +495,7 @@
                                   <Value>Total</Value>
                                   <Style>
                                     <FontFamily>Inter Medium</FontFamily>
+                                    <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -524,6 +535,7 @@
                                   <Value>=Fields!Num_recibo.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -558,6 +570,7 @@
                                   <Value>=Fields!nombres.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -592,6 +605,7 @@
                                   <Value>=Fields!apellidos.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -626,6 +640,7 @@
                                   <Value>=Fields!senda.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -660,6 +675,7 @@
                                   <Value>=Fields!poligono.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -694,6 +710,7 @@
                                   <Value>=Fields!n_casa.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -728,6 +745,7 @@
                                   <Value>=Fields!codigo.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -762,6 +780,7 @@
                                   <Value>=Fields!mes_es.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -796,12 +815,14 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!cantidad.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -836,12 +857,14 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!otro.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -876,12 +899,14 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!total.Value</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -921,10 +946,13 @@
                                   <Value>Valor Total</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox59</rd:DefaultName>
@@ -935,7 +963,7 @@
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingTop>5pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
@@ -963,16 +991,20 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Sum(Fields!total.Value, "DataSet1")</Value>
                                   <Style>
                                     <FontFamily>Inter</FontFamily>
+                                    <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -983,7 +1015,7 @@
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingTop>5pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
@@ -1022,23 +1054,24 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>3.90003cm</Top>
-            <Left>0.69545cm</Left>
+            <Top>5.46107cm</Top>
+            <Left>1.34187cm</Left>
             <Height>2.56728cm</Height>
-            <Width>19.40486cm</Width>
+            <Width>19.19575cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
               <FontFamily>Inter</FontFamily>
+              <FontSize>8pt</FontSize>
             </Style>
           </Tablix>
           <Image Name="Image1">
             <Source>Embedded</Source>
             <Value>logopdf</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.76412cm</Top>
-            <Left>1.36275cm</Left>
+            <Top>2.32516cm</Top>
+            <Left>1.6123cm</Left>
             <Height>1.87042cm</Height>
             <Width>1.87042cm</Width>
             <ZIndex>1</ZIndex>
@@ -1069,8 +1102,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>0.76412cm</Top>
-            <Left>6.90071cm</Left>
+            <Top>2.32516cm</Top>
+            <Left>5.72038cm</Left>
             <Height>1.26105cm</Height>
             <Width>9.67021cm</Width>
             <ZIndex>2</ZIndex>
@@ -1102,8 +1135,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox53</rd:DefaultName>
-            <Top>2.91198cm</Top>
-            <Left>0.669cm</Left>
+            <Top>4.47302cm</Top>
+            <Left>1.34187cm</Left>
             <Height>0.6cm</Height>
             <Width>5.5611cm</Width>
             <ZIndex>3</ZIndex>
@@ -1134,41 +1167,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>2.91198cm</Top>
-            <Left>14.04447cm</Left>
+            <Top>4.47302cm</Top>
+            <Left>14.32947cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.47273cm</Width>
+            <Width>6.20815cm</Width>
             <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="mes_es1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Fields!mes_es.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>mes_es1</rd:DefaultName>
-            <Top>2.91198cm</Top>
-            <Left>6.2301cm</Left>
-            <Height>0.6cm</Height>
-            <Width>1.9115cm</Width>
-            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1188,27 +1191,26 @@
                   <TextRun>
                     <Value>=Fields!fecha.Value</Value>
                     <Style>
-                      <FontFamily>Inter</FontFamily>
+                      <FontFamily>Inter Medium</FontFamily>
+                      <FontSize>9pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>fecha</rd:DefaultName>
-            <Top>2.91198cm</Top>
-            <Left>10.03481cm</Left>
+            <Top>4.47302cm</Top>
+            <Left>9.66701cm</Left>
             <Height>0.6cm</Height>
             <Width>1.50517cm</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
@@ -1221,36 +1223,39 @@
                 <TextRuns>
                   <TextRun>
                     <Value>del año de</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Inter Medium</FontFamily>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox34</rd:DefaultName>
-            <Top>2.91198cm</Top>
-            <Left>8.17687cm</Left>
+            <Top>4.47302cm</Top>
+            <Left>7.84434cm</Left>
             <Height>0.6cm</Height>
             <Width>1.82267cm</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>8.7057cm</Height>
+        <Height>8.7cm</Height>
         <Style />
       </Body>
-      <Width>23.5887cm</Width>
+      <Width>23.5cm</Width>
       <Page>
         <PageHeight>27.94cm</PageHeight>
         <PageWidth>21.59cm</PageWidth>
+        <InteractiveHeight>27.9cm</InteractiveHeight>
+        <InteractiveWidth>21.5cm</InteractiveWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>
@@ -1310,6 +1315,8 @@ ae/cm9B7EPt6PsBGhNOKCf0uyZcZwUQGw2cQRhd4SQg8gci9oMt5ec295dq1zj1hvwd8djtn3kJfcLLW
 yGOAL4B8msI2GyuHsgnhLpSbGLdyqXv5rg2aViDbkt1/SEzN5o7rkWweqsiVAAAA2ElEQVQ/YrgchMDjKPficQ8jvPtdjnjt4QRiQFLp/YEpiPdBNNwXZDLRuSjbYwvwDOhKkFXAb8FbUYkweEd5cQIpkGyAZGY/SLwbLxyH6hiEHVDZAZGdQAcI2YiwDmU9nm4glHW0eKt48YW/u3yM+sQJxOGIoLYqKzocNYYTiMMRgROIwxGBE4jDEYETiMMRgROIwxGBE4jDEYETiMMRgROIwxGBE4jDEYETiMMRgROIwxGBE4jDEYETiMMRgROIwxGBE4jDEYETiMMRgROIwxGBE4jDEcH/B44oRNra3gAcAAAAAElFTkSuQmCC</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
+  <Language>es-ES</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>25216c21-0d15-46aa-81d2-94e9ac30924b</rd:ReportID>
 </Report>

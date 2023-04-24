@@ -44,17 +44,21 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new Proyecto_Adesco.RJButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 152);
+            this.label1.Location = new System.Drawing.Point(270, 212);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
@@ -65,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(263, 189);
+            this.label2.Location = new System.Drawing.Point(270, 249);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 16);
@@ -76,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 226);
+            this.label3.Location = new System.Drawing.Point(270, 286);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 16);
@@ -87,7 +91,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(263, 263);
+            this.label4.Location = new System.Drawing.Point(270, 323);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 16);
@@ -97,7 +101,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(266, 167);
+            this.txtUsuario.Location = new System.Drawing.Point(273, 227);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(201, 21);
@@ -108,7 +112,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(266, 204);
+            this.txtPassword.Location = new System.Drawing.Point(273, 264);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -120,7 +124,7 @@
             // txtConPassword
             // 
             this.txtConPassword.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConPassword.Location = new System.Drawing.Point(266, 241);
+            this.txtConPassword.Location = new System.Drawing.Point(273, 301);
             this.txtConPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtConPassword.Name = "txtConPassword";
             this.txtConPassword.PasswordChar = '*';
@@ -133,7 +137,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(266, 281);
+            this.txtNombre.Location = new System.Drawing.Point(273, 341);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(201, 21);
@@ -142,20 +146,22 @@
             // 
             // picOcultar
             // 
+            this.picOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picOcultar.Image = global::Proyecto_Adesco.Properties.Resources.invisible1;
-            this.picOcultar.Location = new System.Drawing.Point(471, 241);
+            this.picOcultar.Location = new System.Drawing.Point(478, 301);
             this.picOcultar.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultar.Name = "picOcultar";
             this.picOcultar.Size = new System.Drawing.Size(28, 20);
             this.picOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picOcultar.TabIndex = 10;
             this.picOcultar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picOcultar, "Ocultar contraseña");
             this.picOcultar.Click += new System.EventHandler(this.picOcultar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(471, 167);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 227);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,21 +171,22 @@
             // 
             // picMonstrar
             // 
+            this.picMonstrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMonstrar.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrar.Image")));
-            this.picMonstrar.Location = new System.Drawing.Point(471, 241);
+            this.picMonstrar.Location = new System.Drawing.Point(478, 301);
             this.picMonstrar.Margin = new System.Windows.Forms.Padding(2);
             this.picMonstrar.Name = "picMonstrar";
             this.picMonstrar.Size = new System.Drawing.Size(28, 20);
             this.picMonstrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMonstrar.TabIndex = 9;
             this.picMonstrar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picMonstrar, "Mostrar/ocultar contraseña.");
+            this.toolTip1.SetToolTip(this.picMonstrar, "Mostrar contraseña.");
             this.picMonstrar.Click += new System.EventHandler(this.picMonstrar_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(471, 281);
+            this.pictureBox4.Location = new System.Drawing.Point(478, 341);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 20);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +208,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(282, 345);
+            this.rjButton1.Location = new System.Drawing.Point(289, 380);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(162, 52);
             this.rjButton1.TabIndex = 15;
@@ -210,17 +217,42 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(726, 1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 128;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Regresar");
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(293, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(162, 156);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 129;
+            this.pictureBox2.TabStop = false;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(769, 521);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.picMonstrar);
-            this.Controls.Add(this.picOcultar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtConPassword);
             this.Controls.Add(this.txtPassword);
@@ -229,6 +261,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.picMonstrar);
+            this.Controls.Add(this.picOcultar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(785, 560);
@@ -242,6 +276,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +298,8 @@
         private System.Windows.Forms.PictureBox picMonstrar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

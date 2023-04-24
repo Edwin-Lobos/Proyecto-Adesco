@@ -25,8 +25,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>0.69624cm</Top>
-            <Left>5.79049cm</Left>
+            <Top>0.4068cm</Top>
+            <Left>3.56799cm</Left>
             <Height>1.26105cm</Height>
             <Width>9.67021cm</Width>
             <Style>
@@ -60,8 +60,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>2.43353cm</Top>
-            <Left>9.13747cm</Left>
+            <Top>2.14409cm</Top>
+            <Left>6.91497cm</Left>
             <Height>0.57327cm</Height>
             <Width>2.97626cm</Width>
             <ZIndex>1</ZIndex>
@@ -152,8 +152,8 @@
               </Tablix>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.69624cm</Top>
-            <Left>16.58279cm</Left>
+            <Top>0.4068cm</Top>
+            <Left>14.80945cm</Left>
             <Height>1.31438cm</Height>
             <Width>3.16146cm</Width>
             <ZIndex>2</ZIndex>
@@ -167,10 +167,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.97192cm</Width>
+                  <Width>3.6538cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>9.5267cm</Width>
+                  <Width>8.0715cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.92055cm</Width>
@@ -1279,10 +1279,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>4.32626cm</Top>
+            <Top>4.03682cm</Top>
             <Left>0.47508cm</Left>
             <Height>6.76231cm</Height>
-            <Width>19.26915cm</Width>
+            <Width>17.49583cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1309,7 +1309,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox219</rd:DefaultName>
-            <Top>3.39937cm</Top>
+            <Top>3.10993cm</Top>
             <Left>0.47508cm</Left>
             <Height>0.6cm</Height>
             <Width>4.37421cm</Width>
@@ -1328,7 +1328,7 @@
             <Source>Embedded</Source>
             <Value>logopdf</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.39527cm</Top>
+            <Top>0.10583cm</Top>
             <Left>0.77141cm</Left>
             <Height>2.61153cm</Height>
             <Width>2.64901cm</Width>
@@ -1356,7 +1356,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>11.42075cm</Top>
+            <Top>11.13131cm</Top>
             <Left>0.40452cm</Left>
             <Height>0.78521cm</Height>
             <Width>1.03244cm</Width>
@@ -1388,8 +1388,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.05874cm</Top>
-            <Left>15.45868cm</Left>
+            <Top>0.7693cm</Top>
+            <Left>13.68534cm</Left>
             <Height>0.6cm</Height>
             <Width>1.1241cm</Width>
             <ZIndex>7</ZIndex>
@@ -1407,7 +1407,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>18.20145cm</Width>
+                  <Width>16.42812cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1461,10 +1461,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>11.42075cm</Top>
+            <Top>11.13131cm</Top>
             <Left>1.54279cm</Left>
             <Height>0.78521cm</Height>
-            <Width>18.20145cm</Width>
+            <Width>16.42812cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1487,10 +1487,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>fecha</rd:DefaultName>
-            <Top>3.54987cm</Top>
-            <Left>15.45868cm</Left>
+            <Top>3.26043cm</Top>
+            <Left>13.0768cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.28557cm</Width>
+            <Width>4.89411cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -1505,10 +1505,10 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.44725cm</Top>
-        <Left>0.27815cm</Left>
-        <Height>13.29534cm</Height>
-        <Width>23.02488cm</Width>
+        <Top>1.46411cm</Top>
+        <Left>1.28944cm</Left>
+        <Height>12.10173cm</Height>
+        <Width>18.47424cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1538,8 +1538,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>0.69624cm</Top>
-            <Left>5.79049cm</Left>
+            <Top>0.4068cm</Top>
+            <Left>3.56799cm</Left>
             <Height>1.26105cm</Height>
             <Width>9.67021cm</Width>
             <Style>
@@ -1573,8 +1573,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>2.43353cm</Top>
-            <Left>9.13747cm</Left>
+            <Top>2.14409cm</Top>
+            <Left>6.91497cm</Left>
             <Height>0.57327cm</Height>
             <Width>2.97626cm</Width>
             <ZIndex>1</ZIndex>
@@ -1665,8 +1665,8 @@
               </Tablix>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.69624cm</Top>
-            <Left>16.58279cm</Left>
+            <Top>0.4068cm</Top>
+            <Left>14.80945cm</Left>
             <Height>1.31438cm</Height>
             <Width>3.16146cm</Width>
             <ZIndex>2</ZIndex>
@@ -1680,13 +1680,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.97192cm</Width>
+                  <Width>3.6538cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>11.16163cm</Width>
+                  <Width>8.0715cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.97958cm</Width>
+                  <Width>1.92055cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.55561cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.13833cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.15604cm</Width>
@@ -1756,9 +1762,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -1854,9 +1862,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -1952,9 +1962,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -2050,9 +2062,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -2148,9 +2162,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -2246,9 +2262,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -2344,10 +2362,72 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="año2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!año.Value</Value>
+                                  <Style>
+                                    <FontFamily>Inter Medium</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>año</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox26">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Inter Medium</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="mes4">
@@ -2451,9 +2531,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -2527,9 +2609,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
@@ -2667,9 +2751,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>3</ColSpan>
+                        <ColSpan>5</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                   </TablixCells>
@@ -2678,6 +2764,8 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
+                <TablixMember />
+                <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -2704,10 +2792,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>4.32626cm</Top>
+            <Top>4.03682cm</Top>
             <Left>0.47508cm</Left>
             <Height>6.76231cm</Height>
-            <Width>19.26917cm</Width>
+            <Width>17.49583cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -2734,7 +2822,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox219</rd:DefaultName>
-            <Top>3.39937cm</Top>
+            <Top>3.10993cm</Top>
             <Left>0.47508cm</Left>
             <Height>0.6cm</Height>
             <Width>4.37421cm</Width>
@@ -2753,7 +2841,7 @@
             <Source>Embedded</Source>
             <Value>logopdf</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.39527cm</Top>
+            <Top>0.10583cm</Top>
             <Left>0.77141cm</Left>
             <Height>2.61153cm</Height>
             <Width>2.64901cm</Width>
@@ -2764,38 +2852,6 @@
               </Border>
             </Style>
           </Image>
-          <Textbox Name="nota2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Fields!nota.Value</Value>
-                    <Style>
-                      <FontFamily>Inter</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>nota</rd:DefaultName>
-            <Top>11.60596cm</Top>
-            <Left>1.50752cm</Left>
-            <Height>1.38452cm</Height>
-            <Width>18.23672cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox46">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -2813,11 +2869,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>11.60596cm</Top>
+            <Top>11.13131cm</Top>
             <Left>0.40452cm</Left>
-            <Height>0.6cm</Height>
+            <Height>0.78521cm</Height>
             <Width>1.03244cm</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2845,11 +2901,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.05874cm</Top>
-            <Left>15.45868cm</Left>
+            <Top>0.7693cm</Top>
+            <Left>13.68534cm</Left>
             <Height>0.6cm</Height>
             <Width>1.1241cm</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2860,6 +2916,75 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>16.42812cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.78521cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="nota2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!nota.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>nota</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Detalles5" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>11.13131cm</Top>
+            <Left>1.54279cm</Left>
+            <Height>0.78521cm</Height>
+            <Width>16.42812cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
           <Textbox Name="fecha2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -2875,8 +3000,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>fecha</rd:DefaultName>
-            <Top>3.39937cm</Top>
-            <Left>15.45868cm</Left>
+            <Top>3.26043cm</Top>
+            <Left>13.68534cm</Left>
             <Height>0.6cm</Height>
             <Width>4.28557cm</Width>
             <ZIndex>9</ZIndex>
@@ -2893,10 +3018,10 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>13.96746cm</Top>
-        <Left>0.27815cm</Left>
-        <Height>13.29534cm</Height>
-        <Width>20.22049cm</Width>
+        <Top>13.69611cm</Top>
+        <Left>1.28122cm</Left>
+        <Height>12.10173cm</Height>
+        <Width>18.47424cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -2905,13 +3030,15 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>28.10947cm</Height>
+    <Height>27.94cm</Height>
     <Style />
   </Body>
-  <Width>23.40906cm</Width>
+  <Width>21.59cm</Width>
   <Page>
     <PageHeight>27.94cm</PageHeight>
     <PageWidth>21.59cm</PageWidth>
+    <InteractiveHeight>27.9cm</InteractiveHeight>
+    <InteractiveWidth>21.5cm</InteractiveWidth>
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>
@@ -3027,6 +3154,7 @@ xXUKBB2PUbgydquTtc5zVDyk1hhq8yLu1sV0kqU4uS08cdfkVos3hPY+y8FZDrVcZjXTdEKyIjK/zLec
 i6r5PEa4EtosGNRltIeB7oKW+Z14H+FalD6VO01ooLcucwWK/lF9wRA1N4r7k+bxeD/jD9xfeSzoH4a2f5i9Gv8ArRJXidkOzn3aypK7lIT7HuhgEequZY7FA71HXDSeTJTgpetFv2fn07SSt2i86e1HVPkw7tv49ew0a0802wjSnGI2H4Bj0a0WuN1DTI3U4vbq44s7qcWdhupRJ6D2FUepqptXMc2dFi2XimpZNHLUqTDgj01fA6BQCgFAKAUAoBQCgFAKAUAoBQCgFAKA+b7DEplcaSy28y6koW24kKSpJ7gg9CK/U2nij8aTWDIPzzgk4Z9QHHZVw00h2uY6SoybM4uCrc9zyNkNkn3KDUtT32vp8oZmK7c/XPzImosVBU5xS8H2ZemXkQ/ePCu0alPKcsme5hAQrr5by40gJ/QhpB2/Un9ak4NLKpLrwQvxXuRceiVK31I4l4P2OsjeFLp0hZMzVXI3U79A1EYbO36nm/0r29LZ+yWvFnhaIyNsx+CPfYp4a/DTjzrb91h5FkikHcouVz5EKP6R0tdPoT+u9cc7SevmZQtQ8F84nZJ0XoJTxiTi4v4wLA4PpdpzppEVCwDCLLYG1gJcMGGhpbu38awOZZ+qiahp9XPqnjOjcXFk1IpJFKsJMCh4I9RXOdAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoD/2Q==</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0ee01432-7a8b-460c-b83e-b008d510977f</rd:ReportID>
 </Report>

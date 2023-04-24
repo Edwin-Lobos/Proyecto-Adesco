@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,8 @@
             this.picMonstrar = new System.Windows.Forms.PictureBox();
             this.picOcultar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -121,7 +124,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(112, 249);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(234, 20);
             this.txtUsuario.TabIndex = 0;
@@ -178,7 +181,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(112, 297);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(234, 20);
@@ -188,26 +191,30 @@
             // 
             // picMonstrar
             // 
+            this.picMonstrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMonstrar.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrar.Image")));
             this.picMonstrar.Location = new System.Drawing.Point(350, 298);
-            this.picMonstrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picMonstrar.Margin = new System.Windows.Forms.Padding(2);
             this.picMonstrar.Name = "picMonstrar";
             this.picMonstrar.Size = new System.Drawing.Size(28, 20);
             this.picMonstrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMonstrar.TabIndex = 22;
             this.picMonstrar.TabStop = false;
+            this.toolTip2.SetToolTip(this.picMonstrar, "Mostrar contraseña");
             this.picMonstrar.Click += new System.EventHandler(this.picMonstrar_Click);
             // 
             // picOcultar
             // 
+            this.picOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picOcultar.Image = global::Proyecto_Adesco.Properties.Resources.invisible1;
             this.picOcultar.Location = new System.Drawing.Point(350, 298);
-            this.picOcultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picOcultar.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultar.Name = "picOcultar";
             this.picOcultar.Size = new System.Drawing.Size(28, 20);
             this.picOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picOcultar.TabIndex = 23;
             this.picOcultar.TabStop = false;
+            this.toolTip2.SetToolTip(this.picOcultar, "Ocultar contraseña");
             this.picOcultar.Click += new System.EventHandler(this.picOcultar_Click);
             // 
             // panel2
@@ -229,7 +236,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(732, 558);
             this.MinimumSize = new System.Drawing.Size(732, 558);
@@ -264,5 +271,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox picMonstrar;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

@@ -42,11 +42,13 @@
             this.botonPendientes = new Proyecto_Adesco.RJButton();
             this.rjButton1 = new Proyecto_Adesco.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +81,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(625, 337);
+            this.pictureBox4.Location = new System.Drawing.Point(625, 370);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(63, 63);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +91,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(455, 337);
+            this.pictureBox3.Location = new System.Drawing.Point(455, 370);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 63);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +101,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(283, 337);
+            this.pictureBox2.Location = new System.Drawing.Point(283, 370);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(63, 63);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +111,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(115, 337);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 370);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -156,7 +158,7 @@
             this.botonDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonDatos.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonDatos.ForeColor = System.Drawing.Color.White;
-            this.botonDatos.Location = new System.Drawing.Point(574, 251);
+            this.botonDatos.Location = new System.Drawing.Point(574, 284);
             this.botonDatos.Name = "botonDatos";
             this.botonDatos.Size = new System.Drawing.Size(162, 52);
             this.botonDatos.TabIndex = 24;
@@ -180,7 +182,7 @@
             this.botonRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonRecibo.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonRecibo.ForeColor = System.Drawing.Color.White;
-            this.botonRecibo.Location = new System.Drawing.Point(70, 251);
+            this.botonRecibo.Location = new System.Drawing.Point(70, 284);
             this.botonRecibo.Name = "botonRecibo";
             this.botonRecibo.Size = new System.Drawing.Size(162, 52);
             this.botonRecibo.TabIndex = 18;
@@ -204,7 +206,7 @@
             this.botonReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonReporte.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonReporte.ForeColor = System.Drawing.Color.White;
-            this.botonReporte.Location = new System.Drawing.Point(238, 251);
+            this.botonReporte.Location = new System.Drawing.Point(238, 284);
             this.botonReporte.Name = "botonReporte";
             this.botonReporte.Size = new System.Drawing.Size(162, 52);
             this.botonReporte.TabIndex = 17;
@@ -228,7 +230,7 @@
             this.botonPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonPendientes.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonPendientes.ForeColor = System.Drawing.Color.White;
-            this.botonPendientes.Location = new System.Drawing.Point(406, 251);
+            this.botonPendientes.Location = new System.Drawing.Point(406, 284);
             this.botonPendientes.Name = "botonPendientes";
             this.botonPendientes.Size = new System.Drawing.Size(162, 52);
             this.botonPendientes.TabIndex = 16;
@@ -274,6 +276,17 @@
             this.panel1.Size = new System.Drawing.Size(800, 33);
             this.panel1.TabIndex = 28;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(307, 87);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(162, 156);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 29;
+            this.pictureBox5.TabStop = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +294,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(797, 493);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -306,6 +320,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +340,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private RJButton rjButton3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

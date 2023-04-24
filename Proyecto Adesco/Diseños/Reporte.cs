@@ -37,9 +37,7 @@ namespace Proyecto_Adesco
 
         private void Reporte_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
+            Application.Exit(); 
         }
 
         
@@ -199,7 +197,14 @@ namespace Proyecto_Adesco
             }
         }
 
-      
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form frmPrincipal = new Principal();
+            frmPrincipal.Show();
+            this.Visible = false;
+        }
+
+
         //----------------------------------------------------------------------------------------------------------
 
 

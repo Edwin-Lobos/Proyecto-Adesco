@@ -39,8 +39,11 @@
             this.cbxDato = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpAño = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataSet1BindingSource
@@ -59,10 +62,11 @@
             reportDataSource1.Value = this.dataSet1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto_Adesco.reporte.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 74);
+            this.reportViewer1.Location = new System.Drawing.Point(9, 60);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1457, 693);
+            this.reportViewer1.Size = new System.Drawing.Size(1093, 563);
             this.reportViewer1.TabIndex = 83;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
@@ -82,10 +86,9 @@
             this.btnGenerarRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarRP.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarRP.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarRP.Location = new System.Drawing.Point(641, 783);
-            this.btnGenerarRP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGenerarRP.Location = new System.Drawing.Point(481, 636);
             this.btnGenerarRP.Name = "btnGenerarRP";
-            this.btnGenerarRP.Size = new System.Drawing.Size(200, 48);
+            this.btnGenerarRP.Size = new System.Drawing.Size(150, 39);
             this.btnGenerarRP.TabIndex = 86;
             this.btnGenerarRP.Text = "Generar Reporte";
             this.btnGenerarRP.TextColor = System.Drawing.Color.White;
@@ -108,10 +111,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(810, 32);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(608, 26);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(125, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(94, 24);
             this.btnBuscar.TabIndex = 85;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
@@ -134,19 +136,20 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cbxDato.Location = new System.Drawing.Point(526, 38);
-            this.cbxDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxDato.Location = new System.Drawing.Point(394, 31);
+            this.cbxDato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxDato.Name = "cbxDato";
-            this.cbxDato.Size = new System.Drawing.Size(179, 24);
+            this.cbxDato.Size = new System.Drawing.Size(135, 21);
             this.cbxDato.TabIndex = 84;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(522, 9);
+            this.label1.Location = new System.Drawing.Point(392, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 20);
+            this.label1.Size = new System.Drawing.Size(208, 17);
             this.label1.TabIndex = 87;
             this.label1.Text = "Filtrar Busqueda por meses";
             // 
@@ -154,19 +157,34 @@
             // 
             this.dtpAño.CustomFormat = "yyyy";
             this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAño.Location = new System.Drawing.Point(711, 38);
-            this.dtpAño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpAño.Location = new System.Drawing.Point(533, 31);
+            this.dtpAño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpAño.Name = "dtpAño";
             this.dtpAño.ShowUpDown = true;
-            this.dtpAño.Size = new System.Drawing.Size(92, 22);
+            this.dtpAño.Size = new System.Drawing.Size(70, 20);
             this.dtpAño.TabIndex = 126;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1067, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 129;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Regresar");
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Reporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1481, 842);
+            this.ClientSize = new System.Drawing.Size(1111, 684);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dtpAño);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerarRP);
@@ -174,7 +192,7 @@
             this.Controls.Add(this.cbxDato);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Reporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte";
@@ -183,6 +201,7 @@
             this.Resize += new System.EventHandler(this.Reporte_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +216,7 @@
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
         private DataSet1 dataSet1;
         private System.Windows.Forms.DateTimePicker dtpAño;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
