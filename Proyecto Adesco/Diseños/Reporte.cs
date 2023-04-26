@@ -47,7 +47,6 @@ namespace Proyecto_Adesco
         public List<object> consulta(string datoRC)
         {
             MySqlDataReader reader;
-            List<object> lista = new List<object>();
             string sql;
 
             if (datoRC == null)
