@@ -36,6 +36,7 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelbajo = new System.Windows.Forms.Panel();
+            this.btncerrarsesion = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelhijo = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,28 +47,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.label2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.rjButton1 = new Proyecto_Adesco.RJButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnregistrar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelbarralateral.SuspendLayout();
             this.panelbajo.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelhijo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox5.Location = new System.Drawing.Point(7, 24);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(270, 147);
+            this.pictureBox5.Size = new System.Drawing.Size(170, 119);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
@@ -86,9 +85,9 @@
             this.panelbarralateral.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelbarralateral.ForeColor = System.Drawing.SystemColors.Control;
             this.panelbarralateral.Location = new System.Drawing.Point(0, 0);
-            this.panelbarralateral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelbarralateral.Margin = new System.Windows.Forms.Padding(2);
             this.panelbarralateral.Name = "panelbarralateral";
-            this.panelbarralateral.Size = new System.Drawing.Size(270, 1055);
+            this.panelbarralateral.Size = new System.Drawing.Size(181, 881);
             this.panelbarralateral.TabIndex = 30;
             // 
             // iconButton4
@@ -96,19 +95,21 @@
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.SystemColors.Control;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 45;
+            this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 297);
+            this.iconButton4.Location = new System.Drawing.Point(0, 394);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(270, 50);
+            this.iconButton4.Size = new System.Drawing.Size(181, 72);
             this.iconButton4.TabIndex = 11;
             this.iconButton4.Text = "Beneficiario";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
@@ -117,18 +118,21 @@
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PersonCircleExclamation;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ExclamationCircle;
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 25;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 247);
+            this.iconButton3.Location = new System.Drawing.Point(0, 322);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(270, 50);
+            this.iconButton3.Size = new System.Drawing.Size(181, 72);
             this.iconButton3.TabIndex = 10;
             this.iconButton3.Text = "Pendientes";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
@@ -137,19 +141,21 @@
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
+            this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 197);
+            this.iconButton2.Location = new System.Drawing.Point(0, 250);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(270, 50);
+            this.iconButton2.Size = new System.Drawing.Size(181, 72);
             this.iconButton2.TabIndex = 9;
             this.iconButton2.Text = "Reporte";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
@@ -158,39 +164,62 @@
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
+            this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 147);
+            this.iconButton1.Location = new System.Drawing.Point(0, 178);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(270, 50);
+            this.iconButton1.Size = new System.Drawing.Size(181, 72);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Nuevo Recibo";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // panelbajo
             // 
-            this.panelbajo.Controls.Add(this.rjButton1);
+            this.panelbajo.Controls.Add(this.btncerrarsesion);
             this.panelbajo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelbajo.Location = new System.Drawing.Point(0, 1001);
+            this.panelbajo.Location = new System.Drawing.Point(0, 837);
+            this.panelbajo.Margin = new System.Windows.Forms.Padding(2);
             this.panelbajo.Name = "panelbajo";
-            this.panelbajo.Size = new System.Drawing.Size(270, 54);
+            this.panelbajo.Size = new System.Drawing.Size(181, 44);
             this.panelbajo.TabIndex = 7;
+            // 
+            // btncerrarsesion
+            // 
+            this.btncerrarsesion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btncerrarsesion.FlatAppearance.BorderSize = 0;
+            this.btncerrarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncerrarsesion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncerrarsesion.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btncerrarsesion.IconColor = System.Drawing.Color.White;
+            this.btncerrarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btncerrarsesion.IconSize = 30;
+            this.btncerrarsesion.Location = new System.Drawing.Point(0, 0);
+            this.btncerrarsesion.Name = "btncerrarsesion";
+            this.btncerrarsesion.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btncerrarsesion.Size = new System.Drawing.Size(181, 44);
+            this.btncerrarsesion.TabIndex = 0;
+            this.btncerrarsesion.Text = "Cerra sesion";
+            this.btncerrarsesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btncerrarsesion.UseVisualStyleBackColor = true;
+            this.btncerrarsesion.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.pictureBox5);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(270, 147);
+            this.panelLogo.Size = new System.Drawing.Size(181, 178);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
@@ -205,10 +234,10 @@
             this.panelhijo.Controls.Add(this.pictureBox1);
             this.panelhijo.Controls.Add(this.label3);
             this.panelhijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelhijo.Location = new System.Drawing.Point(270, 0);
-            this.panelhijo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelhijo.Location = new System.Drawing.Point(181, 0);
+            this.panelhijo.Margin = new System.Windows.Forms.Padding(2);
             this.panelhijo.Name = "panelhijo";
-            this.panelhijo.Size = new System.Drawing.Size(1654, 1055);
+            this.panelhijo.Size = new System.Drawing.Size(1423, 881);
             this.panelhijo.TabIndex = 31;
             // 
             // label9
@@ -216,10 +245,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(780, 470);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(654, 427);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 29);
+            this.label9.Size = new System.Drawing.Size(81, 22);
             this.label9.TabIndex = 7;
             this.label9.Text = "Valores";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,10 +257,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(264, 514);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(267, 463);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1089, 60);
+            this.label8.Size = new System.Drawing.Size(843, 48);
             this.label8.TabIndex = 6;
             this.label8.Text = resources.GetString("label8.Text");
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,10 +269,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(789, 342);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(661, 323);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 29);
+            this.label7.Size = new System.Drawing.Size(69, 22);
             this.label7.TabIndex = 5;
             this.label7.Text = "Visión";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,10 +281,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(264, 394);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(267, 365);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1098, 40);
+            this.label6.Size = new System.Drawing.Size(847, 32);
             this.label6.TabIndex = 4;
             this.label6.Text = "La visión de la Asociación de Desarrollo Comunal (ADESCO) es mejorar las condicio" +
     "nes sociales, económicas, culturales y ambientales \r\ndel área en que conviven su" +
@@ -270,10 +295,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 249);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(167, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1366, 60);
+            this.label5.Size = new System.Drawing.Size(1059, 48);
             this.label5.TabIndex = 3;
             this.label5.Text = resources.GetString("label5.Text");
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,10 +307,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(786, 207);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(659, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 29);
+            this.label4.Size = new System.Drawing.Size(73, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "Misión";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,10 +318,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(482, 54);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(431, 89);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -309,87 +331,83 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(574, 49);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(499, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(515, 72);
+            this.label3.Size = new System.Drawing.Size(419, 58);
             this.label3.TabIndex = 0;
             this.label3.Text = "Asociacion de desarrollo comunal \r\nResidencial San Francisco Etapa II";
             // 
-            // toolStrip1
+            // panel1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.label2,
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(270, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1654, 27);
-            this.toolStrip1.TabIndex = 8;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(83, 24);
-            this.toolStripLabel1.Text = "Bienvenido";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnregistrar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(181, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1423, 36);
+            this.panel1.TabIndex = 32;
             // 
             // label2
             // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(112, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(12, 24);
+            this.label2.Size = new System.Drawing.Size(418, 36);
+            this.label2.TabIndex = 2;
             this.label2.Text = ".";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toolStripButton1
+            // label1
             // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton1.Text = "Registarse";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenido";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rjButton1
+            // btnregistrar
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderRadius1 = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.BorderSize1 = 0;
-            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(0, 7);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(270, 47);
-            this.rjButton1.TabIndex = 6;
-            this.rjButton1.Text = "Cerrar sesion";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click_2);
+            this.btnregistrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnregistrar.FlatAppearance.BorderSize = 0;
+            this.btnregistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregistrar.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregistrar.ForeColor = System.Drawing.Color.White;
+            this.btnregistrar.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.btnregistrar.IconColor = System.Drawing.Color.White;
+            this.btnregistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnregistrar.IconSize = 25;
+            this.btnregistrar.Location = new System.Drawing.Point(1285, 0);
+            this.btnregistrar.Name = "btnregistrar";
+            this.btnregistrar.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnregistrar.Size = new System.Drawing.Size(138, 36);
+            this.btnregistrar.TabIndex = 0;
+            this.btnregistrar.Text = "Regsitrarse";
+            this.btnregistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnregistrar.UseVisualStyleBackColor = true;
+            this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelhijo);
             this.Controls.Add(this.panelbarralateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -404,15 +422,12 @@
             this.panelhijo.ResumeLayout(false);
             this.panelhijo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private RJButton rjButton1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panelbarralateral;
         private System.Windows.Forms.Panel panelLogo;
@@ -426,13 +441,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panelbajo;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel label2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btncerrarsesion;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnregistrar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

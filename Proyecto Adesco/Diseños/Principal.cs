@@ -226,7 +226,7 @@ namespace Proyecto_Adesco
         {
             Form frmRegistro = new Registro();
             frmRegistro.Show();
-            this.Visible = false;
+            this.Visible = true;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -247,6 +247,34 @@ namespace Proyecto_Adesco
         private void iconButton4_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Beneficiarios());
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea cerrar sesión?", "Salir",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question) == DialogResult.No)
+            {
+
+            }
+            else
+            {
+                Form frmInicio = new Inicio();
+                frmInicio.Show();
+                this.Visible = false;
+            }
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnregistrar_Click(object sender, EventArgs e)
+        {
+            Form frmRegistro = new Registro();
+            frmRegistro.Show();
+            this.Visible = true;
         }
     }
 }

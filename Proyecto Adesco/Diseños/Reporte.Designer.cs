@@ -34,12 +34,12 @@
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Proyecto_Adesco.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnGenerarRP = new Proyecto_Adesco.RJButton();
-            this.btnBuscar = new Proyecto_Adesco.RJButton();
             this.cbxDato = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpAño = new System.Windows.Forms.DateTimePicker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnGenerarRP = new Proyecto_Adesco.RJButton();
+            this.btnBuscar = new Proyecto_Adesco.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
@@ -59,17 +59,66 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer1.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.dataSet1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto_Adesco.reporte.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(9, 60);
+            this.reportViewer1.Location = new System.Drawing.Point(9, 105);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1093, 563);
+            this.reportViewer1.Size = new System.Drawing.Size(1093, 518);
             this.reportViewer1.TabIndex = 83;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            this.reportViewer1.ZoomPercent = 75;
+            // 
+            // cbxDato
+            // 
+            this.cbxDato.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxDato.FormattingEnabled = true;
+            this.cbxDato.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cbxDato.Location = new System.Drawing.Point(500, 71);
+            this.cbxDato.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxDato.Name = "cbxDato";
+            this.cbxDato.Size = new System.Drawing.Size(135, 21);
+            this.cbxDato.TabIndex = 84;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(263, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 18);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "Filtrar Busqueda por meses";
+            // 
+            // dtpAño
+            // 
+            this.dtpAño.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpAño.CustomFormat = "yyyy";
+            this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAño.Location = new System.Drawing.Point(639, 71);
+            this.dtpAño.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpAño.Name = "dtpAño";
+            this.dtpAño.ShowUpDown = true;
+            this.dtpAño.Size = new System.Drawing.Size(70, 20);
+            this.dtpAño.TabIndex = 126;
             // 
             // btnGenerarRP
             // 
@@ -110,63 +159,16 @@
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Inter Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(608, 26);
+            this.btnBuscar.Location = new System.Drawing.Point(714, 68);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(94, 24);
+            this.btnBuscar.Size = new System.Drawing.Size(76, 24);
             this.btnBuscar.TabIndex = 85;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // cbxDato
-            // 
-            this.cbxDato.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxDato.FormattingEnabled = true;
-            this.cbxDato.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cbxDato.Location = new System.Drawing.Point(394, 31);
-            this.cbxDato.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxDato.Name = "cbxDato";
-            this.cbxDato.Size = new System.Drawing.Size(135, 21);
-            this.cbxDato.TabIndex = 84;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(392, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 17);
-            this.label1.TabIndex = 87;
-            this.label1.Text = "Filtrar Busqueda por meses";
-            // 
-            // dtpAño
-            // 
-            this.dtpAño.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpAño.CustomFormat = "yyyy";
-            this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAño.Location = new System.Drawing.Point(533, 31);
-            this.dtpAño.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpAño.Name = "dtpAño";
-            this.dtpAño.ShowUpDown = true;
-            this.dtpAño.Size = new System.Drawing.Size(70, 20);
-            this.dtpAño.TabIndex = 126;
             // 
             // Reporte
             // 
