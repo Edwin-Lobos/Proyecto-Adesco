@@ -246,13 +246,8 @@ namespace Proyecto_Adesco
             this.Visible = false;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
-        }
+       
     }
-    }
+}
 
 

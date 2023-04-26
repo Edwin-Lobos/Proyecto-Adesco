@@ -199,6 +199,7 @@ namespace Proyecto_Adesco
         private void Beneficiarios_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Beneficiarios());
+
         }
 
        
