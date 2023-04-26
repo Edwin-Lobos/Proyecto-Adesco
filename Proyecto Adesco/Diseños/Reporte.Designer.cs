@@ -39,11 +39,9 @@
             this.cbxDato = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpAño = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataSet1BindingSource
@@ -58,12 +56,15 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.dataSet1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto_Adesco.reporte.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(9, 60);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1093, 563);
@@ -72,7 +73,7 @@
             // 
             // btnGenerarRP
             // 
-            this.btnGenerarRP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerarRP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGenerarRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnGenerarRP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnGenerarRP.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -97,7 +98,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -122,6 +123,7 @@
             // 
             // cbxDato
             // 
+            this.cbxDato.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxDato.FormattingEnabled = true;
             this.cbxDato.Items.AddRange(new object[] {
             "Enero",
@@ -137,13 +139,14 @@
             "Noviembre",
             "Diciembre"});
             this.cbxDato.Location = new System.Drawing.Point(394, 31);
-            this.cbxDato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxDato.Margin = new System.Windows.Forms.Padding(2);
             this.cbxDato.Name = "cbxDato";
             this.cbxDato.Size = new System.Drawing.Size(135, 21);
             this.cbxDato.TabIndex = 84;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(392, 7);
@@ -155,28 +158,15 @@
             // 
             // dtpAño
             // 
+            this.dtpAño.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpAño.CustomFormat = "yyyy";
             this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAño.Location = new System.Drawing.Point(533, 31);
-            this.dtpAño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpAño.Margin = new System.Windows.Forms.Padding(2);
             this.dtpAño.Name = "dtpAño";
             this.dtpAño.ShowUpDown = true;
             this.dtpAño.Size = new System.Drawing.Size(70, 20);
             this.dtpAño.TabIndex = 126;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1067, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 129;
-            this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "Regresar");
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Reporte
             // 
@@ -184,7 +174,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 684);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dtpAño);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerarRP);
@@ -192,16 +181,16 @@
             this.Controls.Add(this.cbxDato);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Reporte_FormClosed);
             this.Load += new System.EventHandler(this.Reporte_Load);
             this.Resize += new System.EventHandler(this.Reporte_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,7 +205,6 @@
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
         private DataSet1 dataSet1;
         private System.Windows.Forms.DateTimePicker dtpAño;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }

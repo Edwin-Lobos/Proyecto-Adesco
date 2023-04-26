@@ -120,7 +120,6 @@
             this.btnLimpiar = new Proyecto_Adesco.RJButton();
             this.btnGuardar = new Proyecto_Adesco.RJButton();
             this.btnBuscar = new Proyecto_Adesco.RJButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -131,7 +130,6 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -148,7 +146,7 @@
             // txtNota
             // 
             this.txtNota.Location = new System.Drawing.Point(57, 571);
-            this.txtNota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNota.Margin = new System.Windows.Forms.Padding(2);
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(217, 56);
@@ -157,7 +155,7 @@
             // txtNum_recibo
             // 
             this.txtNum_recibo.Location = new System.Drawing.Point(210, 296);
-            this.txtNum_recibo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNum_recibo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNum_recibo.Name = "txtNum_recibo";
             this.txtNum_recibo.Size = new System.Drawing.Size(64, 20);
             this.txtNum_recibo.TabIndex = 122;
@@ -185,7 +183,7 @@
             "Noviembre",
             "Diciembre"});
             this.lbxMes_es.Location = new System.Drawing.Point(59, 377);
-            this.lbxMes_es.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxMes_es.Margin = new System.Windows.Forms.Padding(2);
             this.lbxMes_es.Name = "lbxMes_es";
             this.lbxMes_es.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbxMes_es.Size = new System.Drawing.Size(90, 128);
@@ -205,7 +203,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(210, 264);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(64, 20);
             this.txtId.TabIndex = 109;
@@ -226,7 +224,7 @@
             // 
             this.txtOCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOCargo.Location = new System.Drawing.Point(57, 526);
-            this.txtOCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOCargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtOCargo.Name = "txtOCargo";
             this.txtOCargo.Size = new System.Drawing.Size(102, 20);
             this.txtOCargo.TabIndex = 108;
@@ -257,7 +255,7 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(59, 323);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(102, 20);
             this.txtCantidad.TabIndex = 107;
@@ -266,7 +264,7 @@
             // 
             this.txtPoligono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPoligono.Location = new System.Drawing.Point(171, 221);
-            this.txtPoligono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPoligono.Margin = new System.Windows.Forms.Padding(2);
             this.txtPoligono.Name = "txtPoligono";
             this.txtPoligono.Size = new System.Drawing.Size(102, 20);
             this.txtPoligono.TabIndex = 106;
@@ -275,7 +273,7 @@
             // 
             this.txtSenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenda.Location = new System.Drawing.Point(59, 221);
-            this.txtSenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSenda.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenda.Name = "txtSenda";
             this.txtSenda.Size = new System.Drawing.Size(102, 20);
             this.txtSenda.TabIndex = 105;
@@ -306,7 +304,7 @@
             // 
             this.txtN_casa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtN_casa.Location = new System.Drawing.Point(59, 270);
-            this.txtN_casa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtN_casa.Margin = new System.Windows.Forms.Padding(2);
             this.txtN_casa.Name = "txtN_casa";
             this.txtN_casa.Size = new System.Drawing.Size(102, 20);
             this.txtN_casa.TabIndex = 104;
@@ -315,7 +313,7 @@
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(59, 173);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(211, 20);
             this.txtApellidos.TabIndex = 103;
@@ -357,7 +355,7 @@
             // 
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.Location = new System.Drawing.Point(59, 119);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(211, 20);
             this.txtNombres.TabIndex = 102;
@@ -366,7 +364,7 @@
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(59, 73);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(102, 20);
             this.txtCodigo.TabIndex = 101;
@@ -409,7 +407,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(4, 80);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -490,7 +488,7 @@
             this.txtDato.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDato.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDato.Location = new System.Drawing.Point(309, 32);
-            this.txtDato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDato.Margin = new System.Windows.Forms.Padding(2);
             this.txtDato.Name = "txtDato";
             this.txtDato.Size = new System.Drawing.Size(170, 21);
             this.txtDato.TabIndex = 72;
@@ -535,7 +533,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.Location = new System.Drawing.Point(17, 81);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -640,7 +638,7 @@
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(288, 32);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(170, 20);
             this.txtBuscar.TabIndex = 77;
@@ -653,7 +651,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(312, 73);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(854, 701);
@@ -666,9 +664,9 @@
             this.tabPage1.Controls.Add(this.btnBuscar2);
             this.tabPage1.Controls.Add(this.txtDato);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(846, 675);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personas";
@@ -706,9 +704,9 @@
             this.tabPage2.Controls.Add(this.btnEliminar);
             this.tabPage2.Controls.Add(this.btnBuscar3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(846, 675);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Recibos";
@@ -789,7 +787,7 @@
             this.fecha,
             this.año});
             this.dataGridView3.Location = new System.Drawing.Point(355, 715);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
@@ -1004,7 +1002,7 @@
             this.dtpAño.CustomFormat = "yyyy";
             this.dtpAño.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAño.Location = new System.Drawing.Point(164, 377);
-            this.dtpAño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpAño.Margin = new System.Windows.Forms.Padding(2);
             this.dtpAño.Name = "dtpAño";
             this.dtpAño.ShowUpDown = true;
             this.dtpAño.Size = new System.Drawing.Size(70, 20);
@@ -1083,27 +1081,12 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1135, 1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 129;
-            this.pictureBox3.TabStop = false;
-            this.toolTip2.SetToolTip(this.pictureBox3, "Regresar");
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // recibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1174, 716);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dtpAño);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtNota);
@@ -1133,8 +1116,7 @@
             this.Controls.Add(this.txtPoligono);
             this.Controls.Add(this.txtSenda);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(1190, 755);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "recibo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recibo";
@@ -1151,7 +1133,6 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1248,7 +1229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn año;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolTip toolTip1;
     }
