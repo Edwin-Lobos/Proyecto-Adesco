@@ -31,24 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjButton3 = new Proyecto_Adesco.RJButton();
-            this.botonDatos = new Proyecto_Adesco.RJButton();
-            this.botonRecibo = new Proyecto_Adesco.RJButton();
-            this.botonReporte = new Proyecto_Adesco.RJButton();
-            this.botonPendientes = new Proyecto_Adesco.RJButton();
             this.rjButton1 = new Proyecto_Adesco.RJButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelbarralateral = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.Recibo = new System.Windows.Forms.Button();
+            this.Reporte = new System.Windows.Forms.Button();
+            this.Pendientes = new System.Windows.Forms.Button();
+            this.Beneficiarios = new System.Windows.Forms.Button();
+            this.panelhijo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelbarralateral.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -57,10 +52,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(319, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 443);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.Size = new System.Drawing.Size(100, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido";
             // 
@@ -70,53 +64,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(403, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(137, 443);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 15);
+            this.label2.Size = new System.Drawing.Size(14, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = ".";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(625, 370);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 25;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(455, 370);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(283, 370);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(115, 370);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
             // 
             // rjButton3
             // 
@@ -134,110 +87,15 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(0, 2);
+            this.rjButton3.Location = new System.Drawing.Point(4, 380);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(144, 31);
+            this.rjButton3.Size = new System.Drawing.Size(192, 38);
             this.rjButton3.TabIndex = 27;
             this.rjButton3.Text = "Registrarse";
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
             this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click_1);
-            // 
-            // botonDatos
-            // 
-            this.botonDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonDatos.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonDatos.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.botonDatos.BorderRadius = 18;
-            this.botonDatos.BorderRadius1 = 18;
-            this.botonDatos.BorderSize = 0;
-            this.botonDatos.BorderSize1 = 0;
-            this.botonDatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonDatos.FlatAppearance.BorderSize = 0;
-            this.botonDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonDatos.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonDatos.ForeColor = System.Drawing.Color.White;
-            this.botonDatos.Location = new System.Drawing.Point(574, 284);
-            this.botonDatos.Name = "botonDatos";
-            this.botonDatos.Size = new System.Drawing.Size(162, 52);
-            this.botonDatos.TabIndex = 24;
-            this.botonDatos.Text = "Beneficiarios";
-            this.botonDatos.TextColor = System.Drawing.Color.White;
-            this.botonDatos.UseVisualStyleBackColor = false;
-            this.botonDatos.Click += new System.EventHandler(this.botonDatos_Click);
-            // 
-            // botonRecibo
-            // 
-            this.botonRecibo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonRecibo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonRecibo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonRecibo.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.botonRecibo.BorderRadius = 18;
-            this.botonRecibo.BorderRadius1 = 18;
-            this.botonRecibo.BorderSize = 0;
-            this.botonRecibo.BorderSize1 = 0;
-            this.botonRecibo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonRecibo.FlatAppearance.BorderSize = 0;
-            this.botonRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRecibo.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRecibo.ForeColor = System.Drawing.Color.White;
-            this.botonRecibo.Location = new System.Drawing.Point(70, 284);
-            this.botonRecibo.Name = "botonRecibo";
-            this.botonRecibo.Size = new System.Drawing.Size(162, 52);
-            this.botonRecibo.TabIndex = 18;
-            this.botonRecibo.Text = "Nuevo Recibo";
-            this.botonRecibo.TextColor = System.Drawing.Color.White;
-            this.botonRecibo.UseVisualStyleBackColor = false;
-            this.botonRecibo.Click += new System.EventHandler(this.rjButton3_Click);
-            // 
-            // botonReporte
-            // 
-            this.botonReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonReporte.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonReporte.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.botonReporte.BorderRadius = 18;
-            this.botonReporte.BorderRadius1 = 18;
-            this.botonReporte.BorderSize = 0;
-            this.botonReporte.BorderSize1 = 0;
-            this.botonReporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonReporte.FlatAppearance.BorderSize = 0;
-            this.botonReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonReporte.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonReporte.ForeColor = System.Drawing.Color.White;
-            this.botonReporte.Location = new System.Drawing.Point(238, 284);
-            this.botonReporte.Name = "botonReporte";
-            this.botonReporte.Size = new System.Drawing.Size(162, 52);
-            this.botonReporte.TabIndex = 17;
-            this.botonReporte.Text = "Reporte";
-            this.botonReporte.TextColor = System.Drawing.Color.White;
-            this.botonReporte.UseVisualStyleBackColor = false;
-            this.botonReporte.Click += new System.EventHandler(this.rjButton1_Click_1);
-            // 
-            // botonPendientes
-            // 
-            this.botonPendientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonPendientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.botonPendientes.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonPendientes.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.botonPendientes.BorderRadius = 18;
-            this.botonPendientes.BorderRadius1 = 18;
-            this.botonPendientes.BorderSize = 0;
-            this.botonPendientes.BorderSize1 = 0;
-            this.botonPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonPendientes.FlatAppearance.BorderSize = 0;
-            this.botonPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonPendientes.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonPendientes.ForeColor = System.Drawing.Color.White;
-            this.botonPendientes.Location = new System.Drawing.Point(406, 284);
-            this.botonPendientes.Name = "botonPendientes";
-            this.botonPendientes.Size = new System.Drawing.Size(162, 52);
-            this.botonPendientes.TabIndex = 16;
-            this.botonPendientes.Text = "Pendientes";
-            this.botonPendientes.TextColor = System.Drawing.Color.White;
-            this.botonPendientes.UseVisualStyleBackColor = false;
-            this.botonPendientes.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
             // 
@@ -255,91 +113,165 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(653, 2);
+            this.rjButton1.Location = new System.Drawing.Point(13, 506);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(144, 31);
+            this.rjButton1.Size = new System.Drawing.Size(192, 38);
             this.rjButton1.TabIndex = 25;
             this.rjButton1.Text = "Cerrar sesion";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click_2);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.panel1.Controls.Add(this.rjButton1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.rjButton3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 33);
-            this.panel1.TabIndex = 28;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(307, 87);
+            this.pictureBox5.Location = new System.Drawing.Point(65, 13);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(162, 156);
+            this.pictureBox5.Size = new System.Drawing.Size(164, 73);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
             // 
+            // panelbarralateral
+            // 
+            this.panelbarralateral.AutoScroll = true;
+            this.panelbarralateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelbarralateral.Controls.Add(this.rjButton1);
+            this.panelbarralateral.Controls.Add(this.Beneficiarios);
+            this.panelbarralateral.Controls.Add(this.label2);
+            this.panelbarralateral.Controls.Add(this.label1);
+            this.panelbarralateral.Controls.Add(this.Pendientes);
+            this.panelbarralateral.Controls.Add(this.rjButton3);
+            this.panelbarralateral.Controls.Add(this.Reporte);
+            this.panelbarralateral.Controls.Add(this.Recibo);
+            this.panelbarralateral.Controls.Add(this.panelLogo);
+            this.panelbarralateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelbarralateral.Location = new System.Drawing.Point(0, 0);
+            this.panelbarralateral.Name = "panelbarralateral";
+            this.panelbarralateral.Size = new System.Drawing.Size(310, 597);
+            this.panelbarralateral.TabIndex = 30;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox5);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(310, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // Recibo
+            // 
+            this.Recibo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Recibo.FlatAppearance.BorderSize = 0;
+            this.Recibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Recibo.ForeColor = System.Drawing.SystemColors.Control;
+            this.Recibo.Location = new System.Drawing.Point(0, 100);
+            this.Recibo.Name = "Recibo";
+            this.Recibo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Recibo.Size = new System.Drawing.Size(310, 55);
+            this.Recibo.TabIndex = 1;
+            this.Recibo.Text = "Nuevo Recibo";
+            this.Recibo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Recibo.UseVisualStyleBackColor = true;
+            this.Recibo.Click += new System.EventHandler(this.Recibo_Click);
+            // 
+            // Reporte
+            // 
+            this.Reporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Reporte.FlatAppearance.BorderSize = 0;
+            this.Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reporte.ForeColor = System.Drawing.SystemColors.Control;
+            this.Reporte.Location = new System.Drawing.Point(0, 155);
+            this.Reporte.Name = "Reporte";
+            this.Reporte.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Reporte.Size = new System.Drawing.Size(310, 55);
+            this.Reporte.TabIndex = 2;
+            this.Reporte.Text = "Reporte";
+            this.Reporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reporte.UseVisualStyleBackColor = true;
+            this.Reporte.Click += new System.EventHandler(this.Reporte_Click);
+            // 
+            // Pendientes
+            // 
+            this.Pendientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pendientes.FlatAppearance.BorderSize = 0;
+            this.Pendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pendientes.ForeColor = System.Drawing.SystemColors.Control;
+            this.Pendientes.Location = new System.Drawing.Point(0, 210);
+            this.Pendientes.Name = "Pendientes";
+            this.Pendientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Pendientes.Size = new System.Drawing.Size(310, 55);
+            this.Pendientes.TabIndex = 3;
+            this.Pendientes.Text = "Pendientes";
+            this.Pendientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Pendientes.UseVisualStyleBackColor = true;
+            this.Pendientes.Click += new System.EventHandler(this.Pendientes_Click);
+            // 
+            // Beneficiarios
+            // 
+            this.Beneficiarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Beneficiarios.FlatAppearance.BorderSize = 0;
+            this.Beneficiarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Beneficiarios.ForeColor = System.Drawing.SystemColors.Control;
+            this.Beneficiarios.Location = new System.Drawing.Point(0, 265);
+            this.Beneficiarios.Name = "Beneficiarios";
+            this.Beneficiarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Beneficiarios.Size = new System.Drawing.Size(310, 55);
+            this.Beneficiarios.TabIndex = 4;
+            this.Beneficiarios.Text = "Beneficiarios";
+            this.Beneficiarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Beneficiarios.UseVisualStyleBackColor = true;
+            this.Beneficiarios.Click += new System.EventHandler(this.Beneficiarios_Click);
+            // 
+            // panelhijo
+            // 
+            this.panelhijo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelhijo.Location = new System.Drawing.Point(310, 0);
+            this.panelhijo.Name = "panelhijo";
+            this.panelhijo.Size = new System.Drawing.Size(960, 597);
+            this.panelhijo.TabIndex = 31;
+            // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(797, 493);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.botonDatos);
-            this.Controls.Add(this.botonPendientes);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.botonReporte);
-            this.Controls.Add(this.botonRecibo);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1270, 597);
+            this.Controls.Add(this.panelhijo);
+            this.Controls.Add(this.panelbarralateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(813, 532);
-            this.MinimumSize = new System.Drawing.Size(813, 532);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.SizeChanged += new System.EventHandler(this.Principal_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panelbarralateral.ResumeLayout(false);
+            this.panelbarralateral.PerformLayout();
+            this.panelLogo.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private RJButton botonPendientes;
-        private RJButton botonReporte;
-        private RJButton botonRecibo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private RJButton botonDatos;
         private RJButton rjButton1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private RJButton rjButton3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panelbarralateral;
+        private System.Windows.Forms.Button Beneficiarios;
+        private System.Windows.Forms.Button Pendientes;
+        private System.Windows.Forms.Button Reporte;
+        private System.Windows.Forms.Button Recibo;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelhijo;
     }
 }

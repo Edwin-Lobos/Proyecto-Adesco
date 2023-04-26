@@ -37,7 +37,7 @@ namespace Proyecto_Adesco
 
         private void Reporte_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit(); 
+            
         }
 
         
