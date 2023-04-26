@@ -14,6 +14,7 @@ namespace Proyecto_Adesco
 {
     public partial class Principal : Form
     {
+        private Form currentChildForm;
         public Principal()
         {
             InitializeComponent();
@@ -28,9 +29,10 @@ namespace Proyecto_Adesco
 
         private void Principal_Load(object sender, EventArgs e)
         {
-           
+
+
         }
-        
+
 
         private void btnRecibo_Click(object sender, EventArgs e)
         {
@@ -155,5 +157,50 @@ namespace Proyecto_Adesco
             frmRegistro.Show();
             this.Visible = false;
         }
+
+        //---------------------------------------------------------------
+        private void OpenChildForm(Form childForm)
+        {
+            // Cerrar y quitar el formulario hijo actualmente mostrado en el panel
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                panelhijo.Controls.Remove(currentChildForm);
+            }
+
+            // Configurar el nuevo formulario hijo a mostrar
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelhijo.Controls.Add(childForm);
+            panelhijo.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+            // Actualizar la referencia al nuevo formulario hijo actual
+            currentChildForm = childForm;
+        }
+        //---------------------------------------------------------------
+        private void Recibo_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new recibo());
+        }
+
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Reporte());
+        }
+
+        private void Pendientes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Pendientes());
+        }
+
+        private void Beneficiarios_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Beneficiarios());
+        }
+
+       
     }
 }

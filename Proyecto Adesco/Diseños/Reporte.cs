@@ -37,7 +37,7 @@ namespace Proyecto_Adesco
 
         private void Reporte_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit(); 
+            
         }
 
         
@@ -47,7 +47,6 @@ namespace Proyecto_Adesco
         public List<object> consulta(string datoRC)
         {
             MySqlDataReader reader;
-            List<object> lista = new List<object>();
             string sql;
 
             if (datoRC == null)
