@@ -23,12 +23,6 @@ namespace Proyecto_Adesco
             InitializeComponent();          
         }
 
-        private void picRegresar_Click(object sender, EventArgs e)
-        {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
-        }
 
         private void Pendientes_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -40,19 +34,6 @@ namespace Proyecto_Adesco
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
-        }
 
 
 
@@ -61,11 +42,32 @@ namespace Proyecto_Adesco
            
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form frmPrincipal = new Principal();
-            frmPrincipal.Show();
-            this.Visible = false;
+
+            string cadenaConexion = "server=sql355.main-hosting.eu;database=u433272284_adesco;uid=u433272284_edwin;pwd=$8k4W~!qb4P;";
+            MySqlConnection conexion = new MySqlConnection(cadenaConexion);
+            conexion.Open();
+
+            string consulta = "SELECT DATEDIFF(fecha_fin, fecha_inicio) as diferencia FROM tabla_fechas";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.Read())
+            {
+                int diferenciaEnDias = reader.GetInt32("diferencia");
+
+                // Asignamos el resultado al DataGridView
+                DataGridViewRow fila = new DataGridViewRow();
+                fila.CreateCells(dataGridView1);
+                fila.Cells[0].Value = diferenciaEnDias.ToString();
+                dataGridView1.Rows.Add(fila);
+            }
+
+            reader.Close();
+            conexion.Close();
+
         }
     }
 }
