@@ -151,22 +151,17 @@ namespace Proyecto_Adesco
             
         }
 
-        private void rjButton3_Click_1(object sender, EventArgs e)
-        {
-            Form frmRegistro = new Registro();
-            frmRegistro.Show();
-            this.Visible = false;
-        }
 
         //---------------------------------------------------------------
         private void OpenChildForm(Form childForm)
         {
-            // Cerrar y quitar el formulario hijo actualmente mostrado en el panel
+            //open only form
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
-                panelhijo.Controls.Remove(currentChildForm);
             }
+            currentChildForm = childForm;
+            //End
 
             // Configurar el nuevo formulario hijo a mostrar
             childForm.TopLevel = false;
@@ -202,6 +197,56 @@ namespace Proyecto_Adesco
 
         }
 
-       
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rjButton2_Click_2(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Form frmRegistro = new Registro();
+            frmRegistro.Show();
+            this.Visible = false;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new recibo());
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Reporte());
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Pendientes());
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Beneficiarios());
+        }
     }
 }
