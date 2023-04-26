@@ -245,16 +245,6 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>La Asociaciones de Desarrollo Comunal (ADESCO) se rige por valores como la economía social solidaria y el objetivo de convertirse 
-en una comunidad inclusiva y participativa donde el desarrollo comunal, el equilibrio ecológico y el bienestar social sean sus mayores 
-logros.</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>La Asociación de Desarrollo Comunal (ADESCO) tiene como misión facilitar los procesos de promoción, organización y fortalecimiento de las organizaciones comunales, 
-promover la participación social, democrática y activa de los habitantes en el desarrollo, se buscan mejorar las condiciones de vida de sus habitantes solventando los 
-principales problemas de la comunidad.</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -493,6 +483,16 @@ principales problemas de la comunidad.</value>
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAwNne4w/8HWnzXAZ//UwYAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>La Asociación de Desarrollo Comunal (ADESCO) tiene como misión facilitar los procesos de promoción, organización y fortalecimiento de las organizaciones comunales, 
+promover la participación social, democrática y activa de los habitantes en el desarrollo, se buscan mejorar las condiciones de vida de sus habitantes solventando los 
+principales problemas de la comunidad.</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>La Asociaciones de Desarrollo Comunal (ADESCO) se rige por valores como la economía social solidaria y el objetivo de convertirse 
+en una comunidad inclusiva y participativa donde el desarrollo comunal, el equilibrio ecológico y el bienestar social sean sus mayores 
+logros.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

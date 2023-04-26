@@ -60,12 +60,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 182);
+            this.label1.Location = new System.Drawing.Point(35, 143);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 18);
+            this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -74,12 +74,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(127, 182);
+            this.label2.Location = new System.Drawing.Point(54, 162);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 18);
+            this.label2.Size = new System.Drawing.Size(15, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = ".";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +89,7 @@
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(52, 40);
+            this.pictureBox5.Location = new System.Drawing.Point(33, 12);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(109, 117);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +111,7 @@
             this.panelbarralateral.Location = new System.Drawing.Point(0, 0);
             this.panelbarralateral.Margin = new System.Windows.Forms.Padding(2);
             this.panelbarralateral.Name = "panelbarralateral";
-            this.panelbarralateral.Size = new System.Drawing.Size(232, 553);
+            this.panelbarralateral.Size = new System.Drawing.Size(184, 881);
             this.panelbarralateral.TabIndex = 30;
             // 
             // Beneficiarios
@@ -122,11 +122,11 @@
             this.Beneficiarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Beneficiarios.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beneficiarios.ForeColor = System.Drawing.SystemColors.Control;
-            this.Beneficiarios.Location = new System.Drawing.Point(0, 409);
+            this.Beneficiarios.Location = new System.Drawing.Point(0, 361);
             this.Beneficiarios.Margin = new System.Windows.Forms.Padding(2);
             this.Beneficiarios.Name = "Beneficiarios";
-            this.Beneficiarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Beneficiarios.Size = new System.Drawing.Size(232, 57);
+            this.Beneficiarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Beneficiarios.Size = new System.Drawing.Size(184, 57);
             this.Beneficiarios.TabIndex = 4;
             this.Beneficiarios.Text = "Beneficiarios";
             this.Beneficiarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,11 +141,11 @@
             this.Pendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pendientes.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pendientes.ForeColor = System.Drawing.SystemColors.Control;
-            this.Pendientes.Location = new System.Drawing.Point(0, 352);
+            this.Pendientes.Location = new System.Drawing.Point(0, 304);
             this.Pendientes.Margin = new System.Windows.Forms.Padding(2);
             this.Pendientes.Name = "Pendientes";
-            this.Pendientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Pendientes.Size = new System.Drawing.Size(232, 57);
+            this.Pendientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Pendientes.Size = new System.Drawing.Size(184, 57);
             this.Pendientes.TabIndex = 3;
             this.Pendientes.Text = "Pendientes";
             this.Pendientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,11 +160,11 @@
             this.Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reporte.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reporte.ForeColor = System.Drawing.SystemColors.Control;
-            this.Reporte.Location = new System.Drawing.Point(0, 295);
+            this.Reporte.Location = new System.Drawing.Point(0, 247);
             this.Reporte.Margin = new System.Windows.Forms.Padding(2);
             this.Reporte.Name = "Reporte";
-            this.Reporte.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Reporte.Size = new System.Drawing.Size(232, 57);
+            this.Reporte.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Reporte.Size = new System.Drawing.Size(184, 57);
             this.Reporte.TabIndex = 2;
             this.Reporte.Text = "Reporte";
             this.Reporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,11 +179,11 @@
             this.Recibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Recibo.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recibo.ForeColor = System.Drawing.SystemColors.Control;
-            this.Recibo.Location = new System.Drawing.Point(0, 238);
+            this.Recibo.Location = new System.Drawing.Point(0, 190);
             this.Recibo.Margin = new System.Windows.Forms.Padding(2);
             this.Recibo.Name = "Recibo";
-            this.Recibo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Recibo.Size = new System.Drawing.Size(232, 57);
+            this.Recibo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Recibo.Size = new System.Drawing.Size(184, 57);
             this.Recibo.TabIndex = 1;
             this.Recibo.Text = "Nuevo Recibo";
             this.Recibo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,7 +199,7 @@
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(232, 238);
+            this.panelLogo.Size = new System.Drawing.Size(184, 190);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
@@ -214,10 +214,10 @@
             this.panelhijo.Controls.Add(this.pictureBox1);
             this.panelhijo.Controls.Add(this.label3);
             this.panelhijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelhijo.Location = new System.Drawing.Point(232, 0);
+            this.panelhijo.Location = new System.Drawing.Point(184, 0);
             this.panelhijo.Margin = new System.Windows.Forms.Padding(2);
             this.panelhijo.Name = "panelhijo";
-            this.panelhijo.Size = new System.Drawing.Size(893, 553);
+            this.panelhijo.Size = new System.Drawing.Size(1420, 881);
             this.panelhijo.TabIndex = 31;
             // 
             // rjButton1
@@ -236,9 +236,9 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(0, 516);
+            this.rjButton1.Location = new System.Drawing.Point(0, 830);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(114, 34);
+            this.rjButton1.Size = new System.Drawing.Size(85, 51);
             this.rjButton1.TabIndex = 25;
             this.rjButton1.Text = "Cerrar sesion";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -261,9 +261,9 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(120, 516);
+            this.rjButton3.Location = new System.Drawing.Point(80, 830);
             this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(112, 37);
+            this.rjButton3.Size = new System.Drawing.Size(104, 51);
             this.rjButton3.TabIndex = 27;
             this.rjButton3.Text = "Registrarse";
             this.rjButton3.TextColor = System.Drawing.Color.White;
@@ -275,7 +275,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(256, 40);
+            this.label3.Location = new System.Drawing.Point(520, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(419, 58);
             this.label3.TabIndex = 0;
@@ -285,7 +285,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(187, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(451, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -298,7 +298,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(415, 168);
+            this.label4.Location = new System.Drawing.Point(679, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 22);
             this.label4.TabIndex = 2;
@@ -310,7 +310,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 205);
+            this.label5.Location = new System.Drawing.Point(187, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(1059, 48);
             this.label5.TabIndex = 3;
@@ -322,7 +322,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 320);
+            this.label6.Location = new System.Drawing.Point(287, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(847, 32);
             this.label6.TabIndex = 4;
@@ -336,7 +336,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(417, 278);
+            this.label7.Location = new System.Drawing.Point(681, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 22);
             this.label7.TabIndex = 5;
@@ -348,7 +348,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 418);
+            this.label8.Location = new System.Drawing.Point(287, 418);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(843, 48);
             this.label8.TabIndex = 6;
@@ -360,7 +360,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(410, 382);
+            this.label9.Location = new System.Drawing.Point(674, 382);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 22);
             this.label9.TabIndex = 7;
@@ -373,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1125, 553);
+            this.ClientSize = new System.Drawing.Size(1604, 881);
             this.Controls.Add(this.panelhijo);
             this.Controls.Add(this.panelbarralateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
