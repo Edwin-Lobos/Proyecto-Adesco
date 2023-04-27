@@ -88,7 +88,7 @@ namespace Proyecto_Adesco
         //---------------------------------------------------------------------------------------------
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(lbxMes_es.Text) || string.IsNullOrEmpty(txtCantidad.Text))
+            if (string.IsNullOrEmpty(txtCantidad.Text))
             {
                 MessageBox.Show("Debe llenar el campo cantidad y Mes/es", "Aviso",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -124,14 +124,14 @@ namespace Proyecto_Adesco
                 fila.Cells["poligono"].Value = txtPoligono.Text;
                 fila.Cells["n_casa"].Value = txtN_casa.Text;
                 fila.Cells["cantidad"].Value = txtCantidad.Text;
-                fila.Cells["mes_es"].Value = string.Join(", ", lbxMes_es.SelectedItems.Cast<string>());
+                fila.Cells["mes_es"].Value = checkedListBox1.Text;
                 fila.Cells["otro"].Value = txtOCargo.Text;
                 fila.Cells["total"].Value = decimal.Parse(txtCantidad.Text) + (string.IsNullOrEmpty(txtOCargo.Text) ? 0 : decimal.Parse(txtOCargo.Text));
                 fila.Cells["totalenletras"].Value = ConvertirNumeroALetras((decimal)fila.Cells["total"].Value);
                 fila.Cells["codigo"].Value = txtCodigo.Text;
                 fila.Cells["nota"].Value = txtNota.Text;
                 fila.Cells["fecha"].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                fila.Cells["año"].Value = dtpAño.Text;
+                
 
                 // Enviar los datos a la base de datos
                 using (MySqlConnection conexion = Conexion.GetConnection())
@@ -142,7 +142,7 @@ namespace Proyecto_Adesco
                         // Verificar si el valor de la columna total es nulo
                         if (row.Cells["nombres"].Value != null)
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota, totalenletras, fecha, año) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota, @totalenletras, @fecha, @año)", conexion);
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO recibos (nombres, apellidos, senda, poligono, n_casa, cantidad, mes_es, otro, total, codigo, nota, totalenletras, fecha) VALUES (@nombres, @apellidos, @senda, @poligono, @n_casa, @cantidad, @mes_es, @otro, @total, @codigo, @nota, @totalenletras, @fecha)", conexion);
                             cmd.Parameters.AddWithValue("@nombres", row.Cells["nombres"].Value);
                             cmd.Parameters.AddWithValue("@apellidos", row.Cells["apellidos"].Value);
                             cmd.Parameters.AddWithValue("@senda", row.Cells["senda"].Value);
@@ -156,7 +156,6 @@ namespace Proyecto_Adesco
                             cmd.Parameters.AddWithValue("@nota", row.Cells["nota"].Value);
                             cmd.Parameters.AddWithValue("@totalenletras", row.Cells["totalenletras"].Value);
                             cmd.Parameters.AddWithValue("@fecha", row.Cells["fecha"].Value);
-                            cmd.Parameters.AddWithValue("@año", row.Cells["año"].Value);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -272,7 +271,35 @@ namespace Proyecto_Adesco
 
         //---------------------------------------------------------------------------
         private void recibo_Load(object sender, EventArgs e)
-        {
+        {  // Crear una lista de fechas desde la fecha actual hasta 5 años en el futuro
+            List<DateTime> fechas = new List<DateTime>();
+            DateTime fechaInicial = new DateTime(2022, 1, 1);
+
+            for (int i = 0; i < 72; i++)
+            {
+                DateTime fecha = fechaInicial.AddMonths(i);
+                fechas.Add(fecha);
+            }
+
+            // Llenar la lista desplegable con las fechas disponibles
+            foreach (DateTime fecha in fechas)
+            {
+                checkedListBox1.Items.Add(fecha.ToString("MMMM yyyy"));
+            }
+            // Llenar la lista desplegable con las fechas disponibles
+            foreach (DateTime fecha in fechas)
+            {
+                // Convertir la fecha a string con formato "yyyy-MM-dd"
+                string fechaStr = fecha.ToString("yyyy-MM-dd");
+
+                // Convertir la fecha de string a DateTime
+                DateTime fechaDT;
+                if (DateTime.TryParseExact(fechaStr, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaDT))
+                {
+                    // Agregar la fecha convertida a la lista desplegable
+                    checkedListBox1.Items.Add(fechaDT.ToString("MMMM yyyy"));
+                }
+            }
 
         }
         private void limpiar()
